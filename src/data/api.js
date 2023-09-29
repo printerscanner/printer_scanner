@@ -174,7 +174,7 @@ const data = {
 	// synth: {
 	// 	title: "Building a Synth",
 	// 	description: "I am building a synth, watch the changes live.",
-	// 	link: "https://printerscanner.net/synth/",
+	// 	link: "https://printerscanner.github.io/synth/",
 	// 	year: '2023'
 	// },
 	"smiling-everyday": {
@@ -273,7 +273,7 @@ const data = {
 		description: "Need a brand but you're not a designer? This sophisticated algorithm will generate brand guidelines for you, and export a pattern library and custom stylesheet.",
 		category: "Web",
 		subcategory: "Graphic Design",
-		link: "https://printerscanner.net/automatic-brand-generator/",
+		link: "https://printerscanner.github.io/automatic-brand-generator/",
 		year: '2022'
 	},
 	"random-bible": {
