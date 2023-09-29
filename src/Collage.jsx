@@ -8,6 +8,8 @@ function Collage() {
 			<a href="/" className="home-button"><u>←</u></a>
 			<h1>Collage Generator</h1>
 			<p>I taught my computer to make collages for me. Here's everything it made.</p>
+			</div>
+
 			<div>
 				<div className="grid-layout collage">
 				{
@@ -16,7 +18,6 @@ function Collage() {
 					)
 				}
 				</div>
-			</div>
 			</div>
 		</article>
 	)
