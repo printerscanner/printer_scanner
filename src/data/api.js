@@ -121,7 +121,7 @@ const data = {
 		category: "Typeface",
 		description: "You've seen kitsch body fonts, but you haven't seen one that's literally my body. Great for resumes and businesses. If you are a corporation, please reach out directly regarding a business license.",
 		year: '2023',
-		downloadLink: 'https://printerscanner.net/BodySans-Regular.otf'
+		downloadLink: 'https://printerscanner.net/BodySans-Regular.zip'
 	},
 	everlaw: {
 		title: "Everlaw",
