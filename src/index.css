@@ -229,7 +229,7 @@ a:hover img {
 /* Blog */
 .blog {
 	margin: 0 20px;
-	width: 40%;
+	max-width: 40%;
 }
 
 .blog h3 {
@@ -292,6 +292,6 @@ a:hover img {
 		display: none;
 	}
 	.blog {
-		width: 100%;
+		max-width: 100%;
 	}
 }
