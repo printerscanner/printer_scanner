@@ -85,7 +85,6 @@ import hou_3 from "../assets/images/hou_3.mp4";
 import hou_4 from "../assets/images/hou_4.webp";
 
 import wolfpops from "../assets/images/wolfpops.webp";
-import PJT from "../assets/images/PJT.webp";
 import galaxy_interactive from "../assets/images/galaxy_interactive.webp";
 import galaxy from "../assets/images/galaxy.webp";
 import everlaw from "../assets/images/everlaw.webp";
@@ -94,6 +93,10 @@ import everlaw from "../assets/images/everlaw.webp";
 import body_1 from "../assets/images/body_2.webp";
 import body_2 from "../assets/images/body_1.webp";
 import body_3 from "../assets/images/body_3.webp";
+
+import coaster_1 from "../assets/images/coaster_1.webp";
+import coaster_3 from "../assets/images/coaster_3.webp";
+import coaster_4 from "../assets/images/coaster_4.webp";
 
 
 const data = {
@@ -105,6 +108,24 @@ const data = {
 	// 	description: "A website for an independent, ad-free leftist magazine of critical essays, poetry, fiction, and art.",
 	// 	year: '2023'
 	// },
+	"coaster-sans": {
+		title: "Coaster Sans",
+		img1: coaster_1,
+		img3: coaster_3,
+		img4: coaster_4,
+		year: '2023',
+		description: "A new chunky display font that will make you feel like you're riding the waves back home.",
+		content: "There's still some proofing on this font being done, so if you like it, give me a buzz at <a href='mailto:itsprinterscanner@gmail.com'>itsprinterscanner@gmail.com</a> and I'll let you know when v1.1 is out.",
+		downloadLink: 'https://printerscanner.net/CoasterSans-Regular.zip'
+	},
+	boring_books_club: {
+		img1: boring_book_club,
+		title: "Boring Book Club",
+		description: "I spent three years on my goal to become the first person in the world to ever read some of these books. I'm here to give you the scoop on the 17th Century, and I will warn you, it's not good.",
+		link: 'https://boringbooks.org',
+		category: "Website",
+		year: '2023'
+	},
 	galaxy_interactive: {
 		title: "Galaxy Interactive",
 		img1: galaxy_interactive,
@@ -139,14 +160,6 @@ const data = {
 		description: "A websystem for a cryptocurrency investment firm. Built with Fictive Kin, and with branding by Pentagram.",
 		year: '2023'
 	},
-	pjt: {
-		title: "PJT",
-		img1: PJT,
-		link: 'https://pjtpartners.com/',
-		category: "with Fictive Kin",
-		description: "A websystem for an advisory-focused investment bank.",
-		year: '2023'
-	},
 	sapiens_hate_club: {
 		title: "Sapiens Hate Club",
 		description: "Please join us. Please.",
@@ -154,14 +167,6 @@ const data = {
 		link: 'https://sapienshate.club',
 		category: "Website",
 		year: '2023'
-	},
-	boring_books_club: {
-		img1: boring_book_club,
-		title: "Boring Book Club",
-		description: "I spent three years on my goal to become the first person in the world to ever read some of these books. I'm here to give you the scoop on the 17th Century, and I will warn you, it's not good.",
-		link: 'https://boringbooks.org',
-		category: "Website",
-		year: '2022'
 	},
 	travel_vlog: {
 		title: "Dan & Abb Productions",
@@ -171,12 +176,12 @@ const data = {
 		category: "Vlog",
 		year: '2022'
 	},
-	// synth: {
-	// 	title: "Building a Synth",
-	// 	description: "I am building a synth, watch the changes live.",
-	// 	link: "https://printerscanner.github.io/synth/",
-	// 	year: '2023'
-	// },
+	synth: {
+		title: "Building a Synth",
+		description: "I am building a synth, watch the changes live.",
+		link: "https://printerscanner.github.io/synth/",
+		year: '2023'
+	},
 	"smiling-everyday": {
 		title: "Swimming in the Ocean, Smiling Everyday",
 		img1: smiling1,

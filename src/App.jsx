@@ -48,7 +48,7 @@ function App() {
   }, []);
 
   let productIds = Object.keys(data);
-	productIds.sort(function() {return Math.random() - 0.5;});
+	// productIds.sort(function() {return Math.random() - 0.5;});
 
   return (
     <div>
