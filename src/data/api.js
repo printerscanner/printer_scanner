@@ -72,12 +72,8 @@ import loch3 from "../assets/images/scanned_Loch_3.webp";
 
 
 import collage_1 from "../assets/images/collage_1.webp";
-import boring_book_club from "../assets/images/boring_book_club.webp";
 import vlog_1 from "../assets/images/vlog_1.webp";
 import sapiens_1 from "../assets/images/sapiens_1.webp";
-import mondrian_1 from "../assets/images/mondrian_1.webp";
-import roch_bot from "../assets/images/roch_bot.webp";
-import daguerreohype from "../assets/images/daguerreohype.webp";
 
 import hou_1 from "../assets/images/hou_1.webp";
 import hou_2 from "../assets/images/hou_2.webp";
@@ -85,7 +81,6 @@ import hou_3 from "../assets/images/hou_3.mp4";
 import hou_4 from "../assets/images/hou_4.webp";
 
 import wolfpops from "../assets/images/wolfpops.webp";
-import galaxy_interactive from "../assets/images/galaxy_interactive.webp";
 import galaxy from "../assets/images/galaxy.webp";
 import everlaw from "../assets/images/everlaw.webp";
 // import protean from "../assets/images/protean.webp";
@@ -97,6 +92,33 @@ import body_3 from "../assets/images/body_3.webp";
 import coaster_1 from "../assets/images/coaster_1.webp";
 import coaster_3 from "../assets/images/coaster_3.webp";
 import coaster_4 from "../assets/images/coaster_4.webp";
+
+
+import boring_book_club_thumb from "../assets/thumbnails/boring_book_club_thumb.webp";
+import april_3_thumb from "../assets/thumbnails/april_3_thumb.webp";
+import bible_1_thumb from "../assets/thumbnails/bible_1_thumb.webp";
+import body_2_thumb from "../assets/thumbnails/body_2_thumb.webp";
+import coaster_thumb from "../assets/thumbnails/coaster_1_thumb.webp";
+import collage_1_thumb from "../assets/thumbnails/collage_1_thumb.webp";
+import coptic_4_thumb from "../assets/thumbnails/coptic_4_thumb.webp";
+import daguerreohype_thumb from "../assets/thumbnails/daguerreohype_thumb.webp";
+import deconstructed_1_thumb from "../assets/thumbnails/deconstructed_1_thumb.webp";
+import everlaw_thumb from "../assets/thumbnails/everlaw_thumb.webp";
+import galaxy_interactive_thumb from "../assets/thumbnails/galaxy_interactive_thumb.webp";
+import galaxy_thumb from "../assets/thumbnails/galaxy_thumb.webp";
+import mondrian_1_thumb from "../assets/thumbnails/mondrian_1_thumb.webp";
+import radiozoa_2_thumb from "../assets/thumbnails/radiozoa_2_thumb.webp";
+import roch_bot_thumb from "../assets/thumbnails/roch_bot_thumb.webp";
+import sapiens_1_thumb from "../assets/thumbnails/sapiens_1_thumb.webp";
+import scanned_i_1_thumb from "../assets/thumbnails/scanned_i_1_thumb.webp";
+import scanned_Loch_2_thumb from "../assets/thumbnails/scanned_Loch_2_thumb.webp";
+import scanned_Moby_2_thumb from "../assets/thumbnails/scanned_Moby_2_thumb.webp";
+import scanned_polygons_1_thumb from "../assets/thumbnails/scanned_polygons_1_thumb.webp";
+import scanned_RNG_3_thumb from "../assets/thumbnails/scanned_RNG_3_thumb.webp";
+import scanned_sandwich_3_thumb from "../assets/thumbnails/scanned_sandwich_3_thumb.webp";
+import scanned_summer_5_thumb from "../assets/thumbnails/scanned_summer_5_thumb.webp";
+import smiling_1_thumb from "../assets/thumbnails/smiling_1_thumb.webp";
+import vlog_1_thumb from "../assets/thumbnails/vlog_1_thumb.webp";
 
 
 const data = {
@@ -111,6 +133,7 @@ const data = {
 	"coaster-sans": {
 		title: "Coaster Sans",
 		img1: coaster_1,
+		thumbnail: coaster_thumb,
 		img3: coaster_3,
 		img4: coaster_4,
 		year: '2023',
@@ -119,7 +142,7 @@ const data = {
 		downloadLink: 'https://printerscanner.net/CoasterSans-Regular.zip'
 	},
 	boring_books_club: {
-		img1: boring_book_club,
+		thumbnail: boring_book_club_thumb,
 		title: "Boring Book Club",
 		description: "I spent three years on my goal to become the first person in the world to ever read some of these books. I'm here to give you the scoop on the 17th Century, and I will warn you, it's not good.",
 		link: 'https://boringbooks.org',
@@ -128,7 +151,7 @@ const data = {
 	},
 	galaxy_interactive: {
 		title: "Galaxy Interactive",
-		img1: galaxy_interactive,
+		thumbnail: galaxy_interactive_thumb,
 		link: 'https://interactive.galaxy.com',
 		category: "with Fictive Kin",
 		description: "A web experience for Galaxy Interactive, a venture fund for games and related technology.",
@@ -136,6 +159,7 @@ const data = {
 	},
 	"body-sans": {
 		title: "(my) body sans",
+		thumbnail: body_2_thumb,
 		img1: body_1,
 		img2: body_2,
 		img3: body_3,
@@ -146,6 +170,7 @@ const data = {
 	},
 	everlaw: {
 		title: "Everlaw",
+		thumbnail: everlaw_thumb,
 		img1: everlaw,
 		link: 'https://everlaw.com/',
 		category: "with Fictive Kin",
@@ -154,6 +179,7 @@ const data = {
 	},
 	galaxy: {
 		title: "Galaxy",
+		thumbnail: galaxy_thumb,
 		img1: galaxy,
 		link: 'https://galaxy.com/',
 		category: "with Fictive Kin",
@@ -163,6 +189,7 @@ const data = {
 	sapiens_hate_club: {
 		title: "Sapiens Hate Club",
 		description: "Please join us. Please.",
+		thumbnail: sapiens_1_thumb,
 		img1: sapiens_1,
 		link: 'https://sapienshate.club',
 		category: "Website",
@@ -170,6 +197,7 @@ const data = {
 	},
 	travel_vlog: {
 		title: "Dan & Abb Productions",
+		thumbnail: vlog_1_thumb,
 		img1: vlog_1,
 		description: "A surrealist travel vlog. My mom posted one of our videos recently on Facebook and it got 200x the average view count, so please subscribe, for her sake.",
 		link: "https://www.youtube.com/channel/UCam9p5fiexMSluubYBs6sNw",
@@ -184,6 +212,7 @@ const data = {
 	},
 	"smiling-everyday": {
 		title: "Swimming in the Ocean, Smiling Everyday",
+		thumbnail: smiling_1_thumb,
 		img1: smiling1,
 		img2: smiling2,
 		img3: smiling3,
@@ -196,13 +225,9 @@ const data = {
 		subcategory: "zine",
 		year: '2022'
 	},
-	// "dear-reader-dont-read": {
-	// 	title: "Dear Reader. Don't Read.",
-	// 	img1: reader,
-	// 	year: '2022'
-	// },
 	polygons: {
 		title: "Polygons",
+		thumbnail: scanned_polygons_1_thumb,
 		img1: polygons1,
 		img2: polygons2,
 		img3: polygons3,
@@ -219,6 +244,7 @@ const data = {
 		description:
 			"An encyclopedia of all convex and star polygons from 0 up to 28 edges, except I destroyed it.",
 		category: "Print",
+		thumbnail: deconstructed_1_thumb,
 		img1: deconstructed1,
 		img2: deconstructed2,
 		img3: deconstructed3,
@@ -228,6 +254,7 @@ const data = {
 	},
 	"coptic-stitch": {
 		title: "Wallpaper Sample Book",
+		thumbnail: coptic_4_thumb,
 		img1: coptic4,
 		img2: coptic2,
 		img3: coptic3,
@@ -240,6 +267,7 @@ const data = {
 	},
 	april: {
 		title: "April",
+		thumbnail: april_3_thumb,
 		img1: april3,
 		img2: april5,
 		img3: april1,
@@ -254,6 +282,7 @@ const data = {
 	},
 	collages: {
 		title: "Collage Generator",
+		thumbnail: collage_1_thumb,
 		img1: collage_1,
 		description:
 			"Using the simplest algorithm in existance, I wrote a program teaching my computer to make collages. To my surprise, each one turned out more beautiful and moving than the last, telling stories I would not have been brave enough to craft on my own. Really makes you think.",
@@ -264,6 +293,7 @@ const data = {
 	},
 	"sandwich-book": {
 		title: "Sandwiches: An Investigation",
+		thumbnail: scanned_sandwich_3_thumb,
 		img1: sandwich3,
 		img2: sandwich2,
 		img3: sandwich1,
@@ -283,6 +313,7 @@ const data = {
 	},
 	"random-bible": {
 		title: "The Random Bible",
+		thumbnail: bible_1_thumb,
 		img1: bible2,
 		img2: bible1,
 		img3: bible3,
@@ -298,7 +329,7 @@ const data = {
 		title: "DaguerreoHype",
 		description:
 			"Daguerreotype photographs historically took up to fifteen minutes to expose, requiring incredible patience of both the photographer and the subject. Now, you can scroll really fast past them on your phone. Photographs pulled from the Library of Congress API.",
-		img1: daguerreohype,
+		thumbnail: daguerreohype_thumb,
 		category: "Bot",
 		subcategory: "Twitter",
 		link: "https://twitter.com/daguerreohype",
@@ -316,7 +347,7 @@ const data = {
 		title: "Roch Bot",
 		description:
 			"François VI, Duc de La Rochefoucauld, Prince de Marcillac would have liked Twitter. Now, posthumously, he tweets his Maximes.",
-		img1: roch_bot,
+		thumbnail: roch_bot_thumb,
 		category: "Bot",
 		subcategory: "Twitter",
 		link: "https://twitter.com/roch_bot",
@@ -324,6 +355,7 @@ const data = {
 	},
 	"random-number-generators": {
 		title: "Random Number Generators",
+		thumbnail: scanned_RNG_3_thumb,
 		img1: rng3,
 		img2: rng2,
 		img3: rng1,
@@ -337,6 +369,7 @@ const data = {
 	"moby-dick": {
 		title: "Moby-Dick",
 		subtitle: "But, every line it gets bigger",
+		thumbnail: scanned_Moby_2_thumb,
 		img1: moby2,
 		img2: moby5,
 		img3: moby3,
@@ -351,6 +384,7 @@ const data = {
 	},
 	"summer-book": {
 		title: "The Summer Book",
+		thumbnail: scanned_summer_5_thumb,
 		img1: summer1,
 		img2: summer2,
 		img3: summer3,
@@ -363,6 +397,7 @@ const data = {
 	"i-but": {
 		title: "i",
 		subtitle: "But, every line it gets bigger",
+		thumbnail: scanned_i_1_thumb,
 		img1: i1,
 		img2: i2,
 		img3: i3,
@@ -374,6 +409,7 @@ const data = {
 	},
 	"loch-lomond": {
 		title: "Loch Lomond",
+		thumbnail: scanned_Loch_2_thumb,
 		img1: loch2,
 		img2: loch3,
 		img3: loch1,
@@ -385,7 +421,7 @@ const data = {
 	mondrian_generator: {
 		title: "Mondrian Generator",
 		subtitle: "Bot",
-		img1: mondrian_1,
+		thumbnail: mondrian_1_thumb,
 		description:
 		"This bot procedurally generates a variation of Mondrian-style artwork, and automatically publishes it using the Instagram API.",
 		category: "Bot",
@@ -405,6 +441,7 @@ const data = {
 	},
 	radiozoa: {
 		title: "Radiozoa",
+		thumbnail: radiozoa_2_thumb,
 		img1: radiozoa3,
 		img2: radiozoa2,
 		img3: radiozoa1,
@@ -417,7 +454,7 @@ const data = {
 	},
 	wolfpops: {
 		title: "wolfpops",
-		img1: wolfpops,
+		thumbnail: wolfpops,
 		description: "This popscicle business went out of business shortly after I designed and developed this website. Probably no correlation there.",
 		category: "Graphic Design",
 		year: '2016',

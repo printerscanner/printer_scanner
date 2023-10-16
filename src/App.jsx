@@ -73,7 +73,7 @@ function App() {
             key={id}
           >
             <>
-              {data[id].img1 && !data[id].mov && <img src={data[id].img1} alt={data[id].title} />}
+              {data[id].thumbnail && !data[id].mov && <img src={data[id].thumbnail} alt={data[id].title} />}
               {data[id].mov && <video autoPlay={true} muted={true}><source autoPlay src={data[id].mov} type="video/mp4" /></video>}
               <div className="text">
                 <p>{data[id].link ? <span>↗ </span> : ''} <b>{data[id].title}</b></p>
