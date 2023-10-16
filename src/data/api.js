@@ -130,17 +130,17 @@ const data = {
 	// 	description: "A website for an independent, ad-free leftist magazine of critical essays, poetry, fiction, and art.",
 	// 	year: '2023'
 	// },
-	"coaster-sans": {
-		title: "Coaster Sans",
-		img1: coaster_1,
-		thumbnail: coaster_thumb,
-		img3: coaster_3,
-		img4: coaster_4,
-		year: '2023',
-		description: "A new chunky display font that will make you feel like you're riding the waves back home.",
-		content: "There's still some proofing on this font being done, so if you like it, give me a buzz at <a href='mailto:itsprinterscanner@gmail.com'>itsprinterscanner@gmail.com</a> and I'll let you know when v1.1 is out.",
-		downloadLink: 'https://printerscanner.net/CoasterSans-Regular.zip'
-	},
+	// "coaster-sans": {
+	// 	title: "Coaster Sans",
+	// 	img1: coaster_1,
+	// 	thumbnail: coaster_thumb,
+	// 	img3: coaster_3,
+	// 	img4: coaster_4,
+	// 	year: '2023',
+	// 	description: "A new chunky display font that will make you feel like you're riding the waves back home.",
+	// 	content: "There's still some proofing on this font being done, so if you like it, give me a buzz at <a href='mailto:itsprinterscanner@gmail.com'>itsprinterscanner@gmail.com</a> and I'll let you know when v1.1 is out.",
+	// 	downloadLink: 'https://printerscanner.net/CoasterSans-Regular.zip'
+	// },
 	boring_books_club: {
 		thumbnail: boring_book_club_thumb,
 		title: "Boring Book Club",
