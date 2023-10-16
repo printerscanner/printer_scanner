@@ -80,7 +80,7 @@ import hou_2 from "../assets/images/hou_2.webp";
 import hou_3 from "../assets/images/hou_3.mp4";
 import hou_4 from "../assets/images/hou_4.webp";
 
-import wolfpops from "../assets/images/wolfpops.webp";
+import wolfpops_thumb from "../assets/thumbnails/wolfpops_thumb.webp";
 import galaxy from "../assets/images/galaxy.webp";
 import everlaw from "../assets/images/everlaw.webp";
 // import protean from "../assets/images/protean.webp";
@@ -89,16 +89,16 @@ import body_1 from "../assets/images/body_2.webp";
 import body_2 from "../assets/images/body_1.webp";
 import body_3 from "../assets/images/body_3.webp";
 
-import coaster_1 from "../assets/images/coaster_1.webp";
-import coaster_3 from "../assets/images/coaster_3.webp";
-import coaster_4 from "../assets/images/coaster_4.webp";
+// import coaster_1 from "../assets/images/coaster_1.webp";
+// import coaster_3 from "../assets/images/coaster_3.webp";
+// import coaster_4 from "../assets/images/coaster_4.webp";
+// import coaster_thumb from "../assets/thumbnails/coaster_1_thumb.webp";
 
 
 import boring_book_club_thumb from "../assets/thumbnails/boring_book_club_thumb.webp";
 import april_3_thumb from "../assets/thumbnails/april_3_thumb.webp";
 import bible_1_thumb from "../assets/thumbnails/bible_1_thumb.webp";
 import body_2_thumb from "../assets/thumbnails/body_2_thumb.webp";
-import coaster_thumb from "../assets/thumbnails/coaster_1_thumb.webp";
 import collage_1_thumb from "../assets/thumbnails/collage_1_thumb.webp";
 import coptic_4_thumb from "../assets/thumbnails/coptic_4_thumb.webp";
 import daguerreohype_thumb from "../assets/thumbnails/daguerreohype_thumb.webp";
@@ -454,7 +454,7 @@ const data = {
 	},
 	wolfpops: {
 		title: "wolfpops",
-		thumbnail: wolfpops,
+		thumbnail: wolfpops_thumb,
 		description: "This popscicle business went out of business shortly after I designed and developed this website. Probably no correlation there.",
 		category: "Graphic Design",
 		year: '2016',
