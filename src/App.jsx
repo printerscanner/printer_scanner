@@ -60,7 +60,7 @@ function App() {
         <p>Physical ephemera is by contrast much more long lasting. We will hold on to a scrap of paper with a drawing from our loved ones our whole lives. Even with delicate artifacts like paper, our instinct for preservation has allowed our species us to reach back thousands of years.</p>
 
         <p>Printing remains an expensive, inaccessible medium. Words that are printed and disseminated are still allowed only to the celebrities of the world (Prince Harry). It's hard today to even print anything! Do you have a working printer in your house? I didn't think so.</p>
-        <p><b>printer_scanner</b> is a laboratory of experimentation. We explore the authority of printed and digital matter, and the worth of cataloguing and preserving. We think of the experience of art as a state of play with out conception of an end, made by choices as small as turning down a new street in a familiar city.</p>
+        <p><b>printer_scanner</b> is a laboratory of experimentation. We explore the authority of printed and digital matter, and the worth of cataloguing and preserving. We think of the experience of art as a state of play without conception of an end, made by choices as small as turning down a new street in a familiar city.</p>
         <p>
           If you would like to learn more or get in touch, our email is <a href="mailto:itsprinterscanner@gmail.com"> itsprinterscanner@gmail.com</a>. You can also find us on <a href="https://instagram.com/printer_scanner">Instagram</a> and on <a href="https://github.com/printerscanner">Github</a>.
         </p>
