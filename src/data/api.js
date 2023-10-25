@@ -73,7 +73,6 @@ import loch3 from "../assets/images/scanned_Loch_3.webp";
 
 import collage_1 from "../assets/images/collage_1.webp";
 import vlog_1 from "../assets/images/vlog_1.webp";
-import sapiens_1 from "../assets/images/sapiens_1.webp";
 
 import hou_1 from "../assets/images/hou_1.webp";
 import hou_2 from "../assets/images/hou_2.webp";
@@ -190,7 +189,6 @@ const data = {
 		title: "Sapiens Hate Club",
 		description: "Please join us. Please.",
 		thumbnail: sapiens_1_thumb,
-		img1: sapiens_1,
 		link: 'https://sapienshate.club',
 		category: "Website",
 		year: '2023'
