@@ -79,19 +79,18 @@ import hou_2 from "../assets/images/hou_2.webp";
 import hou_3 from "../assets/images/hou_3.mp4";
 import hou_4 from "../assets/images/hou_4.webp";
 
-import wolfpops_thumb from "../assets/thumbnails/wolfpops_thumb.webp";
 import galaxy from "../assets/images/galaxy.webp";
 import everlaw from "../assets/images/everlaw.webp";
-// import protean from "../assets/images/protean.webp";
+import protean from "../assets/images/protean.webp";
 
 import body_1 from "../assets/images/body_2.webp";
 import body_2 from "../assets/images/body_1.webp";
 import body_3 from "../assets/images/body_3.webp";
 
-// import coaster_1 from "../assets/images/coaster_1.webp";
-// import coaster_3 from "../assets/images/coaster_3.webp";
-// import coaster_4 from "../assets/images/coaster_4.webp";
-// import coaster_thumb from "../assets/thumbnails/coaster_1_thumb.webp";
+import coaster_1 from "../assets/images/coaster_1.webp";
+import coaster_3 from "../assets/images/coaster_3.webp";
+import coaster_4 from "../assets/images/coaster_4.webp";
+import coaster_thumb from "../assets/thumbnails/coaster_1_thumb.webp";
 
 
 import boring_book_club_thumb from "../assets/thumbnails/boring_book_club_thumb.webp";
@@ -123,25 +122,37 @@ const data = {
 	// protean: {
 	// 	title: "Protean Magazine",
 	// 	img1: protean,
+	// 	featured: true,
 	// 	link: 'https://proteanmag.com/',
 	// 	category: "Website",
 	// 	description: "A website for an independent, ad-free leftist magazine of critical essays, poetry, fiction, and art.",
 	// 	year: '2023'
 	// },
-	// "coaster-sans": {
-	// 	title: "Coaster Sans",
-	// 	img1: coaster_1,
-	// 	thumbnail: coaster_thumb,
-	// 	img3: coaster_3,
-	// 	img4: coaster_4,
+	// overbrowsing: {
+	// 	title: "Overbrowsing",
+	// 	img1: protean,
+	// 	link: 'https://proteanmag.com/',
+	// 	category: "Website",
+	// 	description: "A website for an independent, ad-free leftist magazine of critical essays, poetry, fiction, and art.",
 	// 	year: '2023',
-	// 	description: "A new chunky display font that will make you feel like you're riding the waves back home.",
-	// 	content: "There's still some proofing on this font being done, so if you like it, give me a buzz at <a href='mailto:itsprinterscanner@gmail.com'>itsprinterscanner@gmail.com</a> and I'll let you know when v1.1 is out.",
-	// 	downloadLink: 'https://printerscanner.net/CoasterSans-Regular.zip'
+	// 	featured: true
 	// },
+	"coaster-sans": {
+		title: "Coaster Sans",
+		img1: coaster_1,
+		thumbnail: coaster_thumb,
+		img3: coaster_3,
+		img4: coaster_4,
+		featured: true,
+		year: '2023',
+		description: "A new chunky display font that will make you feel like you're riding the waves back home.",
+		content: "There's still some proofing on this font being done, so if you like it, give me a buzz at <a href='mailto:itsprinterscanner@gmail.com'>itsprinterscanner@gmail.com</a> and I'll let you know when v1.1 is out.",
+		downloadLink: 'https://printerscanner.net/CoasterSans.zip'
+	},
 	boring_books_club: {
 		thumbnail: boring_book_club_thumb,
-		title: "Boring Book Club",
+		title: "Boring Books & More",
+		featured: true,
 		description: "I spent three years on my goal to become the first person in the world to ever read some of these books. I'm here to give you the scoop on the 17th Century, and I will warn you, it's not good.",
 		link: 'https://boringbooks.org',
 		category: "Website",
@@ -151,6 +162,7 @@ const data = {
 		title: "Galaxy Interactive",
 		thumbnail: galaxy_interactive_thumb,
 		link: 'https://interactive.galaxy.com',
+		featured: true,
 		category: "with Fictive Kin",
 		description: "A web experience for Galaxy Interactive, a venture fund for games and related technology.",
 		year: '2023'
@@ -160,6 +172,7 @@ const data = {
 		thumbnail: body_2_thumb,
 		img1: body_1,
 		img2: body_2,
+		featured: true,
 		img3: body_3,
 		category: "Typeface",
 		description: "You've seen kitsch body fonts, but you haven't seen one that's literally my body. Great for resumes and businesses. If you are a corporation, please reach out directly regarding a business license.",
@@ -170,6 +183,7 @@ const data = {
 		title: "Everlaw",
 		thumbnail: everlaw_thumb,
 		img1: everlaw,
+		featured: true,
 		link: 'https://everlaw.com/',
 		category: "with Fictive Kin",
 		description: "A websystem for a platform for document analysis for law firms, government, and corporations.",
@@ -180,6 +194,7 @@ const data = {
 		thumbnail: galaxy_thumb,
 		img1: galaxy,
 		link: 'https://galaxy.com/',
+		featured: true,
 		category: "with Fictive Kin",
 		description: "A websystem for a cryptocurrency investment firm. Built with Fictive Kin, and with branding by Pentagram.",
 		year: '2023'
@@ -189,6 +204,7 @@ const data = {
 		description: "Please join us. Please.",
 		link: 'https://sapienshate.club',
 		category: "Website",
+		featured: true,
 		year: '2023'
 	},
 	travel_vlog: {
@@ -215,6 +231,7 @@ const data = {
 		img4: smiling4,
 		img5: smiling5,
 		img6: smiling6,
+		featured: true,
 		description:
 		"A zine about being lost after a breakup.",
 		category: "Print",
@@ -230,6 +247,7 @@ const data = {
 		img4: polygons4,
 		img5: polygons5,
 		img6: polygons6,
+		featured: true,
 		description: "Regular polygons all follow a mathematic pattern, that can be numerically and visually categorized. This book is a visual encyclopedia of that organization, starting from a point, then a line, then a triangle, this book maps of all convex and star polygons up to 28 edges.",
 		category: "Print",
 		subcategory: "Illustration",
@@ -246,19 +264,6 @@ const data = {
 		img3: deconstructed3,
 		img4: deconstructed4,
 		subcategory: "Experimental",
-		year: '2022'
-	},
-	"coptic-stitch": {
-		title: "Wallpaper Sample Book",
-		thumbnail: coptic_4_thumb,
-		img1: coptic4,
-		img2: coptic2,
-		img3: coptic3,
-		img4: coptic1,
-		description:
-		"A handmade book, coptic stitched by hand, created entirely from a book of wallpaper samples I found on the street.",
-		category: "Print",
-		subcategory: "Coptic Stitch",
 		year: '2022'
 	},
 	april: {
@@ -280,6 +285,7 @@ const data = {
 		title: "Collage Generator",
 		thumbnail: collage_1_thumb,
 		img1: collage_1,
+		featured: true,
 		description:
 			"Using the simplest algorithm in existance, I wrote a program teaching my computer to make collages. To my surprise, each one turned out more beautiful and moving than the last, telling stories I would not have been brave enough to craft on my own. Really makes you think.",
 		category: "Bot",
@@ -447,14 +453,6 @@ const data = {
 		category: "Website",
 		subcategory: "Brand",
 		year: '2016'
-	},
-	wolfpops: {
-		title: "wolfpops",
-		thumbnail: wolfpops_thumb,
-		description: "This popscicle business went out of business shortly after I designed and developed this website. Probably no correlation there.",
-		category: "Graphic Design",
-		year: '2016',
-		link: "https://wolfpops.com"
 	},
 };
 
