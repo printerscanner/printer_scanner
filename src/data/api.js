@@ -108,7 +108,6 @@ import galaxy_thumb from "../assets/thumbnails/galaxy_thumb.webp";
 import mondrian_1_thumb from "../assets/thumbnails/mondrian_1_thumb.webp";
 import radiozoa_2_thumb from "../assets/thumbnails/radiozoa_2_thumb.webp";
 import roch_bot_thumb from "../assets/thumbnails/roch_bot_thumb.webp";
-import sapiens_1_thumb from "../assets/thumbnails/sapiens_1_thumb.webp";
 import scanned_i_1_thumb from "../assets/thumbnails/scanned_i_1_thumb.webp";
 import scanned_Loch_2_thumb from "../assets/thumbnails/scanned_Loch_2_thumb.webp";
 import scanned_Moby_2_thumb from "../assets/thumbnails/scanned_Moby_2_thumb.webp";
@@ -188,7 +187,6 @@ const data = {
 	sapiens_hate_club: {
 		title: "Sapiens Hate Club",
 		description: "Please join us. Please.",
-		thumbnail: sapiens_1_thumb,
 		link: 'https://sapienshate.club',
 		category: "Website",
 		year: '2023'
