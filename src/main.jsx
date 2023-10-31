@@ -5,8 +5,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from './App.jsx'
-import Header from './Header.jsx'
 import Footer from './Footer.jsx'
+import Header from './Header.jsx'
 import Collage from './Collage.jsx'
 import Post from './Post.jsx'
 import './index.css'
@@ -46,7 +46,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       `}
     </style>
     <Header />
-    
       <RouterProvider router={router} />
     <Footer />
   </React.StrictMode>,

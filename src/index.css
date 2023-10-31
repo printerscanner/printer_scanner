@@ -29,6 +29,7 @@ body {
 	font-display: swap;
 	filter: invert();
 	color: inherit;
+	line-height: 1.5;
 }
 
 h2 {
@@ -126,6 +127,7 @@ article {
 }
 
 /* Grid */
+
 .grid-layout {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
@@ -212,6 +214,12 @@ a:hover img {
 	grid-row-end: span 1;
 }
 
+.span-all {
+	grid-column-start: 3;
+	grid-column-end: -1;
+	grid-row-end: span 1;
+}
+
 .grid-number {
 	font-size: 13px;
 	position: absolute;
@@ -278,6 +286,10 @@ button {
 	font-weight: bold;
 	text-decoration: underline;
 
+}
+
+.menu-link {
+	text-decoration: underline;
 }
 
 @media only screen and (max-width: 1000px) {

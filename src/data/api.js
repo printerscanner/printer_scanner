@@ -12,11 +12,6 @@ import polygons4 from "../assets/images/scanned_polygons_4.webp";
 import polygons5 from "../assets/images/scanned_polygons_2.webp";
 import polygons6 from "../assets/images/scanned_polygons_3.webp";
 
-import coptic1 from "../assets/images/coptic_1.webp";
-import coptic2 from "../assets/images/coptic_2.webp";
-import coptic3 from "../assets/images/coptic_3.webp";
-import coptic4 from "../assets/images/coptic_4.webp";
-
 import april1 from "../assets/images/april_1.webp";
 import april2 from "../assets/images/april_2.webp";
 import april3 from "../assets/images/april_3.webp";
@@ -98,7 +93,6 @@ import april_3_thumb from "../assets/thumbnails/april_3_thumb.webp";
 import bible_1_thumb from "../assets/thumbnails/bible_1_thumb.webp";
 import body_2_thumb from "../assets/thumbnails/body_2_thumb.webp";
 import collage_1_thumb from "../assets/thumbnails/collage_1_thumb.webp";
-import coptic_4_thumb from "../assets/thumbnails/coptic_4_thumb.webp";
 import daguerreohype_thumb from "../assets/thumbnails/daguerreohype_thumb.webp";
 import deconstructed_1_thumb from "../assets/thumbnails/deconstructed_1_thumb.webp";
 import everlaw_thumb from "../assets/thumbnails/everlaw_thumb.webp";
@@ -116,29 +110,14 @@ import scanned_sandwich_3_thumb from "../assets/thumbnails/scanned_sandwich_3_th
 import scanned_summer_5_thumb from "../assets/thumbnails/scanned_summer_5_thumb.webp";
 import smiling_1_thumb from "../assets/thumbnails/smiling_1_thumb.webp";
 import vlog_1_thumb from "../assets/thumbnails/vlog_1_thumb.webp";
+import overbrowsing from "../assets/thumbnails/overbrowsing_test_thumb.png";
+import sapiens_thumb from "../assets/thumbnails/sapiens_thumb.webp";
 
 
 const data = {
-	// protean: {
-	// 	title: "Protean Magazine",
-	// 	img1: protean,
-	// 	featured: true,
-	// 	link: 'https://proteanmag.com/',
-	// 	category: "Website",
-	// 	description: "A website for an independent, ad-free leftist magazine of critical essays, poetry, fiction, and art.",
-	// 	year: '2023'
-	// },
-	// overbrowsing: {
-	// 	title: "Overbrowsing",
-	// 	img1: protean,
-	// 	link: 'https://proteanmag.com/',
-	// 	category: "Website",
-	// 	description: "A website for an independent, ad-free leftist magazine of critical essays, poetry, fiction, and art.",
-	// 	year: '2023',
-	// 	featured: true
-	// },
 	"coaster-sans": {
 		title: "Coaster Sans",
+		category: "with Mother",
 		img1: coaster_1,
 		thumbnail: coaster_thumb,
 		img3: coaster_3,
@@ -149,13 +128,31 @@ const data = {
 		content: "There's still some proofing on this font being done, so if you like it, give me a buzz at <a href='mailto:itsprinterscanner@gmail.com'>itsprinterscanner@gmail.com</a> and I'll let you know when v1.1 is out.",
 		downloadLink: 'https://printerscanner.net/CoasterSans.zip'
 	},
+	protean: {
+		title: "Protean Magazine",
+		thumbnail: protean,
+		featured: true,
+		link: 'https://proteanmag.com/',
+		category: "Website",
+		description: "A website for an independent, ad-free leftist magazine of critical essays, poetry, fiction, and art.",
+		year: '2023'
+	},
+	overbrowsing: {
+		title: "Overbrowsing",
+		category: "with Headless Horse",
+		thumbnail: overbrowsing,
+		link: 'https://overbrowsing.com/',
+		description: "Fostering a deeper understanding of sustainable web design and development.",
+		year: '2023',
+		featured: true
+	},
 	boring_books_club: {
 		thumbnail: boring_book_club_thumb,
 		title: "Boring Books & More",
 		featured: true,
 		description: "I spent three years on my goal to become the first person in the world to ever read some of these books. I'm here to give you the scoop on the 17th Century, and I will warn you, it's not good.",
 		link: 'https://boringbooks.org',
-		category: "Website",
+		category: "Blog",
 		year: '2023'
 	},
 	galaxy_interactive: {
@@ -170,11 +167,11 @@ const data = {
 	"body-sans": {
 		title: "(my) body sans",
 		thumbnail: body_2_thumb,
+		category: "with Mother",
 		img1: body_1,
 		img2: body_2,
 		featured: true,
 		img3: body_3,
-		category: "Typeface",
 		description: "You've seen kitsch body fonts, but you haven't seen one that's literally my body. Great for resumes and businesses. If you are a corporation, please reach out directly regarding a business license.",
 		year: '2023',
 		downloadLink: 'https://printerscanner.net/BodySans-Regular.zip'
@@ -201,6 +198,7 @@ const data = {
 	},
 	sapiens_hate_club: {
 		title: "Sapiens Hate Club",
+		thumbnail: sapiens_thumb,
 		description: "Please join us. Please.",
 		link: 'https://sapienshate.club',
 		category: "Website",
