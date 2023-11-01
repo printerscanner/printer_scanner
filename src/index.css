@@ -140,6 +140,10 @@ article {
 	grid-auto-rows: minmax(25px, auto);
 }
 
+.condensed-grid--secondary {
+	margin-top: 0;
+}
+
 .condensed-grid .grid-item {
 	padding: 1rem;
 }
