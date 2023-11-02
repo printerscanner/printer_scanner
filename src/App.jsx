@@ -1,7 +1,6 @@
-/* eslint-disable react/prop-types */
-import { useState } from "react";
-import data from './data/api.js'
-import CondensedGrid from './CondensedGrid.jsx'
+import { useState, useEffect } from "react";
+import data from './data/api.js';
+import CondensedGrid from './CondensedGrid.jsx';
 
 const randomClass = (value) => {
   const result = Math.floor(Math.random() * value);
@@ -15,9 +14,11 @@ const randomClass = (value) => {
   }
 };
 
-
 function App() {
-  const [filter, setFilter] = useState("featured");
+  const [filter, setFilter] = useState(() => {
+    // Initialize filter from localStorage or use "featured" as the default
+    return localStorage.getItem("filter") || "featured";
+  });
   const [showAbout, setShowAbout] = useState(false);
 
   let productIds = Object.keys(data);
@@ -34,26 +35,44 @@ function App() {
   };
 
   const handleFilterClick = (selectedFilter) => {
-    setShowAbout(false); // Hide the About section when a filter is selected
+    setShowAbout(false);
     setFilter(selectedFilter);
+
+    // Save the selected filter in localStorage
+    localStorage.setItem("filter", selectedFilter);
   };
 
+  useEffect(() => {
+    // Add event listener for browser back/forward navigation
+    window.addEventListener("popstate", () => {
+      // Retrieve the filter value from localStorage and set it
+      const savedFilter = localStorage.getItem("filter");
+      if (savedFilter) {
+        setFilter(savedFilter);
+      }
+    });
+
+    return () => {
+      // Remove the event listener when the component unmounts
+      window.removeEventListener("popstate", () => {});
+    };
+  }, []);
 
   return (
     <div>
-          <>
-      <CondensedGrid
+      <>
+        <CondensedGrid
           filter={filter}
           setFilter={handleFilterClick}
           showAbout={showAbout}
           toggleAbout={toggleAbout}
         />
-      <div className="grid-layout">
+        <div className="grid-layout">
       {!showAbout ? (
       <div className="grid-item span-2 text">
-        <p><b>printer_scanner</b> is a laboratory of experimentation. We explore the authority of printed and digital matter. We think of the experience of art as a state of play without conception of an end, made by choices as small as turning down a new street in a familiar city.</p>
+        <p><b>printer_scanner</b> is a laboratory of experimentation. We explore authority in printed and digital matter. We think of the experience of art as a state of play without conception of an end, made by choices as small as turning down a new street in a familiar city.</p>
         <p>
-          If you would like to learn more or get in touch, our email is <a href="mailto:itsprinterscanner@gmail.com"> itsprinterscanner@gmail.com</a>. You can also find us on <a href="https://instagram.com/printer_scanner">Instagram</a> and on <a href="https://github.com/printerscanner">Github</a>.
+          If you would like to learn more or get in touch, our email is <a href="mailto:itsprinterscanner@gmail.com"> itsprinterscanner@gmail.com</a>. You can also find us on <a href="https://www.are.na/printer-scanner/">are.na</a>, <a href="https://instagram.com/printer_scanner">Instagram</a> and on <a href="https://github.com/printerscanner">Github</a>.
         </p>
 				</div>
         ): (
@@ -64,9 +83,9 @@ function App() {
               <p>Physical ephemera is by contrast much more long lasting. We will hold on to a scrap of paper with a drawing from our loved ones our whole lives. Even with delicate artifacts like paper, our instinct for preservation has allowed our species us to reach back thousands of years.</p>
       
               <p>Printing remains an expensive, inaccessible medium. Words that are printed and disseminated are still allowed only to the celebrities of the world (Prince Harry). It's hard today to even print anything! Do you have a working printer in your house? I didn't think so.</p>
-              <p><b>printer_scanner</b> is a laboratory of experimentation. We explore the authority of printed and digital matter. We think of the experience of art as a state of play without conception of an end, made by choices as small as turning down a new street in a familiar city.</p>
+              <p><b>printer_scanner</b> is a laboratory of experimentation. We explore authority in printed and digital matter. We think of the experience of art as a state of play without conception of an end, made by choices as small as turning down a new street in a familiar city.</p>
               <p>
-                If you would like to learn more or get in touch, our email is <a href="mailto:itsprinterscanner@gmail.com"> itsprinterscanner@gmail.com</a>. You can also find us on <a href="https://instagram.com/printer_scanner">Instagram</a> and on <a href="https://github.com/printerscanner">Github</a>.
+                If you would like to learn more or get in touch, our email is <a href="mailto:itsprinterscanner@gmail.com"> itsprinterscanner@gmail.com</a>. You can also find us on <a href="https://www.are.na/printer-scanner/">are.na</a>, <a href="https://instagram.com/printer_scanner">Instagram</a> and on <a href="https://github.com/printerscanner">Github</a>.
               </p>
             </div>
           </div>

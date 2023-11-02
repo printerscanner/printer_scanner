@@ -115,6 +115,13 @@ import sapiens_thumb from "../assets/thumbnails/sapiens_thumb.webp";
 
 
 const data = {
+	"bigger-every-click": {
+		title: "Bigger Every Click",
+		category: "website",
+		year: '2023',
+		description: "Go to the website and decide if you want to click the button. Click the button and the text gets bigger. Don't click it and the text stays the same. Someday this website will be unreadable.",
+		link: 'https://bigger-every-click.printerscanner.net/'
+	},
 	"coaster-sans": {
 		title: "Coaster Sans",
 		category: "with Mother",
@@ -128,24 +135,24 @@ const data = {
 		content: "There's still some proofing on this font being done, so if you like it, give me a buzz at <a href='mailto:itsprinterscanner@gmail.com'>itsprinterscanner@gmail.com</a> and I'll let you know when v1.1 is out.",
 		downloadLink: 'https://printerscanner.net/CoasterSans.zip'
 	},
-	protean: {
-		title: "Protean Magazine",
-		thumbnail: protean,
-		featured: true,
-		link: 'https://proteanmag.com/',
-		category: "Website",
-		description: "A website for an independent, ad-free leftist magazine of critical essays, poetry, fiction, and art.",
-		year: '2023'
-	},
-	overbrowsing: {
-		title: "Overbrowsing",
-		category: "with Headless Horse",
-		thumbnail: overbrowsing,
-		link: 'https://overbrowsing.com/',
-		description: "Fostering a deeper understanding of sustainable web design and development.",
-		year: '2023',
-		featured: true
-	},
+	// protean: {
+	// 	title: "Protean Magazine",
+	// 	thumbnail: protean,
+	// 	featured: true,
+	// 	link: 'https://proteanmag.com/',
+	// 	category: "Website",
+	// 	description: "A website for an independent, ad-free leftist magazine of critical essays, poetry, fiction, and art.",
+	// 	year: '2023'
+	// },
+	// overbrowsing: {
+	// 	title: "Overbrowsing",
+	// 	category: "with Headless Horse",
+	// 	thumbnail: overbrowsing,
+	// 	link: 'https://overbrowsing.com/',
+	// 	description: "Fostering a deeper understanding of sustainable web design and development.",
+	// 	year: '2023',
+	// 	featured: true
+	// },
 	boring_books_club: {
 		thumbnail: boring_book_club_thumb,
 		title: "Boring Books & More",
@@ -289,7 +296,8 @@ const data = {
 		category: "Bot",
 		subcategory: "Graphic Design",
 		link: "/collage",
-		year: '2022'
+		year: '2022',
+		githubLink: 'https://github.com/printerscanner/collage-generator'
 	},
 	"sandwich-book": {
 		title: "Sandwiches: An Investigation",

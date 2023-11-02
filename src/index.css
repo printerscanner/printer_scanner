@@ -41,10 +41,15 @@ h5 {
 	margin-top: 0;
 }
 
-a {
+a, button {
 	color: inherit;
-	transition: .5s;
+	transition: .2s;
 	text-decoration: none;
+}
+
+a:hover, button:hover {
+	opacity: .6;
+	cursor: pointer;
 }
 
 .text a {

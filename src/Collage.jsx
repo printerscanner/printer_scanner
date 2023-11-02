@@ -8,6 +8,7 @@ function Collage() {
 			<a href="/" className="home-button"><u>←</u></a>
 			<h1>Collage Generator</h1>
 			<p>I taught my computer to make collages for me. Here's everything it made.</p>
+			<a href="https://github.com/printerscanner/collage-generator">↗ <u>View on Github</u></a>
 			</div>
 
 			<div>
