@@ -76,7 +76,6 @@ import hou_4 from "../assets/images/hou_4.webp";
 
 import galaxy from "../assets/images/galaxy.webp";
 import everlaw from "../assets/images/everlaw.webp";
-import protean from "../assets/images/protean.webp";
 
 import body_1 from "../assets/images/body_2.webp";
 import body_2 from "../assets/images/body_1.webp";
@@ -110,15 +109,17 @@ import scanned_sandwich_3_thumb from "../assets/thumbnails/scanned_sandwich_3_th
 import scanned_summer_5_thumb from "../assets/thumbnails/scanned_summer_5_thumb.webp";
 import smiling_1_thumb from "../assets/thumbnails/smiling_1_thumb.webp";
 import vlog_1_thumb from "../assets/thumbnails/vlog_1_thumb.webp";
-import overbrowsing from "../assets/thumbnails/overbrowsing_test_thumb.png";
+// import overbrowsing from "../assets/thumbnails/overbrowsing_test_thumb.png";
+// import protean from "../assets/images/protean.webp";
 import sapiens_thumb from "../assets/thumbnails/sapiens_thumb.webp";
 
 
 const data = {
 	"bigger-every-click": {
 		title: "Bigger Every Click",
-		category: "website",
+		category: "Website",
 		year: '2023',
+		featured: true,
 		description: "Go to the website and decide if you want to click the button. Click the button and the text gets bigger. Don't click it and the text stays the same. Someday this website will be unreadable.",
 		link: 'https://bigger-every-click.printerscanner.net/'
 	},
@@ -187,7 +188,6 @@ const data = {
 		title: "Everlaw",
 		thumbnail: everlaw_thumb,
 		img1: everlaw,
-		featured: true,
 		link: 'https://everlaw.com/',
 		category: "with Fictive Kin",
 		description: "A websystem for a platform for document analysis for law firms, government, and corporations.",
