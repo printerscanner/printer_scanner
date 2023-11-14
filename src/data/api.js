@@ -115,14 +115,14 @@ import sapiens_thumb from "../assets/thumbnails/sapiens_thumb.webp";
 
 
 const data = {
-	"bigger-every-click": {
-		title: "Bigger Every Click",
-		category: "Website",
-		year: '2023',
-		featured: true,
-		description: "Go to the website and decide if you want to click the button. Click the button and the text gets bigger. Don't click it and the text stays the same. Someday this website will be unreadable.",
-		link: 'https://bigger-every-click.printerscanner.net/'
-	},
+	// "bigger-every-click": {
+	// 	title: "Bigger Every Click",
+	// 	category: "Website",
+	// 	year: '2023',
+	// 	featured: true,
+	// 	description: "Go to the website and decide if you want to click the button. Click the button and the text gets bigger. Don't click it and the text stays the same. Someday this website will be unreadable.",
+	// 	link: 'https://bigger-every-click.printerscanner.net/'
+	// },
 	"coaster-sans": {
 		title: "Coaster Sans",
 		category: "with Mother",
@@ -221,12 +221,12 @@ const data = {
 		category: "Vlog",
 		year: '2022'
 	},
-	synth: {
-		title: "Building a Synth",
-		description: "I am building a synth, watch the changes live.",
-		link: "https://printerscanner.github.io/synth/",
-		year: '2023'
-	},
+	// synth: {
+	// 	title: "Building a Synth",
+	// 	description: "I am building a synth, watch the changes live.",
+	// 	link: "https://printerscanner.github.io/synth/",
+	// 	year: '2023'
+	// },
 	"smiling-everyday": {
 		title: "Swimming in the Ocean, Smiling Everyday",
 		thumbnail: smiling_1_thumb,
