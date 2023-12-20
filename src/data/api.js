@@ -74,8 +74,8 @@ import hou_2 from "../assets/images/hou_2.webp";
 import hou_3 from "../assets/images/hou_3.mp4";
 import hou_4 from "../assets/images/hou_4.webp";
 
-import galaxy from "../assets/images/galaxy.webp";
-import everlaw from "../assets/images/everlaw.webp";
+// import galaxy from "../assets/images/galaxy.webp";
+// import everlaw from "../assets/images/everlaw.webp";
 
 import body_1 from "../assets/images/body_2.webp";
 import body_2 from "../assets/images/body_1.webp";
@@ -94,9 +94,9 @@ import body_2_thumb from "../assets/thumbnails/body_2_thumb.webp";
 import collage_1_thumb from "../assets/thumbnails/collage_1_thumb.webp";
 import daguerreohype_thumb from "../assets/thumbnails/daguerreohype_thumb.webp";
 import deconstructed_1_thumb from "../assets/thumbnails/deconstructed_1_thumb.webp";
-import everlaw_thumb from "../assets/thumbnails/everlaw_thumb.webp";
-import galaxy_interactive_thumb from "../assets/thumbnails/galaxy_interactive_thumb.webp";
-import galaxy_thumb from "../assets/thumbnails/galaxy_thumb.webp";
+// import everlaw_thumb from "../assets/thumbnails/everlaw_thumb.webp";
+// import galaxy_interactive_thumb from "../assets/thumbnails/galaxy_interactive_thumb.webp";
+// import galaxy_thumb from "../assets/thumbnails/galaxy_thumb.webp";
 import mondrian_1_thumb from "../assets/thumbnails/mondrian_1_thumb.webp";
 import radiozoa_2_thumb from "../assets/thumbnails/radiozoa_2_thumb.webp";
 import roch_bot_thumb from "../assets/thumbnails/roch_bot_thumb.webp";
@@ -115,14 +115,7 @@ import sapiens_thumb from "../assets/thumbnails/sapiens_thumb.webp";
 
 
 const data = {
-	// "bigger-every-click": {
-	// 	title: "Bigger Every Click",
-	// 	category: "Website",
-	// 	year: '2023',
-	// 	featured: true,
-	// 	description: "Go to the website and decide if you want to click the button. Click the button and the text gets bigger. Don't click it and the text stays the same. Someday this website will be unreadable.",
-	// 	link: 'https://bigger-every-click.printerscanner.net/'
-	// },
+
 	"coaster-sans": {
 		title: "Coaster Sans",
 		category: "with Mother",
@@ -136,24 +129,6 @@ const data = {
 		content: "There's still some proofing on this font being done, so if you like it, give me a buzz at <a href='mailto:itsprinterscanner@gmail.com'>itsprinterscanner@gmail.com</a> and I'll let you know when v1.1 is out.",
 		downloadLink: 'https://printerscanner.net/CoasterSans.zip'
 	},
-	// protean: {
-	// 	title: "Protean Magazine",
-	// 	thumbnail: protean,
-	// 	featured: true,
-	// 	link: 'https://proteanmag.com/',
-	// 	category: "Website",
-	// 	description: "A website for an independent, ad-free leftist magazine of critical essays, poetry, fiction, and art.",
-	// 	year: '2023'
-	// },
-	// overbrowsing: {
-	// 	title: "Overbrowsing",
-	// 	category: "with Headless Horse",
-	// 	thumbnail: overbrowsing,
-	// 	link: 'https://overbrowsing.com/',
-	// 	description: "Fostering a deeper understanding of sustainable web design and development.",
-	// 	year: '2023',
-	// 	featured: true
-	// },
 	boring_books_club: {
 		thumbnail: boring_book_club_thumb,
 		title: "Boring Books & More",
@@ -161,15 +136,6 @@ const data = {
 		description: "I spent three years on my goal to become the first person in the world to ever read some of these books. I'm here to give you the scoop on the 17th Century, and I will warn you, it's not good.",
 		link: 'https://boringbooks.org',
 		category: "Blog",
-		year: '2023'
-	},
-	galaxy_interactive: {
-		title: "Galaxy Interactive",
-		thumbnail: galaxy_interactive_thumb,
-		link: 'https://interactive.galaxy.com',
-		featured: true,
-		category: "with Fictive Kin",
-		description: "A web experience for Galaxy Interactive, a venture fund for games and related technology.",
 		year: '2023'
 	},
 	"body-sans": {
@@ -183,25 +149,6 @@ const data = {
 		description: "You've seen kitsch body fonts, but you haven't seen one that's literally my body. Great for resumes and businesses. If you are a corporation, please reach out directly regarding a business license.",
 		year: '2023',
 		downloadLink: 'https://printerscanner.net/BodySans-Regular.zip'
-	},
-	everlaw: {
-		title: "Everlaw",
-		thumbnail: everlaw_thumb,
-		img1: everlaw,
-		link: 'https://everlaw.com/',
-		category: "with Fictive Kin",
-		description: "A websystem for a platform for document analysis for law firms, government, and corporations.",
-		year: '2023'
-	},
-	galaxy: {
-		title: "Galaxy",
-		thumbnail: galaxy_thumb,
-		img1: galaxy,
-		link: 'https://galaxy.com/',
-		featured: true,
-		category: "with Fictive Kin",
-		description: "A websystem for a cryptocurrency investment firm. Built with Fictive Kin, and with branding by Pentagram.",
-		year: '2023'
 	},
 	sapiens_hate_club: {
 		title: "Sapiens Hate Club",
