@@ -7,7 +7,6 @@ export const CSS_COLOR_NAMES = {
     DarkSlateGrey: '#2F4F4F',
     GhostWhite: '#F8F8FF',
     Indigo: '#4B0082',
-    Lime: '#00FF00',
     Magenta: '#8B008B',
     SeaShell: '#FFF5EE',
     Snow: '#FFFAFA',

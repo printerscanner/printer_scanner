@@ -112,10 +112,22 @@ import vlog_1_thumb from "../assets/thumbnails/vlog_1_thumb.webp";
 // import overbrowsing from "../assets/thumbnails/overbrowsing_test_thumb.png";
 // import protean from "../assets/images/protean.webp";
 import sapiens_thumb from "../assets/thumbnails/sapiens_thumb.webp";
+import seaweed_1 from "../assets/images/seaweed.webp";
+import seaweed_2 from "../assets/images/seaweed_2.webp";
 
 
 const data = {
-
+	"seaweed-sans": {
+		title: "Seaweed Sans",
+		category: "with Mother",
+		img1: seaweed_1,
+		img2: seaweed_2,
+		thumbnail: seaweed_1,
+		featured: true,
+		year: '2024',
+		description: "Type on your typewriter underwater at the crab cafe with seaweed sans.",
+		downloadLink: 'https://printerscanner.net/SeaweedSans-Regular.zip'
+	},
 	"coaster-sans": {
 		title: "Coaster Sans",
 		category: "with Mother",
