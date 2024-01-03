@@ -114,6 +114,7 @@ import vlog_1_thumb from "../assets/thumbnails/vlog_1_thumb.webp";
 import sapiens_thumb from "../assets/thumbnails/sapiens_thumb.webp";
 import seaweed_1 from "../assets/images/seaweed.webp";
 import seaweed_2 from "../assets/images/seaweed_2.webp";
+import seaweed_3 from "../assets/images/seaweed_3.webp";
 
 
 const data = {
@@ -121,7 +122,8 @@ const data = {
 		title: "Seaweed Sans",
 		category: "with Mother",
 		img1: seaweed_1,
-		img2: seaweed_2,
+		img2: seaweed_3,
+		img3: seaweed_2,
 		thumbnail: seaweed_1,
 		featured: true,
 		year: '2024',
