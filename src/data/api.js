@@ -109,15 +109,25 @@ import scanned_sandwich_3_thumb from "../assets/thumbnails/scanned_sandwich_3_th
 import scanned_summer_5_thumb from "../assets/thumbnails/scanned_summer_5_thumb.webp";
 import smiling_1_thumb from "../assets/thumbnails/smiling_1_thumb.webp";
 import vlog_1_thumb from "../assets/thumbnails/vlog_1_thumb.webp";
-// import overbrowsing from "../assets/thumbnails/overbrowsing_test_thumb.png";
 // import protean from "../assets/images/protean.webp";
 import sapiens_thumb from "../assets/thumbnails/sapiens_thumb.webp";
 import seaweed_1 from "../assets/images/seaweed.webp";
 import seaweed_2 from "../assets/images/seaweed_2.webp";
 import seaweed_3 from "../assets/images/seaweed_3.webp";
 
+import overbrowsing_3 from "../assets/images/overbrowsing_3.webp";
+
 
 const data = {
+	"overbrowsing": {
+		title: "Overbrowsing",
+		category: "with Headless Horse",
+		thumbnail: overbrowsing_3,
+		featured: true,
+		year: '2024',
+		link: 'https://overbrowsing.com',
+		description: "A super low-carbon website for an applied research group dedicated to advancing our understanding of sustainable web design and development practises."
+	},
 	"seaweed-sans": {
 		title: "Seaweed Sans",
 		category: "with Mother",
