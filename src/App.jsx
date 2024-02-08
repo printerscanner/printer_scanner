@@ -15,20 +15,12 @@ const randomClass = (value) => {
 };
 
 function App() {
-  const [filter, setFilter] = useState(() => {
-    // Initialize filter from localStorage or use "featured" as the default
-    return localStorage.getItem("filter") || "featured";
-  });
+  const [filter, setFilter] = useState("featured");
   const [showAbout, setShowAbout] = useState(false);
 
   let productIds = Object.keys(data);
 
-  const filteredProducts = () => {
-    if (filter === "featured") {
-      return productIds.filter((id) => data[id].featured);
-    }
-    return productIds;
-  };
+  const filteredProducts = () => (filter === "featured" ? productIds.filter((id) => data[id].featured) : productIds);
 
   const renderGridItem = (id) => {
     const featured = filter === "featured"; // Check if the filter is "featured"
@@ -71,25 +63,14 @@ function App() {
   };
 
   useEffect(() => {
-    // Add event listener for browser back/forward navigation
     const handlePopstate = () => {
-      // Retrieve the filter value from localStorage
       const savedFilter = localStorage.getItem("filter");
-
-      // Set the filter to "featured" if not found in localStorage
       setFilter(savedFilter || "featured");
     };
-
+  
     window.addEventListener("popstate", handlePopstate);
-
-    // Retrieve the filter value from localStorage and set it
-    const savedFilter = localStorage.getItem("filter");
-
-    // Set the filter to "featured" if not found in localStorage
-    setFilter(savedFilter || "featured");
-
+  
     return () => {
-      // Remove the event listener when the component unmounts
       window.removeEventListener("popstate", handlePopstate);
     };
   }, []);

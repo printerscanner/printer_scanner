@@ -1,6 +1,7 @@
 
 // eslint-disable-next-line react/prop-types
 function CondensedGrid({ filter, setFilter, showAbout, toggleAbout }) {
+  console.log(filter)
   return (
     <div className="grid-layout condensed-grid condensed-grid--secondary">
       <div className="grid-item">
