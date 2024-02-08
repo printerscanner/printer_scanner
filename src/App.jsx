@@ -32,7 +32,7 @@ function App() {
 
   const renderGridItem = (id) => {
     const featured = filter === "featured"; // Check if the filter is "featured"
-  
+
     const itemClass = featured ? "grid-item span-2" : "grid-item span-6";
     const itemContent = (
       <>
@@ -47,7 +47,7 @@ function App() {
         </div>
       </>
     );
-  
+
     return (
       <a
         className={itemClass}
@@ -72,19 +72,28 @@ function App() {
 
   useEffect(() => {
     // Add event listener for browser back/forward navigation
-    window.addEventListener("popstate", () => {
-      // Retrieve the filter value from localStorage and set it
+    const handlePopstate = () => {
+      // Retrieve the filter value from localStorage
       const savedFilter = localStorage.getItem("filter");
-      if (savedFilter) {
-        setFilter(savedFilter);
-      }
-    });
+
+      // Set the filter to "featured" if not found in localStorage
+      setFilter(savedFilter || "featured");
+    };
+
+    window.addEventListener("popstate", handlePopstate);
+
+    // Retrieve the filter value from localStorage and set it
+    const savedFilter = localStorage.getItem("filter");
+
+    // Set the filter to "featured" if not found in localStorage
+    setFilter(savedFilter || "featured");
 
     return () => {
       // Remove the event listener when the component unmounts
-      window.removeEventListener("popstate", () => { });
+      window.removeEventListener("popstate", handlePopstate);
     };
   }, []);
+
   const featured = filter === "featured"; // Check if the filter is "featured"
 
   return (
@@ -97,15 +106,14 @@ function App() {
           toggleAbout={toggleAbout}
         />
         <div className="grid-layout">
-        {featured && 
-
-          <div className="grid-item span-2 text">
-            <p><b>printer_scanner</b> is the studio practice of <a href="https://abbeyyacoe.info">Abbey Yacoe</a>.</p>
-            <p>
-              If you would like to learn more or get in touch, our email is <a href="mailto:itsprinterscanner@gmail.com"> itsprinterscanner@gmail.com</a>. You can also find us on <a href="https://www.are.na/printer-scanner/">are.na</a>, <a href="https://instagram.com/printer_scanner">Instagram</a> and on <a href="https://github.com/printerscanner">Github</a>.
-            </p>
-          </div>
-        }
+          {featured &&
+            <div className="grid-item span-2 text">
+              <p><b>printer_scanner</b> is the studio practice of <a href="https://abbeyyacoe.info">Abbey Yacoe</a>.</p>
+              <p>
+                If you would like to learn more or get in touch, our email is <a href="mailto:itsprinterscanner@gmail.com"> itsprinterscanner@gmail.com</a>. You can also find us on <a href="https://www.are.na/printer-scanner/">are.na</a>, <a href="https://instagram.com/printer_scanner">Instagram</a> and on <a href="https://github.com/printerscanner">Github</a>.
+              </p>
+            </div>
+          }
           {filteredProducts().map((id) => (
             renderGridItem(id)
           ))}
