@@ -16,6 +16,7 @@ function Post() {
 					<div dangerouslySetInnerHTML={{__html: product.content }} />
 					<a className={product.downloadLink ? '' : 'hidden'} href={product.downloadLink}><u>↗ Download</u></a>
 					<a className={product.githubLink ? '' : 'hidden'} href={product.githubLink}><u>↗ Fork it on Github</u></a>
+					<a className={product.listen ? '' : 'hidden'} href={product.listen}><u>↗ Listen</u></a>
 				</div>
 				<div className="grid-layout large-grid">
 					{product.img1 && <div className="grid-item span-2"><img className="product-subhero" src={product.img1} alt={product.title} loading="lazy"></img></div>}

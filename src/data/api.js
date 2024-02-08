@@ -133,7 +133,8 @@ const data = {
 		img4: legacy_4,
 		featured: true,
 		year: '2024',
-		description: "Album art and photography for an indie artist."
+		description: "Cover art and photography for an indie artist.",
+		listen: "https://danielazubia.bandcamp.com/album/legacy"
 	},
 	"overbrowsing": {
 		title: "Overbrowsing",
@@ -263,7 +264,7 @@ const data = {
 		description:
 		"A zine about being lost after a breakup.",
 		category: "Print",
-		subcategory: "zine",
+		subcategory: "Zine",
 		year: '2022'
 	},
 	polygons: {
@@ -278,7 +279,7 @@ const data = {
 		featured: true,
 		description: "Regular polygons all follow a mathematic pattern, that can be numerically and visually categorized. This book is a visual encyclopedia of that organization, starting from a point, then a line, then a triangle, this book maps of all convex and star polygons up to 28 edges.",
 		category: "Print",
-		subcategory: "Illustration",
+		subcategory: "Book",
 		year: '2022'
 	},
 	"deconstructed-polygons": {
@@ -291,7 +292,7 @@ const data = {
 		img2: deconstructed2,
 		img3: deconstructed3,
 		img4: deconstructed4,
-		subcategory: "Experimental",
+		subcategory: "Typography Experiment",
 		year: '2022'
 	},
 	april: {
@@ -353,7 +354,7 @@ const data = {
 			"The Random Bible is like a regular Bible except all of the verses are out of order. Hopefully the verses will offer some fresh perspectives in new contexts.",
 		content: "<p>The biggest problem that had to be solved with this project was data cleaning. I searched for quite a bit of time for an online copy of the text that appropriately split verses into paragraphs. Then I removed all special symbols. Because of the size of the book, about four inches thick, duplex printing on an at home machine was not logistically possible. </p><p>Because of this, in InDesign, I designed the book so there would never be paragraph overlaps between pages. This allowed the book to be page-order independent. Thus, each copy of the random Bible is completely different.</p><p>I would like to try a second edition of this book. Due to the thickness of the book, poor materials and my shoddy engineering book, the book is incredibly fragile. Picture number four shows an in-progess photo.</p>",
 		category: "Print",
-		subcategory: "Experimental",
+		subcategory: "Typography Experiment",
 		year: '2022'
 	},
 	daguerreohype: {
@@ -394,7 +395,7 @@ const data = {
 		description:
 			"First in a series of pocket guides to computer science topics. This volume covers random number computer algorithms.",
 		category: "Print",
-		subcategory: "Computer Science",
+		subcategory: "Pocket Guide",
 		year: '2021'
 	},
 	"moby-dick": {
@@ -410,7 +411,7 @@ const data = {
 		description:
 		"What if Moby-Dick were reprinted, but instead the text started infintesimely small, and every word it got slightly bigger? Only a few pages are at the a readable text size. The book is presented in abridgement. If the full book were printed, it would be infinitely long.",
 		category: "Print",
-		subcategory: "Experimental Typography",
+		subcategory: "Typography Experiment",
 		year: '2021'
 	},
 	"summer-book": {
@@ -435,7 +436,7 @@ const data = {
 		img4: i4,
 		description: "What if a book consisted of just the letter 'i', but if every single letter 'i' became a little bigger, until eventually they were even a little too big?",
 		category: "Print",
-		subcategory: "Experimental Typography",
+		subcategory: "Typography Experiment",
 		year: '2021'
 	},
 	"loch-lomond": {
@@ -446,7 +447,7 @@ const data = {
 		img3: loch1,
 		description: "A perfect bound lofi photo book.",
 		category: "Print",
-		subcategory: "Photography",
+		subcategory: "Photo Book",
 		year: '2021'
 	},
 	mondrian_generator: {
