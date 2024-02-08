@@ -117,7 +117,7 @@ import seaweed_2 from "../assets/images/seaweed_2.webp";
 import seaweed_3 from "../assets/images/seaweed_3.webp";
 
 import overbrowsing_3 from "../assets/images/overbrowsing_3.webp";
-import legacy_1 from "../assets/images/legacy_1.webp";
+import legacy from "../assets/images/legacy.webp";
 import legacy_2 from "../assets/images/legacy_2.webp";
 import legacy_3 from "../assets/images/legacy_3.webp";
 import legacy_4 from "../assets/images/legacy_4.webp";
@@ -126,8 +126,8 @@ import legacy_4 from "../assets/images/legacy_4.webp";
 const data = {
 	"legacy": {
 		title: "Legacy",
-		thumbnail: legacy_1,
-		img1: legacy_1,
+		thumbnail: legacy,
+		img1: legacy,
 		img2: legacy_2,
 		img3: legacy_3,
 		img4: legacy_4,
