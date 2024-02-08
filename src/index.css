@@ -229,6 +229,7 @@ a:hover img {
 	background-color: #a2a286;
 	color: #181862;
 	opacity: 1;
+	filter: blur(0);
 }
 
 .span-6 .text {
