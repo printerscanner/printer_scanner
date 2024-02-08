@@ -48,8 +48,8 @@ a, button {
 }
 
 a:hover, button:hover {
-	opacity: .6;
 	cursor: pointer;
+	filter: blur(2px);
 }
 
 .text a {
@@ -223,6 +223,16 @@ a:hover img {
 	border-radius: 0px;
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+.span-6:hover {
+	background-color: #a2a286;
+	color: #181862;
+	opacity: 1;
+}
+
+.span-6 .text {
+	padding: .75rem;
 }
 
 .span-6:first-child {
