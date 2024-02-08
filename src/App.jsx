@@ -25,7 +25,7 @@ function App() {
   const renderGridItem = (id) => {
     const featured = filter === "featured"; // Check if the filter is "featured"
 
-    const itemClass = featured ? "grid-item span-2" : "grid-item span-6";
+    const itemClass = featured ? "grid-item span-2" + randomClass(2) : "grid-item span-6";
     const itemContent = (
       <>
         {featured && data[id].thumbnail && !data[id].mov && <img loading="lazy" src={data[id].thumbnail} alt={data[id].title} />}
