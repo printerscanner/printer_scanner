@@ -30,6 +30,34 @@ function App() {
     return productIds;
   };
 
+  const renderGridItem = (id) => {
+    const featured = filter === "featured"; // Check if the filter is "featured"
+  
+    const itemClass = featured ? "grid-item span-2" : "grid-item span-6";
+    const itemContent = (
+      <>
+        {featured && data[id].thumbnail && !data[id].mov && <img loading="lazy" src={data[id].thumbnail} alt={data[id].title} />}
+        {featured && data[id].mov && <video loading="lazy" autoPlay={true} muted={true}><source autoPlay src={data[id].mov} type="video/mp4" /></video>}
+        <div className="text">
+          <p>{data[id].link ? <span>↗ </span> : ''} <b>{data[id].title}</b></p>
+          <p style={{ fontSize: '12px', paddingBottom: '.5rem' }}>{data[id].subcategory ? <span className="grid-crumbs">{data[id].subcategory}</span> : ''}
+            {data[id].category ? <span className="grid-crumbs">{data[id].category}</span> : ''}
+            {data[id].year ? <span className="grid-crumbs">{data[id].year}</span> : ''} </p>
+          <p>{data[id].description}</p>
+        </div>
+      </>
+    );
+  
+    return (
+      <a
+        className={itemClass}
+        href={data[id].link ? `${data[id].link}` : `work/${id}`}
+        key={id}
+      >
+        {itemContent}
+      </a>
+    );
+  };
   const toggleAbout = () => {
     setShowAbout(!showAbout);
   };
@@ -54,9 +82,10 @@ function App() {
 
     return () => {
       // Remove the event listener when the component unmounts
-      window.removeEventListener("popstate", () => {});
+      window.removeEventListener("popstate", () => { });
     };
   }, []);
+  const featured = filter === "featured"; // Check if the filter is "featured"
 
   return (
     <div>
@@ -68,50 +97,20 @@ function App() {
           toggleAbout={toggleAbout}
         />
         <div className="grid-layout">
-      {!showAbout ? (
-      <div className="grid-item span-2 text">
-        <p><b>printer_scanner</b> is a laboratory of experimentation. We explore authority in printed and digital matter. We think of the experience of art as a state of play without conception of an end, made by choices as small as turning down a new street in a familiar city.</p>
-        <p>
-          If you would like to learn more or get in touch, our email is <a href="mailto:itsprinterscanner@gmail.com"> itsprinterscanner@gmail.com</a>. You can also find us on <a href="https://www.are.na/printer-scanner/">are.na</a>, <a href="https://instagram.com/printer_scanner">Instagram</a> and on <a href="https://github.com/printerscanner">Github</a>.
-        </p>
-				</div>
-        ): (
-          <div className="grid-item span-all text">
-            <div className="about">
-              <p>We rarely think of the website as an artistic medium, even less as the most dominant artistic medium of the 21st Century, used like the Medici's to gain and enforce power. As objects, websites face obsolescence almost immediately, sometimes even before their completion. They are unstable and degrade over time. A website can be deleted accidentally, its electrons rearranged into junk in an instant.</p>
-      
-              <p>Physical ephemera is by contrast much more long lasting. We will hold on to a scrap of paper with a drawing from our loved ones our whole lives. Even with delicate artifacts like paper, our instinct for preservation has allowed our species us to reach back thousands of years.</p>
-      
-              <p>Printing remains an expensive, inaccessible medium. Words that are printed and disseminated are still allowed only to the celebrities of the world (Prince Harry). It's hard today to even print anything! Do you have a working printer in your house? I didn't think so.</p>
-              <p><b>printer_scanner</b> is a laboratory of experimentation. We explore authority in printed and digital matter. We think of the experience of art as a state of play without conception of an end, made by choices as small as turning down a new street in a familiar city.</p>
-              <p>
-                If you would like to learn more or get in touch, our email is <a href="mailto:itsprinterscanner@gmail.com"> itsprinterscanner@gmail.com</a>. You can also find us on <a href="https://www.are.na/printer-scanner/">are.na</a>, <a href="https://instagram.com/printer_scanner">Instagram</a> and on <a href="https://github.com/printerscanner">Github</a>.
-              </p>
-            </div>
+        {featured && 
+
+          <div className="grid-item span-2 text">
+            <p><b>printer_scanner</b> is the studio practice of <a href="https://abbeyyacoe.info">Abbey Yacoe</a>.</p>
+            <p>
+              If you would like to learn more or get in touch, our email is <a href="mailto:itsprinterscanner@gmail.com"> itsprinterscanner@gmail.com</a>. You can also find us on <a href="https://www.are.na/printer-scanner/">are.na</a>, <a href="https://instagram.com/printer_scanner">Instagram</a> and on <a href="https://github.com/printerscanner">Github</a>.
+            </p>
           </div>
-        )}
-        {!showAbout &&
-            filteredProducts().map((id) => (
-					<a
-            className={randomClass(2)}
-            href={data[id].link ? `${data[id].link}` : `work/${id}`}
-            key={id}
-          >
-            <>
-              {data[id].thumbnail && !data[id].mov && <img loading="lazy" src={data[id].thumbnail} alt={data[id].title} />}
-              {data[id].mov && <video loading="lazy" autoPlay={true} muted={true}><source autoPlay src={data[id].mov} type="video/mp4" /></video>}
-              <div className="text">
-                <p>{data[id].link ? <span>↗ </span> : ''} <b>{data[id].title}</b></p>
-                <p style={{fontSize: '12px', paddingBottom: '.5rem'}}>{data[id].subcategory ? <span className="grid-crumbs">{data[id].subcategory}</span> : ''}
-                  {data[id].category ? <span className="grid-crumbs">{data[id].category}</span> : ''}
-                    {data[id].year ? <span className="grid-crumbs">{data[id].year}</span> : ''} </p>
-                <p>{data[id].description}</p>
-              </div>
-            </>
-          </a>
-   ))}
-      </div>
-    </>
+        }
+          {filteredProducts().map((id) => (
+            renderGridItem(id)
+          ))}
+        </div>
+      </>
     </div>
   );
 }

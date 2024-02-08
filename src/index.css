@@ -155,6 +155,7 @@ article {
 
 .text {
 	padding: 1rem;
+	padding-top: 1.5rem;
 }
 
 .collage {
@@ -175,9 +176,6 @@ article {
 	margin: 0;
 }
 
-.grid-item:first-child p {
-	padding-top: 10px;
-}
 
 .grid-item img,
 .grid-item video {
@@ -216,6 +214,26 @@ a:hover img {
 .span-2 {
 	grid-column-end: span 2;
 	grid-row-end: span 1;
+}
+
+.span-6 {
+	grid-column-end: span 6;
+	grid-row-end: span 1;
+	border-top: none;
+	border-radius: 0px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.span-6:first-child {
+	border-top: 1px solid;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+
+.span-6:last-child {
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
 }
 
 .span-3 {

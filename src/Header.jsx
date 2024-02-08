@@ -8,9 +8,9 @@ return (
 			<div className="grid-item span-3"></div>
 
 			<div className="grid-item grid-item--link">
-				{/* <a href="https://earthly-delights.net/">
-					↗ Earthly Delights
-				</a> */}
+				<a href="https://github.com/printerscanner">
+					↗ Github
+				</a>
 			</div>
 		</div>
 		</div>
