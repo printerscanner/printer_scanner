@@ -29,7 +29,7 @@ function CondensedGrid({ filter, setFilter, showAbout, toggleAbout }) {
         {/* <a className="menu-link" href="https://mother-type.de">↗ Mother Type</a> */}
       </div>
       <div className="grid-item">
-        {/* <a className="menu-link" href="">↗ Earthly Delights</a> */}
+        <a className="menu-link" href="https://earthly-delights.net">↗ Earthly Delights</a>
       </div>
     </div>
   );

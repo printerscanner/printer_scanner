@@ -49,7 +49,7 @@ a, button {
 
 a:hover, button:hover {
 	cursor: pointer;
-	filter: blur(2px);
+	opacity: .6;
 }
 
 .text a {
@@ -229,7 +229,6 @@ a:hover img {
 	background-color: #f4f400;
 	color: #000;
 	opacity: 1;
-	filter: blur(0);
 }
 
 .span-6 .text {
