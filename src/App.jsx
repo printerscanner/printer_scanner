@@ -87,7 +87,15 @@ function App() {
           toggleAbout={toggleAbout}
         />
         <div className="grid-layout">
-
+        {featured &&
+            <div className="grid-item span-2 text">
+              <p><b>printer_scanner</b> is an independent design and technology practice based in Berlin.</p>
+              <br />
+              <p>
+                If you would like to learn more or get in touch, our email is <a href="mailto:itsprinterscanner@gmail.com"> itsprinterscanner@gmail.com</a>. You can also find us on <a href="https://www.are.na/printer-scanner/">are.na</a>, <a href="https://instagram.com/printer_scanner">Instagram</a> and on <a href="https://github.com/printerscanner">Github</a>.
+              </p>
+            </div>
+          }
           {filteredProducts().map((id) => (
             renderGridItem(id)
           ))}
