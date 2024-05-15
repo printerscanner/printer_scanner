@@ -1,4 +1,3 @@
-import React from 'react';
 
 function Form() {
   const handleSubmit = async (e) => {
@@ -23,7 +22,7 @@ function Form() {
 
     // Creating a div element to hold the message
     const bubble = document.createElement('div');
-    bubble.className = response.ok ? 'thanks-bubble' : 'error-bubble';
+    bubble.className = 'thanks-bubble';
     bubble.innerHTML = `<p>${thanksMessage}</p>`;
 
     // Appending the bubble to the form
