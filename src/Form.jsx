@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Form() {
   const [email, setEmail] = useState("");
@@ -9,7 +9,7 @@ function Form() {
     e.preventDefault();
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/.netlify/functions/subscribe", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
