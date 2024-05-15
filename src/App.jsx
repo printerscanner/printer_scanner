@@ -8,6 +8,9 @@ function App() {
   let productIds = Object.keys(data);
 
   const renderGridItem = (id) => {
+    if (data[id].archived) {
+      return null; // Don't render archived items
+    }
     const itemClass = data[id].featured ? "grid-item span-2" : "grid-item";
     const itemContent = (
       <>
