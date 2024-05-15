@@ -1,41 +1,27 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import data from './data/api.js';
-import CondensedGrid from './CondensedGrid.jsx';
+import Header from './Header.jsx'
 
-const randomClass = (value) => {
-  const result = Math.floor(Math.random() * value);
-  if (result === 0) {
-    return "grid-item";
-  }
-  if (result === 1) {
-    return "grid-item span-2";
-  } else {
-    return "grid-item";
-  }
-};
 
 function App() {
-  const [filter, setFilter] = useState("featured");
-  const [showAbout, setShowAbout] = useState(false);
 
   let productIds = Object.keys(data);
 
-  const filteredProducts = () => (filter === "featured" ? productIds.filter((id) => data[id].featured) : productIds);
-
   const renderGridItem = (id) => {
-    const featured = filter === "featured"; // Check if the filter is "featured"
-
-    const itemClass = featured ? "grid-item span-2" + randomClass(2) : "grid-item span-6";
+    const itemClass = data[id].featured ? "grid-item span-2" : "grid-item";
     const itemContent = (
       <>
-        {featured && data[id].thumbnail && !data[id].mov && <img loading="lazy" src={data[id].thumbnail} alt={data[id].title} />}
-        {featured && data[id].mov && <video loading="lazy" autoPlay={true} muted={true}><source autoPlay src={data[id].mov} type="video/mp4" /></video>}
         <div className="text">
-          <p>{data[id].link ? <span>↗ </span> : ''} <b>{data[id].title}</b></p>
-          <p style={{ fontSize: '12px', paddingBottom: '.5rem' }}>{data[id].subcategory ? <span className="grid-crumbs">{data[id].subcategory}</span> : ''}
-            {data[id].category ? <span className="grid-crumbs">{data[id].category}</span> : ''}
-            {data[id].year ? <span className="grid-crumbs">{data[id].year}</span> : ''} </p>
-          <p>{data[id].description}</p>
+          <p><b>{data[id].title}</b> <span style={{float: "right"}}>{data[id].link ? <span>↗ </span> : ''}</span></p>
+          <p style={{ fontSize: '12px', paddingBottom: '.5rem' }}>
+            {data[id].category ? <span className="grid-crumbs">{data[id].category}</span> : ''} 
+            {data[id].subcategory ? <span className="grid-crumbs">{data[id].subcategory}</span> : ''}
+            {data[id].subsubcategory ? <span className="grid-crumbs">{data[id].subsubcategory}</span> : ''}
+            {data[id].year ? <span className="grid-crumbs">{data[id].year}</span> : ''} 
+
+          </p>
+
+          <p >{data[id].description}</p>
         </div>
       </>
     );
@@ -50,22 +36,10 @@ function App() {
       </a>
     );
   };
-  const toggleAbout = () => {
-    setShowAbout(!showAbout);
-  };
-
-  const handleFilterClick = (selectedFilter) => {
-    setShowAbout(false);
-    setFilter(selectedFilter);
-
-    // Save the selected filter in localStorage
-    localStorage.setItem("filter", selectedFilter);
-  };
 
   useEffect(() => {
     const handlePopstate = () => {
-      const savedFilter = localStorage.getItem("filter");
-      setFilter(savedFilter || "featured");
+      // Handling popstate if needed
     };
   
     window.addEventListener("popstate", handlePopstate);
@@ -75,28 +49,12 @@ function App() {
     };
   }, []);
 
-  const featured = filter === "featured"; // Check if the filter is "featured"
-
   return (
     <div>
       <>
-        <CondensedGrid
-          filter={filter}
-          setFilter={handleFilterClick}
-          showAbout={showAbout}
-          toggleAbout={toggleAbout}
-        />
+        <Header/>
         <div className="grid-layout">
-        {featured &&
-            <div className="grid-item span-2 text">
-              <p><b>printer_scanner</b> is an independent design and technology studio based in Berlin.</p>
-              <br />
-              <p>
-                If you would like to learn more or get in touch, our email is <a href="mailto:itsprinterscanner@gmail.com"> itsprinterscanner@gmail.com</a>. You can also find us on <a href="https://www.are.na/printer-scanner/">are.na</a>, <a href="https://instagram.com/printer_scanner">Instagram</a> and on <a href="https://github.com/printerscanner">Github</a>.
-              </p>
-            </div>
-          }
-          {filteredProducts().map((id) => (
+          {productIds.map((id) => (
             renderGridItem(id)
           ))}
         </div>
