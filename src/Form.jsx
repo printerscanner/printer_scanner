@@ -1,11 +1,9 @@
-import { useState } from 'react';
+import React from 'react';
 
 function Form() {
-  const [showThanks, setShowThanks] = useState(false);
-  const [thanksMessage, setThanksMessage] = useState("");
-
   const handleSubmit = async (e) => {
     e.preventDefault();
+    let thanksMessage;
 
     try {
       const formData = new FormData(e.target);
@@ -15,36 +13,33 @@ function Form() {
         body: new URLSearchParams(formData).toString(),
       });
       if (response.ok) {
-        // Example success message
-        setThanksMessage("You're a little freak 😉, thanks for joining.");
+        thanksMessage = "You're a little freak 😉, thanks for joining.";
       } else {
-        // Example error message
-        setThanksMessage("Oops! Something went wrong. Please try again later.");
+        thanksMessage = "Oops! Something went wrong. Please try again later.";
       }
     } catch (error) {
-      // Example error message
-      setThanksMessage("Oops! Something went wrong. Please try again later.");
+      thanksMessage = "Oops! Something went wrong. Please try again later.";
     }
 
-    setShowThanks(true);
+    // Creating a div element to hold the message
+    const bubble = document.createElement('div');
+    bubble.className = response.ok ? 'thanks-bubble' : 'error-bubble';
+    bubble.innerHTML = `<p>${thanksMessage}</p>`;
+
+    // Appending the bubble to the form
+    e.target.appendChild(bubble);
+
+    // Hiding the bubble after 3 seconds
     setTimeout(() => {
-      setShowThanks(false);
+      bubble.remove();
     }, 3000);
   };
 
   return (
-    <div>
-      <form name="contact" data-netlify="true" className="form" method="POST" onSubmit={handleSubmit}>
-        <input type="email" name="email" className="email" placeholder="Get The Newsletter" />
-        <button type="submit">→</button>
-      </form>
-
-      {showThanks && (
-        <div className="thanks-bubble">
-          <p>{thanksMessage}</p>
-        </div>
-      )}
-    </div>
+    <form name="contact" data-netlify="true" className="form" method="POST" onSubmit={handleSubmit}>
+      <input type="email" name="email" className="email" placeholder="Get The Newsletter" />
+      <button type="submit">→</button>
+    </form>
   );
 }
 
