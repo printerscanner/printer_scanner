@@ -64,31 +64,25 @@ import radiozoa4 from "../assets/images/radiozoa_5.webp";
 // import loch1 from "../assets/images/scanned_Loch_4.webp";
 // import loch2 from "../assets/images/scanned_Loch_2.webp";
 // import loch3 from "../assets/images/scanned_Loch_3.webp";
-
-
 // import collage_1 from "../assets/images/collage_1.webp";
-
 // import hou_1 from "../assets/images/hou_1.webp";
 // import hou_2 from "../assets/images/hou_2.webp";
 // import hou_3 from "../assets/images/hou_3.mp4";
 // import hou_4 from "../assets/images/hou_4.webp";
-
-import galaxy from "../assets/images/galaxy.webp";
-import everlaw from "../assets/images/everlaw.webp";
-
-import PJT from "../assets/images/PJT.webp";
-
-import boring_book_club_thumb from "../assets/thumbnails/boring_book_club_thumb.webp";
+// import galaxy from "../assets/images/galaxy.webp";
+// import everlaw from "../assets/images/everlaw.webp";
+// import PJT from "../assets/images/PJT.webp";
+// import boring_book_club_thumb from "../assets/thumbnails/boring_book_club_thumb.webp";
 // import april_3_thumb from "../assets/thumbnails/april_3_thumb.webp";
 // import bible_1_thumb from "../assets/thumbnails/bible_1_thumb.webp";
 // import collage_1_thumb from "../assets/thumbnails/collage_1_thumb.webp";
-import daguerreohype_thumb from "../assets/thumbnails/daguerreohype_thumb.webp";
+// import daguerreohype_thumb from "../assets/thumbnails/daguerreohype_thumb.webp";
 // import deconstructed_1_thumb from "../assets/thumbnails/deconstructed_1_thumb.webp";
-import everlaw_thumb from "../assets/thumbnails/everlaw_thumb.webp";
-import galaxy_thumb from "../assets/thumbnails/galaxy_thumb.webp";
-import mondrian_1_thumb from "../assets/thumbnails/mondrian_1_thumb.webp";
-import radiozoa_2_thumb from "../assets/thumbnails/radiozoa_2_thumb.webp";
-import roch_bot_thumb from "../assets/thumbnails/roch_bot_thumb.webp";
+// import everlaw_thumb from "../assets/thumbnails/everlaw_thumb.webp";
+// import galaxy_thumb from "../assets/thumbnails/galaxy_thumb.webp";
+// import mondrian_1_thumb from "../assets/thumbnails/mondrian_1_thumb.webp";
+// import radiozoa_2_thumb from "../assets/thumbnails/radiozoa_2_thumb.webp";
+// import roch_bot_thumb from "../assets/thumbnails/roch_bot_thumb.webp";
 // import scanned_i_1_thumb from "../assets/thumbnails/scanned_i_1_thumb.webp";
 // import scanned_Loch_2_thumb from "../assets/thumbnails/scanned_Loch_2_thumb.webp";
 // import scanned_Moby_2_thumb from "../assets/thumbnails/scanned_Moby_2_thumb.webp";
@@ -98,9 +92,8 @@ import roch_bot_thumb from "../assets/thumbnails/roch_bot_thumb.webp";
 // import scanned_summer_5_thumb from "../assets/thumbnails/scanned_summer_5_thumb.webp";
 // import smiling_1_thumb from "../assets/thumbnails/smiling_1_thumb.webp";
 // import protean from "../assets/images/protean.webp";
-import sapiens_thumb from "../assets/thumbnails/sapiens_thumb.webp";
-
-import overbrowsing_3 from "../assets/images/overbrowsing_3.webp";
+// import sapiens_thumb from "../assets/thumbnails/sapiens_thumb.webp";
+// import overbrowsing_3 from "../assets/images/overbrowsing_3.webp";
 import legacy from "../assets/images/legacy.webp";
 import legacy_2 from "../assets/images/legacy_2.webp";
 import legacy_3 from "../assets/images/legacy_3.webp";
