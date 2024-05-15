@@ -1,7 +1,7 @@
+/* eslint-disable react/no-unknown-property */
 import React, { useState } from "react";
 
 function Form() {
-  const [email, setEmail] = useState("");
   const [showThanks, setShowThanks] = useState(false);
   const [thanksMessage, setThanksMessage] = useState("");
 
@@ -10,24 +10,13 @@ function Form() {
     setShowThanks(true);
 
     try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams({
-          "form-name": "subscribe",
-          email,
-        }).toString(),
-      });
+      // Your form submission logic goes here
+      // ...
 
-      if (response.ok) {
-        setEmail("");
-        setThanksMessage("You're a little freak 😉, thanks for joining.");
-      } else {
-        setThanksMessage("Oops! Something went wrong. Please try again later.");
-      }
+      // Example success message
+      setThanksMessage("You're a little freak 😉, thanks for joining.");
     } catch (error) {
+      // Example error message
       setThanksMessage("Oops! Something went wrong. Please try again later.");
     }
 
@@ -36,35 +25,13 @@ function Form() {
     }, 3000);
   };
 
-  const handleChange = (e) => {
-    setEmail(e.target.value);
-  };
-
   return (
-    <div id="mc_embed_shell" className="form-shell">
-      <div id="mc_embed_signup">
-        <form name="subscribe" method="POST" data-netlify="true" onSubmit={handleSubmit}>
-          <input type="hidden" name="form-name" value="subscribe" /> {/* Required for Netlify */}
+    <div>
+      <form name="contact" netlify onSubmit={handleSubmit} className="form">
+        <input type="email" name="email" className="email" placeholder="Get The Newsletter" />
+          <button type="submit">→</button>
+      </form>
 
-          <div id="mc_embed_signup_scroll" style={{ display: "flex", gap: "10px" }}>
-            <div className="mc-field-group">
-              <input
-                type="email"
-                name="email"
-                className="required email"
-                id="mce-EMAIL"
-                required
-                placeholder="Get the Newsletter"
-                value={email}
-                onChange={handleChange}
-              />
-            </div>
-            <button type="submit" className="join-button">
-              →
-            </button>
-          </div>
-        </form>
-      </div>
       {showThanks && (
         <div className="thanks-bubble">
           <p>{thanksMessage}</p>

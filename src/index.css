@@ -316,6 +316,11 @@ button {
 	text-decoration: underline;
 }
 
+.form {
+	display: flex;
+	gap: 10px;
+	vertical-align: center;
+}
 
 .email {
   /* background: currentColor; */
