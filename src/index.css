@@ -73,10 +73,6 @@ b {
 }
 
 
-article {
-	margin-top: 30px;
-}
-
 ::-moz-selection {
 	/* Code for Firefox */
 	color: red;
@@ -277,21 +273,6 @@ a:hover img {
 	margin: 0 2px;
 }
 
-/* Blog */
-.blog {
-	margin: 0 20px;
-	max-width: 40%;
-}
-
-.blog h3 {
-	font-size: x-large;
-	display: inline-block;
-}
-
-.blog div {
-	margin-bottom: 50px;
-}
-
 /* Extras */
 
 .hidden {
@@ -304,7 +285,7 @@ a:hover img {
 
 .home-button {
 	display: block;
-	margin-bottom: 30px;
+	margin-left: 10px;
 	font-size: x-large;
 }
 
@@ -364,6 +345,17 @@ button {
 	75% { opacity: 1; }
 	100% { opacity: 0; }
   }
+
+  /* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
   
 
 @media only screen and (max-width: 800px) {
