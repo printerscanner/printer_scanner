@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 function Form() {
   const [email, setEmail] = useState("");
@@ -7,9 +7,10 @@ function Form() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setShowThanks(true);
 
     try {
-      const response = await fetch("/.netlify/functions/subscribe", {
+      const response = await fetch("/", {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
@@ -23,18 +24,16 @@ function Form() {
       if (response.ok) {
         setEmail("");
         setThanksMessage("You're a little freak 😉, thanks for joining.");
-        setShowThanks(true);
-        setTimeout(() => {
-          setShowThanks(false);
-        }, 3000);
       } else {
-        console.error("Error submitting form:", response.statusText);
-        // Handle error
+        setThanksMessage("Oops! Something went wrong. Please try again later.");
       }
     } catch (error) {
-      console.error("Error submitting form:", error.message);
-      // Handle error
+      setThanksMessage("Oops! Something went wrong. Please try again later.");
     }
+
+    setTimeout(() => {
+      setShowThanks(false);
+    }, 3000);
   };
 
   const handleChange = (e) => {
