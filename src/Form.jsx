@@ -1,66 +1,42 @@
-
-// function Form() {
-//   return (
-//     <form 
-//     name="contact" 
-//     method="POST" 
-//     data-netlify="true" 
-//     className="form"
-//    >
-//   <input type="hidden" name="form-name" value="contact" />
-//      <input id="standard-basic" label="email" name="email" className="email" placeholder="Get the Newsletter" />
-//      <button type="submit">→</button>
-//     </form>
-//   );
-// }
-
-// export default Form;
-
-import React from 'react';
+import React, { useState } from 'react';
 
 function Form() {
+  const [showThanks, setShowThanks] = useState(false);
+  const [thanksMessage, setThanksMessage] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'contact',
-          email: e.target.email.value,
-        }).toString(),
-      });
-      if (response.ok) {
-        alert('Form submitted successfully!');
-        // Reset form fields if needed
-        e.target.reset();
-      } else {
-        alert('Form submission failed. Please try again.');
-      }
+      // Your form submission logic goes here
+      // ...
+
+      // Example success message
+      setThanksMessage("You're a little freak 😉, thanks for joining.");
     } catch (error) {
-      console.error('Form submission failed:', error);
-      alert('Form submission failed. Please try again.');
+      // Example error message
+      setThanksMessage("Oops! Something went wrong. Please try again later.");
     }
+
+    setShowThanks(true);
+    setTimeout(() => {
+      setShowThanks(false);
+    }, 3000);
   };
 
   return (
-    <form
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      className="form"
-      onSubmit={handleSubmit}
-    >
-      <input type="hidden" name="form-name" value="contact" />
-      <input
-        id="standard-basic"
-        label="email"
-        name="email"
-        className="email"
-        placeholder="Get the Newsletter"
-      />
-      <button type="submit">→</button>
-    </form>
+    <div>
+      <form name="contact" data-netlify="true" className="form" method="POST" onSubmit={handleSubmit}>
+        <input type="email" name="email" className="email" placeholder="Get The Newsletter" />
+        <button type="submit">→</button>
+      </form>
+
+      {showThanks && (
+        <div className="thanks-bubble">
+          <p>{thanksMessage}</p>
+        </div>
+      )}
+    </div>
   );
 }
 
