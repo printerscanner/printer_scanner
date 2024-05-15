@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function Form() {
   const [showThanks, setShowThanks] = useState(false);
@@ -8,11 +8,19 @@ function Form() {
     e.preventDefault();
 
     try {
-      // Your form submission logic goes here
-      // ...
-
-      // Example success message
-      setThanksMessage("You're a little freak 😉, thanks for joining.");
+      const formData = new FormData(e.target);
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      });
+      if (response.ok) {
+        // Example success message
+        setThanksMessage("You're a little freak 😉, thanks for joining.");
+      } else {
+        // Example error message
+        setThanksMessage("Oops! Something went wrong. Please try again later.");
+      }
     } catch (error) {
       // Example error message
       setThanksMessage("Oops! Something went wrong. Please try again later.");
