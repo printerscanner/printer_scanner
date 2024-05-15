@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 function Form() {
   const [email, setEmail] = useState("");
@@ -9,12 +9,15 @@ function Form() {
     e.preventDefault();
 
     try {
-      const response = await fetch("/.netlify/functions/subscribe", {
+      const response = await fetch("/", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: JSON.stringify({ email }),
+        body: new URLSearchParams({
+          "form-name": "subscribe",
+          email,
+        }).toString(),
       });
 
       if (response.ok) {
@@ -41,12 +44,14 @@ function Form() {
   return (
     <div id="mc_embed_shell" className="form-shell">
       <div id="mc_embed_signup">
-        <form onSubmit={handleSubmit}>
+        <form name="subscribe" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+          <input type="hidden" name="form-name" value="subscribe" /> {/* Required for Netlify */}
+
           <div id="mc_embed_signup_scroll" style={{ display: "flex", gap: "10px" }}>
             <div className="mc-field-group">
               <input
                 type="email"
-                name="EMAIL"
+                name="email"
                 className="required email"
                 id="mce-EMAIL"
                 required
