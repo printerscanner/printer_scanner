@@ -26,7 +26,7 @@ function Form() {
 
   return (
     <div>
-      <form name="contact" netlify data-netlify="true" onSubmit={handleSubmit} className="form">
+      <form name="contact" data-netlify="true" onSubmit={handleSubmit} className="form">
         <input type="email" name="email" className="email" placeholder="Get The Newsletter" />
           <button type="submit">→</button>
       </form>
