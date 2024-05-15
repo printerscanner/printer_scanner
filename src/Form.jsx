@@ -1,5 +1,4 @@
-/* eslint-disable react/no-unknown-property */
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Form() {
   const [showThanks, setShowThanks] = useState(false);
@@ -27,7 +26,7 @@ function Form() {
 
   return (
     <div>
-      <form name="contact" netlify onSubmit={handleSubmit} className="form">
+      <form name="contact" netlify data-netlify="true" onSubmit={handleSubmit} className="form">
         <input type="email" name="email" className="email" placeholder="Get The Newsletter" />
           <button type="submit">→</button>
       </form>
