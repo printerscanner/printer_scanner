@@ -1,8 +1,10 @@
-import PropTypes from 'prop-types';
-import Form from "./Form.jsx";
+/* eslint-disable react/prop-types */
+import Form from "../forms/NewsletterForm.jsx";
 
-// eslint-disable-next-line react/prop-types
-function Header({ isHome, onBackClick }) {
+function Header({ isVisible, currentPath }) {
+  const onBackClick = () => {
+    window.history.back();
+  };
   return (
     <header className="grid-layout condensed-grid condensed-grid--secondary">
       <div className="grid-item"><a href="/"><h1 className="logo">printer_scanner</h1></a></div>
@@ -16,19 +18,19 @@ function Header({ isHome, onBackClick }) {
         <Form />
       </div>
       <div className="grid-item grid-item--link">
-        <a className="menu-link right" href="mailto:itsprinterscanner@gmail.com">Get in Touch</a>
+        <a className="menu-link right" href="/contact">Get in Touch</a>
       </div>
 
       <div className="grid-item grid-item--link">
-        {!isHome && <button onClick={onBackClick} className="home-button"><u>←</u></button>}
+          {currentPath.includes("/work/") && !isVisible && <button onClick={onBackClick} className="home-button"><u>←</u></button>}
       </div>
 
       <div className="grid-item span-2 text">
         <p>An independent design and technology studio based in Berlin.</p>
       </div>
 
-      <div className="grid-item">
-        {/* Our Process */}
+      <div className="grid-item grid-item--link">
+      <a className="menu-link right" href="/capabilities">Capabilities</a>
       </div>
 
       <div className="grid-item"></div>
@@ -51,10 +53,5 @@ function Header({ isHome, onBackClick }) {
     </header>
   );
 }
-
-Header.propTypes = {
-  isHome: PropTypes.bool.isRequired,
-  onBackClick: PropTypes.func.isRequired,
-};
 
 export default Header;

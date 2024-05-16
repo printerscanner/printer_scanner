@@ -1,11 +1,11 @@
 @font-face {
 	font-family: 'Neue Montreal';
-	src: url("assets/fonts/PPNeueMontreal-Regular.woff") format("woff");
+	src: url("../assets/fonts/PPNeueMontreal-Regular.woff") format("woff");
 }
 
 @font-face {
 	font-family: 'Neue Montreal';
-	src: url("assets/fonts/PPNeueMontreal-Bold.woff") format("woff");
+	src: url("../assets/fonts/PPNeueMontreal-Bold.woff") format("woff");
 	font-weight: 700;
 }
 
@@ -222,54 +222,15 @@ a:hover img {
 	grid-row-end: span 1;
 }
 
-.span-6 {
-	grid-column-end: span 6;
-	grid-row-end: span 1;
-	border-top: none;
-	border-radius: 0px;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-
-.span-6:hover {
-	background-color: #f4f400;
-	color: #000;
-	opacity: 1;
-}
-
-.span-6 .text {
-	padding: .75rem;
-}
-
-.span-6:first-child {
-	border-top: 1px dotted;
-	border-top-right-radius: 3px;
-	border-top-left-radius: 3px;
-}
-
-.span-6:last-child {
-	border-bottom-right-radius: 3px;
-	border-bottom-left-radius: 3px;
-}
-
 .span-3 {
 	grid-column-end: span 3;
 	grid-row-end: span 1;
 }
 
 .span-all {
-	grid-column-start: 3;
-	grid-column-end: -1;
+	grid-column-start: 2;
+	grid-column-end: -2;
 	grid-row-end: span 1;
-}
-
-.grid-number {
-	font-size: 13px;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	margin: 20px;
-
 }
 
 .grid-crumbs+.grid-crumbs::before {
@@ -277,39 +238,14 @@ a:hover img {
 	margin: 0 2px;
 }
 
-/* Extras */
-
-.hidden {
-	display: none;
-}
-
 .logo {
 	margin: 0;
-}
-
-.reversed {
-	text-align: right;
-	float: right;
-	-webkit-transform:rotateY(180deg);
-	-moz-transform:rotateY(180deg);
-	-o-transform:rotateY(180deg);
-	-ms-transform:rotateY(180deg);
 }
 
 .home-button {
 	display: block;
 	margin-left: 10px;
 	font-size: x-large;
-}
-
-.tile {
-	padding: 5px;
-}
-
-.qr-code img {
-	animation: none !important;
-	-webkit-animation: none !important;
-	filter: invert();
 }
 
 button {
@@ -374,7 +310,6 @@ button {
 	white-space: nowrap;
 	width: 1px;
 }
-  
 
 @media only screen and (max-width: 800px) {
 
@@ -392,9 +327,6 @@ button {
 	}
 	.grid-item {
 		grid-column-end: span 10;
-	}
-	.grid-item.qr-code {
-		display: none;
 	}
 	.blog {
 		max-width: 100%;

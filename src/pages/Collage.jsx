@@ -1,8 +1,10 @@
-import collages from './data/collage.js'
+import collages from '../data/collage.js'
 let imageData = Object.values(collages)
+
 
 function Collage() {
 	return(
+		<>		
 		<article>
 			<div className="blog">
 			<a href="/" className="home-button"><u>←</u></a>
@@ -21,6 +23,8 @@ function Collage() {
 				</div>
 			</div>
 		</article>
+		</>
+
 	)
 }
 

@@ -1,10 +1,8 @@
-import Header from './Header.jsx';
-import Grid from './Grid.jsx';
+import Grid from '../layouts/PostGrid.jsx';
 
 function Archive() {
   return (
     <div>
-      <Header />
       <Grid includeArchived={true} /> {/* Include all items, including archived ones */}
     </div>
   );

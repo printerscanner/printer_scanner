@@ -1,4 +1,4 @@
-import Grid from './layouts/PostGrid.jsx';
+import Grid from './Grid.jsx';
 
 function App() {
   return (

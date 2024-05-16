@@ -1,4 +1,4 @@
-import data from './data/api.js';
+import data from '../data/api.js';
 
 // eslint-disable-next-line react/prop-types
 const Grid = ({ includeArchived }) => {
