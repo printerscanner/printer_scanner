@@ -54,7 +54,7 @@ function ContactForm() {
         }).toString(),
       });
       if (response.ok) {
-        thanksMessage = "You're a little freak 😉, thanks for joining.";
+        thanksMessage = "Our AI (my cousin) is hard at work on a response to your submission right now.";
         // Reset form fields if needed
         e.target.reset();
       } else {
