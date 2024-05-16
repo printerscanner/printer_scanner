@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 function Archive() {
   return (
     <div>
+      <h1 className='visually-hidden'>Archive</h1>	
       <Helmet>
         <title>Archive</title>
         <meta name="description" content="Browse the Archive of past projects" />

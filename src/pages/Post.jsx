@@ -9,8 +9,9 @@ function Post() {
 
     return (
         <>
+        <h1 className='visually-hidden'>{product.title}</h1>
         <Helmet>
-        <title>{product.title} - printer_scanner</title>
+        <title>{product.title}</title>
             <meta name="description" content={`${product.description}`} />
         </Helmet>
             <article>

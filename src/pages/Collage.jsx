@@ -6,7 +6,8 @@ import { Helmet } from 'react-helmet';
 
 function Collage() {
 	return(
-		<>		
+		<>
+		<h1 className='visually-hidden'>Collages</h1>		
 		<Helmet>
 			<title>Collages</title>
 			<meta name="description" content="I taught my computer to make collages for me. Here's everything it made." />
