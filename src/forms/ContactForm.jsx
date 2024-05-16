@@ -43,7 +43,7 @@ function ContactForm() {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
-          'form-name': 'contact',
+          'form-name': 'sumission',
           email: e.target.email.value,
         }).toString(),
       });
@@ -159,6 +159,26 @@ function ContactForm() {
         </div>
       {/* Start Date */}
       <div className='grid-item text xl-grid'><p>Target Launch Date</p></div>
+      <input
+        type="hidden"
+        id="interest"
+        name="interest"
+        value={selectedInterest}
+      />
+
+      <input
+        type="hidden"
+        id="slider1Value"
+        name="slider1Value"
+        value={sliderOneValue}
+      />
+
+      <input
+        type="hidden"
+        id="slider2Value"
+        name="slider2Value"
+        value={sliderTwoValue}
+      />
       <input
         id="start-date"
         name="start-date"
