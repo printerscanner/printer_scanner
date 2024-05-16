@@ -8,11 +8,10 @@ function Header({ isVisible, currentPath }) {
   return (
     <header className="grid-layout condensed-grid condensed-grid--secondary">
       <div className="grid-item"><a href="/"><h1 className="logo">printer_scanner</h1></a></div>
-      <div className="grid-item"></div>
+      <div className="grid-item hidden-mobile"></div>
 
-      <div className="grid-item"></div>
-      <div className="grid-item">
-      </div>
+      <div className="grid-item hidden-mobile"></div>
+      <div className="grid-item hidden-mobile"></div>
 
       <div className="grid-item grid-item--link">
         <Form />
@@ -22,19 +21,19 @@ function Header({ isVisible, currentPath }) {
       </div>
 
       <div className="grid-item grid-item--link">
-          {currentPath.includes("/work/") && !isVisible && <button onClick={onBackClick} className="home-button"><u>←</u></button>}
+          {currentPath != "/" && !isVisible && <button onClick={onBackClick} className="home-button"><u>←</u></button>}
       </div>
 
       <div className="grid-item span-2 text">
         <p>An independent design and technology studio based in Berlin.</p>
       </div>
 
-      <div className="grid-item grid-item--link">
+      <div className="grid-item grid-item--link hidden-mobile">
       {/* <a className="menu-link right" href="/capabilities">Capabilities</a> */}
       </div>
 
-      <div className="grid-item"></div>
-      <div className="grid-item"></div>
+      <div className="grid-item hidden-mobile"></div>
+      <div className="grid-item hidden-mobile"></div>
 
       <div className="grid-item">
         <a className="right menu-link" href="https://instagram.com/printer_scanner">Instagram</a>
@@ -45,8 +44,8 @@ function Header({ isVisible, currentPath }) {
       <div className="grid-item">
         <a className="menu-link" href="https://github.com/printerscanner">Github</a>
       </div>
-      <div className="grid-item"></div>
-      <div className="grid-item"></div>
+      <div className="grid-item hidden-mobile"></div>
+      <div className="grid-item hidden-mobile"></div>
       <div className="grid-item">
         <a className="menu-link" href="https://earthly-delights.net">↗ Earthly Delights</a>
       </div>

@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App.jsx';
 import Layout from './layouts/Layout.jsx';
 import Collage from './pages/Collage.jsx';
-// import Contact from './pages/Contact.jsx';
+import Colophon from './pages/Colophon.jsx';
 import Capabilities from './pages/Capabilities.jsx';
 import Post from './pages/Post.jsx';
 import FourOhFour from './pages/404.jsx';
@@ -29,10 +29,10 @@ const router = createBrowserRouter([
     path: "/archive",
     element: <Archive />,
   },
-  // {
-  //   path: "/contact",
-  //   element: <Contact />,
-  // },
+  {
+    path: "/colophon",
+    element: <Colophon />,
+  },
   {
     path: "/capabilities",
     element: <Capabilities />,
