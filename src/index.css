@@ -31,6 +31,10 @@ body {
 	line-height: 1.5;
 }
 
+h1 {
+	font-size: x-large;
+}
+
 
 h2 {
 	margin: .3rem 0;
@@ -173,7 +177,7 @@ b {
 	border-radius: 3px;
 }
 
-.grid-item p {
+.overview p {
 	padding-top: 1px;
 	margin: 0;
 }
@@ -281,6 +285,15 @@ a:hover img {
 
 .logo {
 	margin: 0;
+}
+
+.reversed {
+	text-align: right;
+	float: right;
+	-webkit-transform:rotateY(180deg);
+	-moz-transform:rotateY(180deg);
+	-o-transform:rotateY(180deg);
+	-ms-transform:rotateY(180deg);
 }
 
 .home-button {

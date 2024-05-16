@@ -11,7 +11,7 @@ const Grid = ({ includeArchived }) => {
     const itemClass = data[id].featured ? "grid-item span-2" : "grid-item";
     const itemContent = (
       <>
-        <div className="text">
+        <div className="text overview">
           <p><b>{data[id].title}</b> <span style={{float: "right"}}>{data[id].link ? <span>↗ </span> : ''}</span></p>
           <p style={{ fontSize: '12px', paddingBottom: '.5rem' }}>
             {data[id].category ? <span className="grid-crumbs">{data[id].category}</span> : ''} 
