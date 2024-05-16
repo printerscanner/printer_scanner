@@ -227,9 +227,15 @@ a:hover img {
 	grid-row-end: span 1;
 }
 
-.span-all {
+.span-most {
 	grid-column-start: 2;
 	grid-column-end: -2;
+	grid-row-end: span 1;
+}
+
+.span-all {
+	grid-column-start: 1;
+	grid-column-end: -1;
 	grid-row-end: span 1;
 }
 
@@ -317,6 +323,11 @@ button {
 		grid-column-end: span 3;
 	}
 	.span-all {
+		grid-column-start: 1;
+		grid-column-end: -1;
+		grid-row-end: span 1;
+	}
+	.span-most {
 		grid-column-start: 1;
 		grid-column-end: -1;
 		grid-row-end: span 1;

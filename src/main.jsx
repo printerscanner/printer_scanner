@@ -6,6 +6,7 @@ import Layout from './layouts/Layout.jsx';
 import Collage from './pages/Collage.jsx';
 import Colophon from './pages/Colophon.jsx';
 import Capabilities from './pages/Capabilities.jsx';
+import Contact from './pages/Contact.jsx';
 import Post from './pages/Post.jsx';
 import FourOhFour from './pages/404.jsx';
 import Archive from './pages/Archive.jsx';
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/colophon",
     element: <Colophon />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
   },
   {
     path: "/capabilities",
