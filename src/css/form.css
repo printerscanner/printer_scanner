@@ -95,20 +95,26 @@ textarea {
 	border-color: currentColor;
 	padding: 20px 10px;
 	font-size: 20px;
-	color: inherit; */
+	color: inherit;
+	outline: 0;
 }
+
+::placeholder { /* Most modern browsers support this now. */
+	color: inherit !important;
+ }
 
 input[type="text"]:hover,
 input[type="email"]:hover,
 textarea:hover {
-	background-color: #5a3400;
+	background-color: #b19cd9;
+	color: black;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  background-color: inherit;
-  color: inherit;
+  background-color: #aca4bb;
+  color: black;
 }
 
 /* Slider track */
@@ -221,6 +227,47 @@ input[type="radio"] {
 	background-color: rgb(152, 149, 187);
   	color: black;
   }
+/* Darker pastel hover colors with contrasty text */
+.web-design-hover:hover,
+.web-design-hover:focus,
+.web-design-hover.selected {
+	background-color: #ffafc2; /* Darker Pink */
+	color: #000000; /* Dark gray */
+	font-weight: 400;
+}
+
+.web-development-hover:hover,
+.web-development-hover:focus,
+.web-development-hover.selected {
+	background-color: #7fc8a9; /* Darker Green */
+	color: #000000; /* Dark gray */
+	font-weight: 400;
+}
+
+.product-mvp-hover:hover,
+.product-mvp-hover:focus,
+.product-mvp-hover.selected {
+	background-color: #86abb8; /* Darker Blue */
+	color: #000000; /* Dark gray */
+	font-weight: 400;
+}
+
+.ecommerce-hover:hover,
+.ecommerce-hover:focus,
+.ecommerce-hover.selected {
+	background-color: #ffcc66; /* Darker Yellow */
+	color: #000000; /* Dark gray */
+	font-weight: 400;
+}
+
+.other-hover:hover,
+.other-hover:focus,
+.other-hover.selected {
+	background-color: #ff8c99; /* Darker Red */
+	color: #000000; /* Dark gray */
+	font-weight: 400;
+}
+
 
 .text-area {
 	width: 100%;

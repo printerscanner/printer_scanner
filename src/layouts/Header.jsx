@@ -34,17 +34,18 @@ function Header({ isVisible, currentPath }) {
 
       <div className="grid-item hidden-mobile"></div>
       <div className="grid-item hidden-mobile"></div>
+      <div className="grid-item hidden-mobile"></div>
 
-      <div className="grid-item">
-        <a className="right menu-link" href="https://instagram.com/printer_scanner">Instagram</a>
-      </div>
+
       <div className="grid-item">
         <a className="menu-link" href="https://www.are.na/printer-scanner">Are.na</a>
       </div>
       <div className="grid-item">
         <a className="menu-link" href="https://github.com/printerscanner">Github</a>
       </div>
-      <div className="grid-item hidden-mobile"></div>
+      <div className="grid-item">
+        <a className="right menu-link" href="https://instagram.com/printer_scanner">Instagram</a>
+      </div>
       <div className="grid-item hidden-mobile"></div>
       <div className="grid-item">
         <a className="menu-link" href="https://earthly-delights.net">↗ Earthly Delights</a>

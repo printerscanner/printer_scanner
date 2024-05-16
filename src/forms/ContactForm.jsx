@@ -80,6 +80,8 @@ function ContactForm() {
       className='grid-layout'
       onSubmit={handleSubmit}
     >
+     <div className='grid-item span-all text xl-grid'><p>Let's work together. We'd love to hear from you.</p></div>
+
       {/* Name */}
       <div className='grid-item text xl-grid'><p>Name</p></div>
       <input
@@ -87,7 +89,7 @@ function ContactForm() {
         name="name"
         type="text"
         className="grid-item span-5" 
-        placeholder="Your Name"
+        placeholder="Elizabeth Holmes"
       />
 
       {/* Email */}
@@ -98,7 +100,7 @@ function ContactForm() {
         name="email"
         type="email"
         className='grid-item span-5'
-        placeholder="Your Email"
+        placeholder="lizzie@theranos.com"
       />
 
       
@@ -110,43 +112,21 @@ function ContactForm() {
         name="company"
         type="text"
         className="grid-item span-5"
-        placeholder="Your Organization"
+        placeholder="Theranos"
       />
 
-
-      {/* Radio Button */}
       {/* Interest buttons */}
       <div className='grid-item text xl-grid'><p>We're looking for</p></div>
+      {["Web Design", "Web Development", "Product MVP", "Ecommerce", "Other"].map(interest => (
         <button
-          className={selectedInterest === "Web Design" ? "grid-item selected" : "grid-item"}
-          onClick={() => handleInterestSelection("Web Design")}
+          key={interest}
+          type="button"
+          className={`grid-item select-button ${selectedInterest === interest ? "selected" : ""} ${interest.toLowerCase().replace(/\s+/g, '-')}-hover`}
+          onClick={() => handleInterestSelection(interest)}
         >
-          Web Design
+          {interest}
         </button>
-        <button
-          className={selectedInterest === "Web Development" ? "grid-item selected" : "grid-item"}
-          onClick={() => handleInterestSelection("Web Development")}
-        >
-          Web Development
-        </button>
-        <button
-          className={selectedInterest === "Product MVP" ? "grid-item selected" : "grid-item"}
-          onClick={() => handleInterestSelection("Product MVP")}
-        >
-          Product MVP
-        </button>
-        <button
-          className={selectedInterest === "Ecommerce" ? "grid-item selected" : "grid-item"}
-          onClick={() => handleInterestSelection("Ecommerce")}
-        >
-          Ecommerce
-        </button>
-        <button
-          className={selectedInterest === "Other" ? "grid-item selected" : "grid-item"}
-          onClick={() => handleInterestSelection("Other")}
-        >
-          Other
-        </button>
+      ))}
 
         <div className='grid-item text xl-grid'><p>Budget</p></div>
 
@@ -178,13 +158,13 @@ function ContactForm() {
           <span id="range2">  {sliderTwoValue}k.</span>
         </div>
       {/* Start Date */}
-      <div className='grid-item text xl-grid'><p>Launch Date</p></div>
+      <div className='grid-item text xl-grid'><p>Target Launch Date</p></div>
       <input
         id="start-date"
         name="start-date"
         type="text"
         className="grid-item span-most"
-        placeholder="Start Date"
+        placeholder="January 1, 2029"
       />
     
       <button type="submit" className='submit grid-item'>Submit</button>
