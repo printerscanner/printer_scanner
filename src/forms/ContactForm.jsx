@@ -2,9 +2,10 @@ import { useState } from 'react';
 import '../css/form.css';
 
 function ContactForm() {
-  const [sliderOneValue, setSliderOneValue] = useState(5);
-  const [sliderTwoValue, setSliderTwoValue] = useState(65);
-  
+  const [sliderOneValue, setSliderOneValue] = useState(15);
+  const [sliderTwoValue, setSliderTwoValue] = useState(75);
+  const [selectedInterest, setSelectedInterest] = useState('');
+
   const handleSliderOneChange = (e) => {
     setSliderOneValue(parseInt(e.target.value));
     if (sliderTwoValue - parseInt(e.target.value) <= minGap) {
@@ -12,7 +13,7 @@ function ContactForm() {
     }
     fillColor();
   };
-  
+
   const handleSliderTwoChange = (e) => {
     setSliderTwoValue(parseInt(e.target.value));
     if (parseInt(e.target.value) - sliderOneValue <= minGap) {
@@ -20,16 +21,19 @@ function ContactForm() {
     }
     fillColor();
   };
-  
+
+  const handleInterestSelection = (interest) => {
+    setSelectedInterest(interest);
+  };
+
   const fillColor = () => {
-    const percent1 = (sliderOneValue / sliderMaxValue) * 100;
-    const percent2 = (sliderTwoValue / sliderMaxValue) * 100;
+    const percent1 = (sliderOneValue / 150) * 100;
+    const percent2 = (sliderTwoValue / 150) * 100;
     const sliderTrack = document.querySelector(".slider-track");
     sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
   };
 
   const minGap = 0;
-  const sliderMaxValue = 100;
 
   const handleSubmit = async (e) => {
     let thanksMessage
@@ -73,104 +77,87 @@ function ContactForm() {
       name="submission"
       method="POST"
       data-netlify="true"
-      className='form contact-form'
+      className='grid-layout'
       onSubmit={handleSubmit}
     >
-      <input type="hidden" name="form-name" value="contact" />
-      
       {/* Name */}
-      My Name is <input
+      <div className='grid-item text xl-grid'><p>Name</p></div>
+      <input
         id="name"
         name="name"
         type="text"
-        className="name"
+        className="grid-item span-5" 
         placeholder="Your Name"
       />
 
-      
-      {/* Company */}
-      and I work at <input
-        id="company"
-        name="company"
-        type="text"
-        className="company"
-        placeholder="Your Company"
-      />
-
       {/* Email */}
-      . You can reach me at
+      <div className='grid-item text xl-grid'><p>Email</p></div>
+      
       <input
         id="email"
         name="email"
         type="email"
+        className='grid-item span-5'
         placeholder="Your Email"
       />
 
+      
+      {/* Company */}
+
+      <div className='grid-item text xl-grid'><p>Organization</p></div>
+      <input
+        id="company"
+        name="company"
+        type="text"
+        className="grid-item span-5"
+        placeholder="Your Organization"
+      />
+
+
       {/* Radio Button */}
-      I'm looking for 
-        
-          <input
-            type="radio"
-            name="interest"
-            value="Web Design"
-          />
-        <label>
+      {/* Interest buttons */}
+      <div className='grid-item text xl-grid'><p>We're looking for</p></div>
+        <button
+          className={selectedInterest === "Web Design" ? "grid-item selected" : "grid-item"}
+          onClick={() => handleInterestSelection("Web Design")}
+        >
           Web Design
-        </label>
-        
-          <input
-            type="radio"
-            name="interest"
-            value="Web Development"
-          />
-        <label>
+        </button>
+        <button
+          className={selectedInterest === "Web Development" ? "grid-item selected" : "grid-item"}
+          onClick={() => handleInterestSelection("Web Development")}
+        >
           Web Development
-        </label>
-        <input
-            type="radio"
-            name="interest"
-            value="Product MVP"
-          />
-        <label>
+        </button>
+        <button
+          className={selectedInterest === "Product MVP" ? "grid-item selected" : "grid-item"}
+          onClick={() => handleInterestSelection("Product MVP")}
+        >
           Product MVP
-        </label>
-        <input
-            type="radio"
-            name="interest"
-            value="Ecommerce"
-          />
-        <label>
-        Ecommerce
-        </label>
-          <input
-            type="radio"
-            name="interest"
-            value="Other"
-          />
-        <label>
+        </button>
+        <button
+          className={selectedInterest === "Ecommerce" ? "grid-item selected" : "grid-item"}
+          onClick={() => handleInterestSelection("Ecommerce")}
+        >
+          Ecommerce
+        </button>
+        <button
+          className={selectedInterest === "Other" ? "grid-item selected" : "grid-item"}
+          onClick={() => handleInterestSelection("Other")}
+        >
           Other
-        </label>
+        </button>
+
+        <div className='grid-item text xl-grid'><p>Budget</p></div>
+
       {/* Budget Range Slider */}
-            {/* Tell us more textarea */}
-            <textarea
-        id="tell-us-more"
-        className="text-area"
-        name="tell-us-more"
-        placeholder="Tell us more"
-      ></textarea>
-      <div className="wrapper">
-        <div>
-        Our budget ranges from €
-          <span id="range1">{sliderOneValue}k</span>
-          <span>&ndash;</span>
-          <span id="range2">  {sliderTwoValue}k.</span>
-        </div>
+      <div className="wrapper span-most">
         <div className="container">
           <div className="slider-track"></div>
           <input
             type="range"
             min="0"
-            max="100"
+            max="150"
             value={sliderOneValue}
             id="slider-1"
             onChange={handleSliderOneChange}
@@ -178,25 +165,29 @@ function ContactForm() {
           <input
             type="range"
             min="0"
-            max="100"
+            max="150"
             value={sliderTwoValue}
             id="slider-2"
             onChange={handleSliderTwoChange}
           />
         </div>
       </div>
-
+      <div className='grid-item text xl-grid'>
+          <span id="range1">€{sliderOneValue}k</span>
+          <span>&ndash;</span>
+          <span id="range2">  {sliderTwoValue}k.</span>
+        </div>
       {/* Start Date */}
-      We want to launch
+      <div className='grid-item text xl-grid'><p>Launch Date</p></div>
       <input
         id="start-date"
         name="start-date"
         type="text"
-        className="start-date"
+        className="grid-item span-most"
         placeholder="Start Date"
       />
     
-      <button type="submit" className='submit'>Submit</button>
+      <button type="submit" className='submit grid-item'>Submit</button>
     </form>
   );
 }

@@ -7,7 +7,7 @@
 /* SLIDER RANGE */
 .wrapper {
 	position: relative;
-	width: 80%;
+	width: 100%;
 	border-radius: 10px;
   }
   
@@ -82,30 +82,33 @@ input[type="range"] {
 	border: 1px dotted #3264fe;
   }
 
-  /* Text inputs */
 input[type="text"],
 input[type="email"],
 textarea {
-	border-radius: 4px;
+	/* border-radius: 4px;
 	outline: none;
 	font-size: 16px;
 	margin-bottom: 15px;
-	transition: background-color 0.3s ease;
+	/* transition: background-color 0.3s ease; */
 	border: 1px dotted;
 	background: transparent;
 	border-color: currentColor;
 	padding: 20px 10px;
-	border: none;
-	border-bottom: 1px solid currentColor;
-	padding-bottom: 10px;
 	font-size: 20px;
-	color: inherit;
+	color: inherit; */
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+	background-color: #5a3400;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  background-color: #e0e0e0;
+  background-color: inherit;
+  color: inherit;
 }
 
 /* Slider track */
@@ -128,7 +131,7 @@ input[type="range"]::-ms-thumb {
   appearance: none;
   height: 20px;
   width: 20px;
-  background-color: #3264fe;
+  /* background-color: #3264fe; */
   cursor: pointer;
   border-radius: 50%;
 }
@@ -180,17 +183,46 @@ input[type="radio"] {
 	color: #3264fe;
   }
 
+  .interest-buttons {
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  .interest-buttons button {
+	background-color: transparent;
+	border: 2px dotted #3264fe;
+	border-radius: 20px;
+	padding: 10px 20px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .interest-buttons button:hover {
+	background-color: #3264fe;
+	color: #fff;
+  }
+  
+  .interest-buttons button.selected {
+	background-color: #3264fe;
+	color: #fff;
+	font-weight: 400;
+  }
+  
+
   .submit {
 	padding: 20px;
-	background-color: red;
-	border-radius: 10px;
+	background-color: inherit;
+	color: currentColor;
   }
 
   .submit:hover {
-	background-color: rgb(21, 0, 255);
+	background-color: rgb(152, 149, 187);
+  	color: black;
   }
 
-  .text-area {
+.text-area {
 	width: 100%;
-	min-height: 100px;
-  }
+	min-height: 100px
+}

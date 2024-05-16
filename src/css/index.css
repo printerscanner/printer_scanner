@@ -53,7 +53,7 @@ a, button {
 
 a:hover, button:hover {
 	cursor: pointer;
-	opacity: .6;
+	/* opacity: .6; */
 }
 
 .text a {
@@ -227,6 +227,11 @@ a:hover img {
 	grid-row-end: span 1;
 }
 
+.span-5 {
+	grid-column-end: span 5;
+	grid-row-end: span 1;
+}
+
 .span-most {
 	grid-column-start: 2;
 	grid-column-end: -2;
@@ -237,6 +242,16 @@ a:hover img {
 	grid-column-start: 1;
 	grid-column-end: -1;
 	grid-row-end: span 1;
+}
+
+.xl-grid {
+	display: flex;
+	align-items: center;
+}
+
+.xl-grid p {
+	font-size: 25px;
+	margin: 0;
 }
 
 .grid-crumbs+.grid-crumbs::before {
