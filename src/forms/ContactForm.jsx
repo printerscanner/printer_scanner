@@ -44,7 +44,13 @@ function ContactForm() {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
           'form-name': 'submission',
+          name: e.target.name.value,
           email: e.target.email.value,
+          company: e.target.company.value,
+          'interest': e.target.interest.value,
+          'slider1Value': e.target.slider1Value.value,
+          'slider2Value': e.target.slider2Value.value,
+          'start-date': e.target['start-date'].value
         }).toString(),
       });
       if (response.ok) {
