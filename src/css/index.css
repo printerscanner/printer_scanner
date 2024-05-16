@@ -314,6 +314,11 @@ button {
 	border-radius: 20px;
 	animation: fadeOut 3s forwards;
   }
+
+  .bottom {
+	top: initial;
+	bottom: 25px;
+  }
   
   @keyframes fadeOut {
 	0% { opacity: 1; }
