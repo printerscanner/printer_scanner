@@ -80,7 +80,7 @@ function ContactForm() {
       className='grid-layout'
       onSubmit={handleSubmit}
     >
-     <div className='grid-item span-all text xl-grid'><p>Let's work together. We'd love to hear from you.</p></div>
+     <div className='grid-item span-all text xl-grid'><p>We would love to hear from you.</p></div>
 
       {/* Name */}
       <div className='grid-item text xl-grid'><p>Name</p></div>

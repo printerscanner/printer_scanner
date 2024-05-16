@@ -17,7 +17,7 @@ function Header({ isVisible, currentPath }) {
         <Form />
       </div>
       <div className="grid-item grid-item--link">
-        <a className="menu-link right" href="mailto:itsprinterscanner@gmail.com">Get in Touch</a>
+        <a className="menu-link right" href="/contact">Work With Us</a>
       </div>
 
       <div className="grid-item grid-item--link">
