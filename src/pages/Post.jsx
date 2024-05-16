@@ -1,5 +1,7 @@
 import { useParams } from 'react-router-dom';
 import data from '../data/api.js';
+import { Helmet } from 'react-helmet';
+
 
 function Post() {
     const { id } = useParams();
@@ -7,6 +9,10 @@ function Post() {
 
     return (
         <>
+        <Helmet>
+        <title>{product.title} - printer_scanner</title>
+            <meta name="description" content={`${product.description}`} />
+        </Helmet>
             <article>
                 <div className="grid-layout large-grid">
                     <div className="blog grid-item span-2 text">

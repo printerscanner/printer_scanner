@@ -18,7 +18,7 @@ function Header({ isVisible, currentPath }) {
         <Form />
       </div>
       <div className="grid-item grid-item--link">
-        <a className="menu-link right" href="/contact">Get in Touch</a>
+        <a className="menu-link right" href="mailto:itsprinterscanner@gmail.com">Get in Touch</a>
       </div>
 
       <div className="grid-item grid-item--link">
@@ -30,7 +30,7 @@ function Header({ isVisible, currentPath }) {
       </div>
 
       <div className="grid-item grid-item--link">
-      <a className="menu-link right" href="/capabilities">Capabilities</a>
+      {/* <a className="menu-link right" href="/capabilities">Capabilities</a> */}
       </div>
 
       <div className="grid-item"></div>

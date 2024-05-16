@@ -1,10 +1,16 @@
 import collages from '../data/collage.js'
 let imageData = Object.values(collages)
+import { Helmet } from 'react-helmet';
+
 
 
 function Collage() {
 	return(
 		<>		
+		<Helmet>
+			<title>Collages</title>
+			<meta name="description" content="I taught my computer to make collages for me. Here's everything it made." />
+		</Helmet>
 		<article>
 			<div className="blog">
 			<a href="/" className="home-button"><u>←</u></a>

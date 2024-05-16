@@ -8,8 +8,8 @@ function Footer() {
             <p>itsprinterscanner@gmail.com</p>
         </div>
 				<div className="grid-item overview">
-        <b>PS Studio</b>
-        <p>Urbanstraße 71 10967 Berlin</p>
+        <b>Offices</b>
+        <p>Urbanstraße 71, 10967 Berlin</p>
         </div>
         <div className="grid-item span-2"></div>
         <div className="grid-item grid-item--link"><a className="menu-link" href="/archive">Archive</a></div>

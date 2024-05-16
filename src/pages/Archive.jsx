@@ -1,9 +1,15 @@
 import Grid from '../layouts/PostGrid.jsx';
+import { Helmet } from 'react-helmet';
+
 
 function Archive() {
   return (
     <div>
-      <Grid includeArchived={true} /> {/* Include all items, including archived ones */}
+      <Helmet>
+        <title>Archive</title>
+        <meta name="description" content="Browse the Archive of past projects" />
+      </Helmet>
+      <Grid includeArchived={true} />
     </div>
   );
 }
