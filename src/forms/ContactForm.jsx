@@ -53,6 +53,7 @@ function ContactForm() {
           'start-date': e.target['start-date'].value
         }).toString(),
       });
+      console.log(response)
       if (response.ok) {
         thanksMessage = "Our AI (my cousin) is hard at work on a response to your submission right now.";
         // Reset form fields if needed

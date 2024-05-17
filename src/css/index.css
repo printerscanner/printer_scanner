@@ -20,10 +20,8 @@ body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	overflow-x: hidden;
 	background-color: currentColor;
 	border-color: currentColor;
-	width: 99%;
 	margin: auto;
 	font-family: 'Neue Montreal', sans-serif;
 	font-display: swap;
@@ -170,7 +168,6 @@ b {
 
 .grid-item {
 	/* padding: 1rem; */
-	position: relative;
 	word-wrap: break-word;
 	border: 1px dotted;
 	margin: 8px;
@@ -337,6 +334,16 @@ button {
 	width: 1px;
 }
 
+.hidden-large {
+	display: none;
+}
+
+@media only screen and (min-width: 1700px) {
+	.hidden-large {
+		display: initial;
+	}
+}
+
 @media only screen and (max-width: 800px) {
 
 	.grid-item {
@@ -373,22 +380,24 @@ button {
 }
 
 .cookie-banner {
-	position: fixed;
-	bottom: 0;
+	position: sticky;
+	display: 0 !important;
 	left: 0;
-	width: 100%;
-	background-color: #f8f9fa;
+	width: max-content;
 	padding: 10px 20px;
 	box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 	z-index: 9999;
+	bottom: 0;
+	background-color: rgba(158, 218, 240, 0.732);
+	color: black;
+	
   }
   .cookie-banner p {
 	margin: 0;
   }
   .cookie-banner button {
-	background-color: #007bff;
-	color: #fff;
-	border: none;
+	border-radius: 3px;
+	border: 2px dotted #007bff;
 	padding: 5px 10px;
 	cursor: pointer;
   }
