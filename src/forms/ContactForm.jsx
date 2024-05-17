@@ -114,7 +114,7 @@ function ContactForm() {
         id="email"
         name="email"
         type="email"
-        // required
+        required
         className='grid-item span-5'
         placeholder="lizzie@theranos.com"
       />
