@@ -253,6 +253,16 @@ a:hover img {
 	margin: 0;
 }
 
+.l-grid {
+	display: flex;
+	align-items: center;
+}
+
+.l-grid p {
+	font-size: 20px;
+	margin: 0;
+}
+
 .grid-crumbs+.grid-crumbs::before {
 	content: ' · ';
 	margin: 0 2px;
