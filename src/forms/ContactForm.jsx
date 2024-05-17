@@ -41,12 +41,11 @@ function ContactForm() {
     
     // Combine all form values into a single message
     const message = JSON.stringify({
-      name: e.target.name.value,
-      email: e.target.email.value,
       company: e.target.company.value,
+      details: e.target.details.value,
       interest: selectedInterest,
-      slider1Value: sliderOneValue,
-      slider2Value: sliderTwoValue,
+      BudgetLow: sliderOneValue,
+      BudgetHigh: sliderTwoValue,
       'start-date': e.target['start-date'].value
     });
     
@@ -56,6 +55,8 @@ function ContactForm() {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
           'form-name': 'submission',
+          name: e.target.name.value,
+          email: e.target.email.value,
           message: message // Include the combined message
         }).toString(),
       });
@@ -141,6 +142,15 @@ function ContactForm() {
           {interest}
         </button>
       ))}
+
+    <div className='grid-item text xl-grid'><p>Details</p></div>
+      <input
+        id="name"
+        name="details"
+        type="text"
+        className="grid-item span-5" 
+        placeholder="Tell us more"
+      />  
 
         <div className='grid-item text xl-grid'><p>Budget</p></div>
 
