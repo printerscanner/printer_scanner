@@ -36,24 +36,30 @@ function ContactForm() {
   const minGap = 0;
 
   const handleSubmit = async (e) => {
-    let thanksMessage
+    let thanksMessage;
     e.preventDefault();
+    
+    // Combine all form values into a single message
+    const message = JSON.stringify({
+      name: e.target.name.value,
+      email: e.target.email.value,
+      company: e.target.company.value,
+      interest: selectedInterest,
+      slider1Value: sliderOneValue,
+      slider2Value: sliderTwoValue,
+      'start-date': e.target['start-date'].value
+    });
+    
     try {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
           'form-name': 'submission',
-          name: e.target.name.value,
-          email: e.target.email.value,
-          company: e.target.company.value,
-          'interest': e.target.interest.value,
-          'slider1Value': e.target.slider1Value.value,
-          'slider2Value': e.target.slider2Value.value,
-          'start-date': e.target['start-date'].value
+          message: message // Include the combined message
         }).toString(),
       });
-      console.log(response)
+      
       if (response.ok) {
         thanksMessage = "Our AI (my cousin) is hard at work on a response to your submission right now.";
         // Reset form fields if needed
@@ -65,14 +71,15 @@ function ContactForm() {
       console.error('Form submission failed:', error);
       thanksMessage = "Oops! Something went wrong.";
     }
+    
     // Creating a div element to hold the message
     const bubble = document.createElement('div');
     bubble.className = 'thanks-bubble bottom';
     bubble.innerHTML = `<p>${thanksMessage}</p>`;
-
+    
     // Appending the bubble to the form
     e.target.appendChild(bubble);
-
+    
     // Hiding the bubble after 3 seconds
     setTimeout(() => {
       bubble.remove();
