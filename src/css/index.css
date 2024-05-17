@@ -12,7 +12,7 @@
 /**/
 
 html {
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 	/*scroll-behavior: smooth;*/
 }
 
@@ -27,6 +27,8 @@ body {
 	font-display: swap;
 	filter: invert();
 	line-height: 1.5;
+	position: relative; /* or any other positioning */
+    overflow: auto; /* or overflow: scroll */
 }
 
 h1 {
@@ -301,15 +303,18 @@ button {
 }
 
 .thanks-bubble {
-	position: fixed;
+	position: sticky;
 	top: 25px;
 	right: 25px;
 	background-color: rgba(0, 0, 0, .9);
 	color: white;
-	padding: 10px 20px;
+	padding: 10px 15px;
 	z-index: 1000000;
 	border-radius: 20px;
 	animation: fadeOut 3s forwards;
+	width: max-content;
+	margin: 10px;
+
   }
 
   .bottom {

@@ -79,7 +79,7 @@ function ContactForm() {
     bubble.innerHTML = `<p>${thanksMessage}</p>`;
     
     // Appending the bubble to the form
-    e.target.appendChild(bubble);
+    document.body.appendChild(bubble);
     
     // Hiding the bubble after 3 seconds
     setTimeout(() => {
@@ -114,6 +114,7 @@ function ContactForm() {
         id="email"
         name="email"
         type="email"
+        // required
         className='grid-item span-5'
         placeholder="lizzie@theranos.com"
       />
@@ -145,7 +146,7 @@ function ContactForm() {
 
     <div className='grid-item text xl-grid'><p>Details</p></div>
       <input
-        id="name"
+        id="details"
         name="details"
         type="text"
         className="grid-item span-5" 
