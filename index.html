@@ -50,43 +50,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-4VE4YJV9L8');
-
-    // Cookie banner script
-    function setCookie(name, value, days) {
-      var expires = "";
-      if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-      }
-      document.cookie = name + "=" + (value || "") + expires + "; path=/";
-    }
-
-    function getCookie(name) {
-      var nameEQ = name + "=";
-      var ca = document.cookie.split(';');
-      for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-      }
-      return null;
-    }
-
-    function acceptCookies() {
-      setCookie('cookiesAccepted', 'true', 365);
-      document.getElementById('cookieBanner').style.display = 'none';
-    }
-
-    window.onload = function() {
-      if (!getCookie('cookiesAccepted')) {
-        var banner = document.createElement('div');
-        banner.id = 'cookieBanner';
-        banner.className = 'cookie-banner';
-        banner.innerHTML = '<p>We would like to use cookies. <button onclick="acceptCookies()">Accept</button></p>';
-        document.body.appendChild(banner);
-      }
-    };
-  </script>
+  </script>  
 </body>
 </html>
