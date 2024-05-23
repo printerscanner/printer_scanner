@@ -7,8 +7,7 @@ function Header({ isVisible, currentPath }) {
   };
   return (
     <header className="grid-layout condensed-grid condensed-grid--secondary">
-      <div className="grid-item"><a href="/"><h1 className="logo">printer_scanner</h1></a></div>
-      <div className="grid-item hidden-mobile"></div>
+      <div className="grid-item span-2"><a href="/"><h1 className="logo">printer_scanner</h1></a></div>
 
       <div className="grid-item hidden-mobile"></div>
       <div className="grid-item hidden-mobile"></div>
