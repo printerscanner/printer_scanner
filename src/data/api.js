@@ -98,6 +98,18 @@ import legacy from "../assets/images/legacy.webp";
 import legacy_2 from "../assets/images/legacy_2.webp";
 import legacy_3 from "../assets/images/legacy_3.webp";
 import legacy_4 from "../assets/images/legacy_4.webp";
+import seaweed_1 from "../assets/images/seaweed.webp";
+import seaweed_2 from "../assets/images/seaweed_2.webp";
+import seaweed_3 from "../assets/images/seaweed_3.webp";
+import body_1 from "../assets/images/body_2.webp";
+import body_2 from "../assets/images/body_1.webp";
+import body_3 from "../assets/images/body_3.webp";
+
+import coaster_1 from "../assets/images/coaster_1.webp";
+import coaster_3 from "../assets/images/coaster_3.webp";
+import coaster_4 from "../assets/images/coaster_4.webp";
+import coaster_thumb from "../assets/thumbnails/coaster_1_thumb.webp";
+import body_2_thumb from "../assets/thumbnails/body_2_thumb.webp";
 
 const data = {
 	// "protean": {
@@ -107,25 +119,53 @@ const data = {
 	// 	featured: true,
 	// 	year: '2024',
 	// 	link: 'https://proteanmag.com',
-	// 	description: "Protean publishes incisive and affecting criticism, journalism, poetry, and art for the discerning leftist, sans advertisements.."
+	// 	description: "Protean publishes incisive and affecting criticism, journalism, poetry, and art for the discerning leftist, sans advertisements."
 	// },
-	// "eugenie-shinkle": {
-	// 	title: "Eugenie Shinkle",
-	// 	category: "Wordpress",
-	// 	featured: true,
-	// 	year: '2024',
-	// 	link: 'https://eugenieshinkle.com',
-	// 	description: "Website for an open source type foundy."
-	// },
+	"stylelint-sustainable-css": {
+		title: "Stylelint Sustainable CSS",
+		category: "Sustainable CSS",
+		year: '2024',
+		link: 'https://www.npmjs.com/package/stylelint-sustainable-css',
+		description: "Sustainable CSS is a Stylelint plugin dedicated to following sustainable web design principles. "
+	},
+	"eugenie-shinkle": {
+		title: "Eugenie Shinkle",
+		category: "Wordpress",
+		year: '2024',
+		link: 'https://eugenieshinkle.com',
+		description: "Portfolio website development for a photographer."
+	},
+	"earthly-delights": {
+		title: "The Garden of Earthly Delights",
+		category: "Obsidian",
+		subcategory: "Eleventy",
+		featured: true,
+		year: '2024',
+		link: 'https://earthly-delights.net',
+		description: "A blog about life's perils and temptations."
+	},
 	"mother-type": {
 		title: "Mother Type",
 		category: "with Callum Beaney",
 		subcategory: "React",
-		subsubcategory: "SIL Open Font License (OFL)",
 		featured: true,
+		subsubcategory: "SIL Open Font License (OFL)",
 		year: '2024',
 		link: 'https://mother-type.de',
 		description: "Website for an open source type foundry."
+	},
+	"seaweed-sans": {
+		title: "Seaweed Sans",
+		category: "with Mother",
+		img1: seaweed_1,
+		img2: seaweed_3,
+		img3: seaweed_2,
+		thumbnail: seaweed_1,
+		year: '2024',
+		archived: true,
+
+		description: "Type on your typewriter underwater at the crab cafe with seaweed sans.",
+		downloadLink: 'https://mother-type.de/fonts/seaweed-sans'
 	},
 	"legacy": {
 		title: "Legacy",
@@ -149,6 +189,17 @@ const data = {
 		link: 'https://overbrowsing.com',
 		description: "A super low-carbon website for an applied research group dedicated to advancing our understanding of sustainable web design and development practises."
 	},
+	"coaster-sans": {
+		title: "Coaster Sans",
+		category: "with Mother",
+		img1: coaster_1,
+		thumbnail: coaster_thumb,
+		img3: coaster_3,
+		img4: coaster_4,
+		year: '2023',
+		description: "A new chunky display font that will make you feel like you're riding the waves back home.",
+		downloadLink: 'https://mother-type.de/fonts/coaster-sans'
+	},
 	boring_books_club: {
 		thumbnail: boring_book_club_thumb,
 		title: "Boring Book Club",
@@ -158,6 +209,18 @@ const data = {
 		category: "Notion",
 		subcategory: "Next.js",
 		year: '2023'
+	},
+	"body-sans": {
+		title: "(my) body sans",
+		thumbnail: body_2_thumb,
+		category: "with Mother",
+		img1: body_1,
+		img2: body_2,
+		featured: true,
+		img3: body_3,
+		description: "You've seen kitsch body fonts, but you haven't seen one that's literally my body. Great for resumes and businesses. If you are a corporation, please reach out directly regarding a business license.",
+		year: '2023',
+		downloadLink: 'https://mother-type.de/fonts/body-sans'
 	},
     galaxy: {
         title: "Galaxy",
@@ -201,6 +264,15 @@ const data = {
 		featured: true,
 		year: '2023'
 	},
+	travel_vlog: {
+		title: "Dan & Abb Productions",
+		description: "A surrealist travel vlog. My mom posted one of our videos recently on Facebook and it got 200x the average view count, so please subscribe, for her sake.",
+		link: "https://www.youtube.com/channel/UCam9p5fiexMSluubYBs6sNw",
+		category: "Vlog",
+		archived: true,
+
+		year: '2022'
+	},
 	"smiling-everyday": {
 		title: "Swimming in the Ocean, Smiling Everyday",
 		thumbnail: smiling_1_thumb,
@@ -211,7 +283,6 @@ const data = {
 		img5: smiling5,
 		img6: smiling6,
 		archived: true,
-		featured: true,
 		description:
 		"A zine about being lost after a breakup.",
 		category: "Print",
@@ -227,7 +298,6 @@ const data = {
 		img5: polygons5,
 		img6: polygons6,
 		archived: true,
-		featured: true,
 		description: "Regular polygons all follow a mathematic pattern, that can be numerically and visually categorized. This book is a visual encyclopedia of that organization, starting from a point, then a line, then a triangle, this book maps of all convex and star polygons up to 28 edges.",
 		category: "Print",
 		subcategory: "Book",
@@ -285,6 +355,15 @@ const data = {
 		img4: sandwich4,
 		archived: true,
 		description: "A metaphorical and physical sandwich book which details the atrocities contained within your lunch. Come hungry, leave horrified.",
+		year: '2022'
+	},
+	automatic_brand_generator: {
+		title: "Automatic Brand Generator",
+		description: "Need a brand but you're not a designer? This sophisticated algorithm will generate brand guidelines for you, and export a pattern library and custom stylesheet.",
+		category: "Web",
+		archived: true,
+		subcategory: "Graphic Design",
+		link: "https://printerscanner.github.io/automatic-brand-generator/",
 		year: '2022'
 	},
 	"random-bible": {
@@ -430,7 +509,7 @@ const data = {
 		img3: radiozoa1,
 		img4: radiozoa4,
 		description:
-			"An online art magazine for artists, with interviews. It is no longer maintained, but in 2016 it had several active contributors about 10,000 unique visitors per month.",
+			"An online art magazine for artists. We interviewed emerging artists about their work. It is no longer maintained, but in 2016 it had ten active contributors and about 10,000 unique visitors per month.",
 		category: "Squarespace",
 		year: '2016'
 	},

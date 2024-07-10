@@ -50,7 +50,7 @@ a, button {
 
 a:hover, button:hover {
 	cursor: pointer;
-	/* opacity: .6; */
+	opacity: .6;
 }
 
 .text a {
@@ -348,6 +348,10 @@ button {
 
 .hidden-large {
 	display: none;
+}
+
+.blog.grid-item.span-2.text {
+	padding: 2rem 1.5rem;
 }
 
 @media only screen and (min-width: 1700px) {

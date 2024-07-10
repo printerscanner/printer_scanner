@@ -21,7 +21,7 @@ function Post() {
                         <h5>{product.subtitle}</h5>
                         <p>{product.description}</p>
                         <div className={product.content ? '' : 'visually-hidden'} dangerouslySetInnerHTML={{ __html: product.content }} />
-                        <a className={product.downloadLink ? '' : 'visually-hidden'} href={product.downloadLink}><u>↗ Download</u></a>
+                        <a className={product.downloadLink ? '' : 'visually-hidden'} href={product.downloadLink}><u>↗ Details on Mother Type</u></a>
                         <a className={product.githubLink ? '' : 'visually-hidden'} href={product.githubLink}><u>↗ Fork it on Github</u></a>
                         <a className={product.listen ? '' : 'visually-hidden'} href={product.listen}><u>↗ Listen</u></a>
                     </div>
