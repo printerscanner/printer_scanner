@@ -396,7 +396,7 @@ const data = {
 		description: "A webpage without any CSS is slightly too ugly, libraries like Bootstrap are way too heavy, and you have too much taste to use the other CSS libraries out there. Slightly Better CSS is a small, simple stylesheet for any project that needs to look just a little bit better.",
 		category: "Web",
 		subcategory: "Graphic Design",
-		link: "https://github.com/printerscanner/slightly-better-css/",
+		link: "https://printerscanner.github.io/slightly-better-css/",
 		year: '2022'
 	},
 	roch_bot: {
