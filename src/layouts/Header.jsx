@@ -28,7 +28,7 @@ function Header({ isVisible, currentPath }) {
         <p>An independent design and technology studio based in Berlin.</p>
       }
       {currentPath == "/archive" && 
-        <p>The Archive</p>
+        <p>Archive of all projects.</p>
       }
       </div>
 
