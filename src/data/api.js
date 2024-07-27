@@ -123,7 +123,7 @@ const data = {
 	},
 	"stylelint-sustainable-css": {
 		title: "Stylelint Sustainable CSS",
-		category: "Sustainable CSS",
+		category: "with Headless Horse",
 		year: '2024',
 		link: 'https://www.npmjs.com/package/stylelint-sustainable-css',
 		description: "Sustainable CSS is a Stylelint plugin dedicated to following sustainable web design principles. "
