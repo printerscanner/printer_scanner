@@ -231,7 +231,7 @@ const data = {
         category: "with Fictive Kin",
         subcategory: "11ty",
         subsubcategory: "Contentful",
-        description: "A websystem for a cryptocurrency investment firm. Built with Fictive Kin, and with branding by Pentagram.",
+        description: "A websystem for a cryptocurrency investment firm. Branding by Pentagram.",
         year: '2023'
     },
 	everlaw: {
