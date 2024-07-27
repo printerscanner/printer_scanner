@@ -112,15 +112,15 @@ import coaster_thumb from "../assets/thumbnails/coaster_1_thumb.webp";
 import body_2_thumb from "../assets/thumbnails/body_2_thumb.webp";
 
 const data = {
-	// "protean": {
-	// 	title: "Protean Magazine",
-	// 	category: "Wordpress",
-	// 	subcategory: "WooCommerce",
-	// 	featured: true,
-	// 	year: '2024',
-	// 	link: 'https://proteanmag.com',
-	// 	description: "Protean publishes incisive and affecting criticism, journalism, poetry, and art for the discerning leftist, sans advertisements."
-	// },
+	"protean": {
+		title: "Protean Magazine",
+		category: "Wordpress",
+		subcategory: "WooCommerce",
+		featured: true,
+		year: '2024',
+		link: 'https://proteanmag.com',
+		description: "Protean publishes incisive and affecting criticism, journalism, poetry, and art for the discerning leftist, sans advertisements."
+	},
 	"stylelint-sustainable-css": {
 		title: "Stylelint Sustainable CSS",
 		category: "Sustainable CSS",
