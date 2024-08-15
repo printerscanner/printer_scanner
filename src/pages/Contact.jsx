@@ -8,7 +8,7 @@ function Archive() {
       <h1 className='visually-hidden'>Contact</h1>
       <Helmet>
         <title>Contact</title>
-        <meta name="description" content="This website was designed and developed by printer_scanner. It is typeset using Neue Montreal by The Pangram Pangram🅐 Foundry" />
+        <meta name="description" content="Let's work together!" />
       </Helmet>
       <ContactForm />
     </div>
