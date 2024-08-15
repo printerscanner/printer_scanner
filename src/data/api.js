@@ -112,6 +112,13 @@ import coaster_thumb from "../assets/thumbnails/coaster_1_thumb.webp";
 import body_2_thumb from "../assets/thumbnails/body_2_thumb.webp";
 
 const data = {
+	"stylelint-sustainable-css": {
+		title: "Stylelint Sustainable CSS",
+		category: "with Headless Horse",
+		year: '2024',
+		link: 'https://github.com/overbrowsing/stylelint-sustainable-css#readme',
+		description: "Sustainable CSS is a Stylelint plugin dedicated to following sustainable web design principles. "
+	},
 	"protean": {
 		title: "Protean Magazine",
 		category: "Wordpress",
@@ -120,13 +127,6 @@ const data = {
 		year: '2024',
 		link: 'https://proteanmag.com',
 		description: "Protean publishes incisive and affecting criticism, journalism, poetry, and art for the discerning leftist, sans advertisements."
-	},
-	"stylelint-sustainable-css": {
-		title: "Stylelint Sustainable CSS",
-		category: "with Headless Horse",
-		year: '2024',
-		link: 'https://www.npmjs.com/package/stylelint-sustainable-css',
-		description: "Sustainable CSS is a Stylelint plugin dedicated to following sustainable web design principles. "
 	},
 	"eugenie-shinkle": {
 		title: "Eugenie Shinkle",
