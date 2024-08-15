@@ -16,7 +16,7 @@ function Header({ isVisible, currentPath }) {
         <Form />
       </div>
       <div className="grid-item grid-item--link">
-        <a className="menu-link right" href="/contact">Lets Work Together</a>
+        <a className="menu-link right" href="/contact">Let’s Work Together</a>
       </div>
 
       <div className="grid-item grid-item--link">
@@ -41,18 +41,19 @@ function Header({ isVisible, currentPath }) {
       <div className="grid-item hidden-mobile"></div>
 
 
-      <div className="grid-item">
-        <a className="menu-link" href="https://www.are.na/printer-scanner-studio">Are.na</a>
-      </div>
+
       <div className="grid-item">
         <a className="menu-link" href="https://github.com/printerscanner">Github</a>
+      </div>
+      <div className="grid-item">
+        <a className="menu-link" href="https://www.are.na/printer-scanner-studio">Are.na</a>
       </div>
       <div className="grid-item">
         <a className="right menu-link" href="https://instagram.com/printer_scanner">Instagram</a>
       </div>
       <div className="grid-item hidden-mobile"></div>
 
-      <div className="grid-item hidden-mobile"></div>
+      <div className="grid-item"><a className="menu-link" href="https://earthly-delights.net">↗ Mother Type</a></div>
       <div className="grid-item">
         <a className="menu-link" href="https://earthly-delights.net">↗ Earthly Delights</a>
       </div>

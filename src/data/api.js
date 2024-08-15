@@ -152,7 +152,7 @@ const data = {
 		subsubcategory: "SIL Open Font License (OFL)",
 		year: '2024',
 		link: 'https://mother-type.de',
-		description: "Website for an open source type foundry."
+		description: "Mother Type is an open-source type foundry exploring an open model for typefaces that are free to use, modify, and distribute under the SIL Open Font License (OFL)."
 	},
 	"seaweed-sans": {
 		title: "Seaweed Sans",
@@ -383,6 +383,7 @@ const data = {
 	},
 	daguerreohype: {
 		title: "DaguerreoHype",
+		archived: true,
 		description:
 			"Daguerreotype photographs historically took up to fifteen minutes to expose, requiring incredible patience of both the photographer and the subject. Now, you can scroll really fast past them on your phone. Photographs pulled from the Library of Congress API.",
 		thumbnail: daguerreohype_thumb,
@@ -401,6 +402,7 @@ const data = {
 	},
 	roch_bot: {
 		title: "Roch Bot",
+		archived: true,
 		description:
 			"François VI, Duc de La Rochefoucauld, Prince de Marcillac would have liked Twitter. Now, posthumously, he tweets his Maximes.",
 		thumbnail: roch_bot_thumb,
@@ -508,6 +510,7 @@ const data = {
 		img2: radiozoa2,
 		img3: radiozoa1,
 		img4: radiozoa4,
+		archived: true,
 		description:
 			"An online art magazine for artists. We interviewed emerging artists about their work. It is no longer maintained, but in 2016 it had ten active contributors and about 10,000 unique visitors per month.",
 		category: "Squarespace",

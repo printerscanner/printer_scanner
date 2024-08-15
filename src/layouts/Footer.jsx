@@ -2,6 +2,7 @@ function Footer() {
   return (
     <footer>
       <div className="grid-layout condensed-grid">
+      <div className="grid-item span-2"><a href="/"><h1 className="logo reversed ">printer_scanner</h1></a></div>
 
         <div className="grid-item overview">
             <b>Project Inquiries</b>
@@ -13,10 +14,9 @@ function Footer() {
         </div>
         {/* <div className="grid-item"></div> */}
         {/* <div className="grid-item"></div> */}
-        <div className="grid-item grid-item--link"><a className="menu-link" href="/colophon">Colophon</a></div>
         <div className="grid-item grid-item--link"><a className="menu-link" href="/archive">Archive</a></div>
+        <div className="grid-item grid-item--link"><a className="menu-link" href="/colophon">Colophon</a></div>
 
-				<div className="grid-item span-2" style={{alignContent: "right", textAlign: "right"}}><a href="/"><h1 className="logo reversed ">printer_scanner</h1></a></div>
         <div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div>
         <div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div>
         <div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div>
