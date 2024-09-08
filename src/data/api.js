@@ -112,6 +112,13 @@ import coaster_thumb from "../assets/thumbnails/coaster_1_thumb.webp";
 import body_2_thumb from "../assets/thumbnails/body_2_thumb.webp";
 
 const data = {
+	"pruner": {
+		title: "Pruner.js",
+		category: "with Headless Horse",
+		year: '2024',
+		link: 'https://github.com/overbrowsing/pruner',
+		description: "A plugin to stitch multiple images into a single canvas. "
+	},
 	"stylelint-sustainable-css": {
 		title: "Stylelint Sustainable CSS",
 		category: "with Headless Horse",
@@ -175,6 +182,7 @@ const data = {
 		img3: legacy_3,
 		img4: legacy_4,
 		year: '2024',
+		archived: true,
 		description: "Cover art and photography for an indie artist.",
 		listen: "https://danielazubia.bandcamp.com/album/legacy"
 	},
@@ -203,7 +211,7 @@ const data = {
 	boring_books_club: {
 		thumbnail: boring_book_club_thumb,
 		title: "Boring Book Club",
-		featured: true,
+		archived: true,
 		description: "I spent three years on my goal to become the first person in the world to ever read some of these books. I'm here to give you the scoop on the 17th Century, and I will warn you, it's not good.",
 		link: 'https://boringbooks.org',
 		category: "Notion",
@@ -216,7 +224,7 @@ const data = {
 		category: "with Mother",
 		img1: body_1,
 		img2: body_2,
-		featured: true,
+		archived: true,
 		img3: body_3,
 		description: "You've seen kitsch body fonts, but you haven't seen one that's literally my body. Great for resumes and businesses. If you are a corporation, please reach out directly regarding a business license.",
 		year: '2023',
@@ -261,7 +269,7 @@ const data = {
 		description: "Please join us. Please.",
 		link: 'https://sapienshate.club',
 		category: "Website",
-		featured: true,
+		archived: true,
 		year: '2023'
 	},
 	travel_vlog: {
@@ -396,6 +404,7 @@ const data = {
 		title: "Slightly Better CSS",
 		description: "A webpage without any CSS is slightly too ugly, libraries like Bootstrap are way too heavy, and you have too much taste to use the other CSS libraries out there. Slightly Better CSS is a small, simple stylesheet for any project that needs to look just a little bit better.",
 		category: "Web",
+		featured: true,
 		subcategory: "Graphic Design",
 		link: "https://printerscanner.github.io/slightly-better-css/",
 		year: '2022'
@@ -485,6 +494,7 @@ const data = {
 		title: "Mondrian Generator",
 		subtitle: "Bot",
 		thumbnail: mondrian_1_thumb,
+		archived: true,
 		description:
 		"This bot procedurally generates a variation of Mondrian-style artwork, and automatically publishes it using the Instagram API.",
 		category: "Python",
