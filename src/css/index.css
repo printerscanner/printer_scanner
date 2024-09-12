@@ -29,6 +29,7 @@ body {
 	line-height: 1.5;
 	position: relative; /* or any other positioning */
     overflow: auto; /* or overflow: scroll */
+	margin: 8px;
 }
 
 
@@ -222,6 +223,10 @@ a:hover img {
 	grid-column-end: span 3;
 	grid-row-end: span 1;
 }
+.span-4 {
+	grid-column-end: span 4;
+	grid-row-end: span 1;
+}
 
 .span-5 {
 	grid-column-end: span 5;
@@ -381,13 +386,7 @@ button {
 }
 
 @media only screen and (max-width: 600px) {
-	.span-3 {
-		grid-column-end: span 10;
-	}
-	.span-2 {
-		grid-column-end: span 10;
-	}
-	.grid-item {
+	.span-3, .span-2, .grid-item, .span-4 {
 		grid-column-end: span 10;
 	}
 	.blog {
