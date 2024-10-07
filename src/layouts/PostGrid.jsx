@@ -12,11 +12,12 @@ const Grid = ({ includeArchived }) => {
     const itemContent = (
       <>
         <div className="text overview">
-          <p><b>{data[id].title}</b> <span style={{float: "right"}}>{data[id].link ? <span>↗ </span> : ''}</span></p>
+          <p><b>{data[id].title}</b> <span style={{float: "right"}}>{data[id].source ? <span>↗ </span> : ''}</span></p>
           <p style={{ fontSize: '12px', paddingBottom: '.5rem' }}>
+            {data[id].collaborators ? <span className="grid-crumbs">with {data[id].collaborators}</span> : ''} 
             {data[id].category ? <span className="grid-crumbs">{data[id].category}</span> : ''} 
-            {data[id].subcategory ? <span className="grid-crumbs">{data[id].subcategory}</span> : ''}
-            {data[id].subsubcategory ? <span className="grid-crumbs">{data[id].subsubcategory}</span> : ''}
+            {data[id].software ? <span className="grid-crumbs">{data[id].software}</span> : ''}
+            {data[id].license ? <span className="grid-crumbs">{data[id].license}</span> : ''}
             {data[id].year ? <span className="grid-crumbs">{data[id].year}</span> : ''} 
           </p>
           <p>{data[id].description}</p>
@@ -27,7 +28,7 @@ const Grid = ({ includeArchived }) => {
     return (
       <a
         className={itemClass}
-        href={data[id].link ? `${data[id].link}` : `work/${id}`}
+        href={data[id].source ? `${data[id].source}` : `work/${id}`}
         key={id}
       >
         {itemContent}

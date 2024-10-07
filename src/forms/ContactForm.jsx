@@ -95,7 +95,7 @@ function ContactForm() {
       className='grid-layout'
       onSubmit={handleSubmit}
     >
-     <div className='grid-item span-all text xl-grid'><p>We would love to hear from you. Still not convinced? Learn more about us on <a href="https://biz.printerscanner.net">our marketing site</a>.</p></div>
+     <div className='grid-item span-all text xl-grid'><p>We would love to hear from you.</p></div>
 
       {/* Name */}
       <div className='grid-item text xl-grid'><p>Name</p></div>

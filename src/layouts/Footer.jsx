@@ -14,7 +14,7 @@ function Footer() {
         </div>
         {/* <div className="grid-item"></div> */}
         {/* <div className="grid-item"></div> */}
-        <div className="grid-item grid-item--link"><a className="menu-link" href="/archive">Archive</a></div>
+        <div className="grid-item grid-item--link"></div>
         <div className="grid-item grid-item--link"><a className="menu-link" href="/colophon">Colophon</a></div>
 
         <div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div><div className="grid-item hidden-large"></div>
