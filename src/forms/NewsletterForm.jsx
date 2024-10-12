@@ -25,7 +25,7 @@ function Form() {
       }
       // Creating a div element to hold the message
       const bubble = document.createElement('div');
-      bubble.className = 'thanks-bubble';
+      bubble.className = 'thanks-bubble-newsletter';
       bubble.innerHTML = `<p>${thanksMessage}</p>`;
   
       // Appending the bubble to the form

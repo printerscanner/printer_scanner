@@ -314,19 +314,31 @@ button {
 }
 
 .thanks-bubble {
+	position: sticky;
+	top: 25px;
+	right: 25px;
+	background-color: rgba(0, 0, 0, .9);
+	color: white;
+	padding: 10px 15px;
+	z-index: 1000000;
+	border-radius: 20px;
+	animation: fadeOut 3s forwards;
+	width: max-content;
+	margin: 10px;
+  }
+
+  .thanks-bubble-newsletter {
 	position: fixed;
-	top: 1%;   /* Adjust this to position */
-	right: 1%;
+	top: 2%;   /* Adjust this to position */
+	right: 2%;
 	background-color: rgba(0, 0, 0, 0.8);  /* Semi-transparent background */
 	color: white;
 	padding: 10px;
 	border-radius: 10px;
 	max-width: 300px;  /* Control the width */
-	text-align: center;
 	z-index: 1000;
 	transition: opacity 0.8s ease-in-out;
   }
-
 
   .bottom {
 	top: initial;
