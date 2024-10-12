@@ -17,11 +17,11 @@ function Form() {
           // Reset form fields if needed
           e.target.reset();
         } else {
-          thanksMessage = "Oops! Something went wrong. Please try again later.";
+          thanksMessage = "Oops! Something went wrong.";
         }
       } catch (error) {
         console.error('Form submission failed:', error);
-        thanksMessage = "Oops! Something went wrong. Please try again later.";
+        thanksMessage = "Oops! Something went wrong.";
       }
       // Creating a div element to hold the message
       const bubble = document.createElement('div');
@@ -51,6 +51,7 @@ function Form() {
           label="email"
           name="email"
           className="email"
+          required
           placeholder="Get the Newsletter"
         />
         <button type="submit">→</button>
