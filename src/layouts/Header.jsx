@@ -25,7 +25,7 @@ function Header({ isVisible, currentPath }) {
 
       <div className="grid-item span-2 text">
       {currentPath != "/archive" && 
-        <p>An independent design and technology studio based in Berlin.</p>
+        <p>Berlin-based independent designer and technologist.</p>
       }
       {currentPath == "/archive" && 
         <p>Oddities, Personal Projects, Experiments and more.</p>
