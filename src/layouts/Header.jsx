@@ -47,7 +47,7 @@ function Header({ isVisible, currentPath }) {
         <a className="menu-link" href="https://github.com/printerscanner">Github</a>
       </div>
       <div className="grid-item">
-        <a className="menu-link" href="https://www.are.na/printer-scanner-studio">Are.na</a>
+        <a className="menu-link" href="https://www.are.na/printer-scanner">Are.na</a>
       </div>
       <div className="grid-item">
         <a className="right menu-link" href="https://instagram.com/printer_scanner">Instagram</a>
