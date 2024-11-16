@@ -54,7 +54,7 @@ function Header({ isVisible, currentPath }) {
       </div>
       <div className="grid-item hidden-mobile"></div>
 
-      <div className="grid-item"><a className="menu-link" href="https://earthly-delights.net">↗ Mother Type</a></div>
+      <div className="grid-item"><a className="menu-link" href="https://mother-type.de">↗ Mother Type</a></div>
       <div className="grid-item">
         <a className="menu-link" href="https://earthly-delights.net">↗ Earthly Delights</a>
       </div>
