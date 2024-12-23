@@ -12,21 +12,6 @@ const data = {
     description:
       "Calculate the environmental impact of a webpage and display it in your GitHub project as a shields.io badge. ",
   },
-  "pruner-js": {
-    title: "Pruner.js",
-    collaborators: "Headless Horse",
-    collaboratorsUrl: "https://headless.horse",
-    category: "Utilities",
-    software: "JavaScript",
-    role: "Development",
-    license: "MIT",
-    year: "2024",
-    source: "https://github.com/overbrowsing/pruner",
-    description:
-      "pruner.js is a JavaScript utility that enhances image handling by stitching multiple images into a single canvas. ",
-    descriptionContinued:
-      "It works by dividing large images into smaller tiles and only loading the necessary tiles based on the viewport size. This approach not only reduces the total amount of data transferred but also improves performance by ensuring that only visible parts of the image are processed. By minimising data transfer and leveraging efficient image management, pruner.js accelerates loading times and supports sustainable web design practices.",
-  },
   "stylelint-sustainable-css": {
     title: "Sustainable CSS",
     collaborators: "Headless Horse",
@@ -147,6 +132,7 @@ const data = {
     title: "Slightly Better CSS",
     category: "Utilities",
     year: "2022",
+    featured: "TRUE",
     source: "https://github.com/printerscanner/slightly-better-css",
     description:
       "A webpage without any CSS is slightly too ugly, libraries like Bootstrap are way too heavy.",
