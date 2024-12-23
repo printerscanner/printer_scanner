@@ -8,7 +8,7 @@ const data = {
     role: "Development",
     license: "MIT",
     year: "2024",
-    source: "https://github.com/overbrowsing/pruner",
+    source: "https://github.com/overbrowsing/co2-shield",
     description:
       "Calculate the environmental impact of a webpage and display it in your GitHub project as a shields.io badge. ",
   },
