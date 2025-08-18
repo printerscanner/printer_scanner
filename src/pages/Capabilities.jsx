@@ -16,9 +16,12 @@ function Capabilities() {
         </div>
         <div className="grid-item span-most text l-grid">
           <p>
-            I’m an independent designer and programmer based in Berlin. I
-            collaborate with agencies, brands, and designers to create modern,
-            accessible and high-performing products.
+            I’m an{" "}
+            <a href="https://abbeyyacoe.info">
+              independent designer and technologist
+            </a>{" "}
+            based in Berlin. I collaborate with agencies, brands, and designers
+            to create modern, accessible and high-performing products.
           </p>
         </div>
         <div className="grid-item"></div>
