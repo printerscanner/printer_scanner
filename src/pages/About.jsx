@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 
-function Capabilities() {
+function About() {
   return (
     <div>
       <Helmet>
@@ -11,6 +11,9 @@ function Capabilities() {
         />
       </Helmet>
       <div className="grid-layout">
+        <div className="grid-item text xl-grid"></div>
+        <div className="grid-item span-most text l-grid"></div>
+        <div className="grid-item"></div>
         <div className="grid-item text xl-grid">
           <b>About</b>
         </div>
@@ -34,7 +37,7 @@ function Capabilities() {
         <div className="grid-item"></div>
 
         <div className="grid-item text xl-grid">
-          <b>Capabilities</b>
+          <b>What I do</b>
         </div>
         <div className="grid-item span-most text l-grid">
           <p>
@@ -49,20 +52,9 @@ function Capabilities() {
         <div className="grid-item"></div>
         <div className="grid-item"></div>
         <div className="grid-item"></div>
-
-        <div className="grid-item text xl-grid">
-          <b>Stack</b>
-        </div>
-        <div className="grid-item span-most text l-grid">
-          <p>
-            React, Node, Sanity.io, NextJS, TypeScript, GraphQL, Shopify, WebGL,
-            ThreeJS, D3, Contentful, Electron, Shopify
-          </p>
-        </div>
-        <div className="grid-item"></div>
       </div>
     </div>
   );
 }
 
-export default Capabilities;
+export default About;

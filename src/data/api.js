@@ -1,4 +1,15 @@
 const data = {
+  xyflow: {
+    title: "xyflow",
+    role: "Development",
+    software: "React, Svelte",
+    license: "MIT",
+    year: "2024-",
+    now: true,
+    source: "https://xyflow.com",
+    description:
+      "React Flow | Svelte Flow - Open source libraries for building node-based UIs.",
+  },
   "strudel-flow": {
     title: "Strudel Flow",
     collaborators: "xyflow",
@@ -136,7 +147,6 @@ const data = {
     title: "Slightly Better CSS",
     category: "Utilities",
     year: "2022",
-    featured: "TRUE",
     source: "https://github.com/printerscanner/slightly-better-css",
     description:
       "Slightly Better CSS is a small, simple stylesheet for any project that needs to look just a little bit better.",

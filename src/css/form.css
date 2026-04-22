@@ -1,275 +1,137 @@
-.contact-form {
-	flex-wrap: wrap;
-	align-items: baseline;
-	font-size: 30px;
-}
-
-/* SLIDER RANGE */
-.wrapper {
-	position: relative;
-	width: 100%;
-	border-radius: 10px;
-  }
-  
-  .container {
-	position: relative;
-	width: 100%;
-	height: 100px;
-  }
-
-input[type="range"] {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	width: 100%;
-	outline: none;
-	position: absolute;
-	margin: auto;
-	top: 0;
-	bottom: 0;
-	background-color: transparent;
-	pointer-events: none;
-  }
-  .slider-track {
-	width: 100%;
-	height: 5px;
-	position: absolute;
-	margin: auto;
-	top: 0;
-	bottom: 0;
-	border-radius: 5px;
-  }
-  input[type="range"]::-webkit-slider-runnable-track {
-	-webkit-appearance: none;
-	height: 5px;
-  }
-  input[type="range"]::-moz-range-track {
-	-moz-appearance: none;
-	height: 5px;
-  }
-  input[type="range"]::-ms-track {
-	appearance: none;
-	height: 5px;
-  }
-  input[type="range"]::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	height: 1.7em;
-	width: 1.7em;
-	cursor: pointer;
-	margin-top: -9px;
-	pointer-events: auto;
-	border-radius: 50%;
-  }
-  input[type="range"]::-moz-range-thumb {
-	-webkit-appearance: none;
-	height: 1.7em;
-	width: 1.7em;
-	cursor: pointer;
-	border-radius: 50%;
-	background-color: #3264fe;
-	pointer-events: auto;
-	border: none;
-  }
-  input[type="range"]::-ms-thumb {
-	appearance: none;
-	height: 1.7em;
-	width: 1.7em;
-	cursor: pointer;
-	border-radius: 50%;
-	pointer-events: auto;
-  }
-  input[type="range"]:active::-webkit-slider-thumb {
-	border: 1px dotted #3264fe;
-  }
-
 input[type="text"],
 input[type="email"],
+input[type="number"],
 textarea {
-	/* border-radius: 4px;
-	outline: none;
-	font-size: 16px;
-	margin-bottom: 15px;
-	/* transition: background-color 0.3s ease; */
-	border: 1px dotted;
-	background: transparent;
-	border-color: currentColor;
-	padding: 20px 10px;
-	font-size: 20px;
-	color: inherit;
-	outline: 0;
+  border: none;
+  background: color-mix(in srgb, var(--page-bg) 72%, var(--grid-bg));
+  padding: 20px 10px;
+  font-size: 20px;
+  color: var(--page-fg);
+  outline: 0;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--page-fg) 18%, transparent) inset,
+    0 1px 0 0 color-mix(in srgb, var(--page-bg) 55%, transparent);
 }
-
-::placeholder { /* Most modern browsers support this now. */
-	color: inherit !important;
- }
 
 input[type="text"]:hover,
 input[type="email"]:hover,
+input[type="number"]:hover,
 textarea:hover {
-	background-color: #b19cd9;
-	color: black;
+  background-color: var(--grid-hover-bg);
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
+input[type="number"]:focus,
 textarea:focus {
-  background-color: #aca4bb;
-  color: black;
-}
-
-/* Slider track */
-.slider-track {
-  width: 100%;
-  height: 5px;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  border-radius: 5px;
-  background: linear-gradient(to right, #dadae5, #3264fe);
-}
-
-/* Slider thumbs */
-input[type="range"]::-webkit-slider-thumb,
-input[type="range"]::-moz-range-thumb,
-input[type="range"]::-ms-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 20px;
-  width: 20px;
-  /* background-color: #3264fe; */
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-/* Slider thumb on hover */
-input[type="range"]::-webkit-slider-thumb:hover,
-input[type="range"]::-moz-range-thumb:hover,
-input[type="range"]::-ms-thumb:hover {
-  background-color: #ffffff;
-  border: 1px dotted #3264fe;
-}
-
-/* Slider thumb on active */
-input[type="range"]:active::-webkit-slider-thumb,
-input[type="range"]:active::-moz-range-thumb,
-input[type="range"]:active::-ms-thumb {
-  background-color: #ffffff;
-  border: 1px dotted #3264fe;
+  background-color: var(--grid-hover-bg);
+  box-shadow:
+    0 0 0 4px color-mix(in srgb, var(--grid-fg) 30%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--grid-fg) 55%, transparent) inset;
 }
 
 /* Text inputs placeholder */
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
+input[type="number"]::placeholder,
 textarea::placeholder {
-  color: #888;
+  color: color-mix(in srgb, var(--page-fg) 70%, var(--page-bg));
+  transition: color 0.2s ease;
+}
+
+/* Text inputs placeholder */
+input[type="text"]:hover::placeholder,
+input[type="email"]:hover::placeholder,
+input[type="number"]:hover::placeholder,
+textarea:hover::placeholder {
+  color: var(--grid-fg);
 }
 
 /* Radio buttons */
 input[type="radio"] {
-	appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	border: 2px dotted #3264fe;
-	outline: none;
-	cursor: pointer;
-	margin-right: 10px;
-	transition: background-color 0.3s ease;
-  }
-  
-  input[type="radio"]:checked {
-	background-color: #3264fe;
-  }
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
 
-  /* Radio button label hover */
-  input[type="radio"]:hover + label {
-	color: #3264fe;
-  }
+input[type="radio"]:checked {
+  background-color: color-mix(in srgb, #3264fe 60%, var(--page-bg));
+}
 
-  .interest-buttons {
-	display: flex;
-	flex-wrap: wrap;
-  }
-  
-  .interest-buttons button {
-	background-color: transparent;
-	border: 2px dotted #3264fe;
-	border-radius: 20px;
-	padding: 10px 20px;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	cursor: pointer;
-	transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .interest-buttons button:hover {
-	background-color: #3264fe;
-	color: #fff;
-  }
-  
-  .interest-buttons button.selected {
-	background-color: #3264fe;
-	color: #fff;
-	font-weight: 400;
-  }
-  
+/* Radio button label hover */
+input[type="radio"]:hover + label {
+  color: color-mix(in srgb, #3264fe 60%, var(--page-fg));
+}
 
-  .submit {
-	padding: 20px;
-	background-color: inherit;
-	color: currentColor;
-  }
+.submit {
+  padding: 20px;
+  background-color: inherit;
+  color: currentColor;
+}
 
-  .submit:hover {
-	background-color: rgb(152, 149, 187);
-  	color: black;
-  }
+.submit:hover {
+  background-color: rgb(152, 149, 187);
+  color: black;
+}
 /* Darker pastel hover colors with contrasty text */
 .web-design-hover:hover,
 .web-design-hover:focus,
 .web-design-hover.selected {
-	background-color: #ffafc2; /* Darker Pink */
-	color: #000000; /* Dark gray */
-	font-weight: 400;
+  background-color: color-mix(in srgb, #ffafc2 45%, var(--page-bg));
+  color: color-mix(in srgb, var(--page-fg) 75%, var(--page-bg));
+  font-weight: 400;
 }
 
 .web-development-hover:hover,
 .web-development-hover:focus,
 .web-development-hover.selected {
-	background-color: #7fc8a9; /* Darker Green */
-	color: #000000; /* Dark gray */
-	font-weight: 400;
+  background-color: color-mix(in srgb, #7fc8a9 45%, var(--page-bg));
+  color: color-mix(in srgb, var(--page-fg) 75%, var(--page-bg));
+  font-weight: 400;
 }
 
 .product-mvp-hover:hover,
 .product-mvp-hover:focus,
 .product-mvp-hover.selected {
-	background-color: #86abb8; /* Darker Blue */
-	color: #000000; /* Dark gray */
-	font-weight: 400;
+  background-color: color-mix(in srgb, #86abb8 45%, var(--page-bg));
+  color: color-mix(in srgb, var(--page-fg) 75%, var(--page-bg));
+  font-weight: 400;
 }
 
 .ecommerce-hover:hover,
 .ecommerce-hover:focus,
 .ecommerce-hover.selected {
-	background-color: #ffcc66; /* Darker Yellow */
-	color: #000000; /* Dark gray */
-	font-weight: 400;
+  background-color: color-mix(in srgb, #ffcc66 45%, var(--page-bg));
+  color: color-mix(in srgb, var(--page-fg) 75%, var(--page-bg));
+  font-weight: 400;
 }
 
 .other-hover:hover,
 .other-hover:focus,
 .other-hover.selected {
-	background-color: #ff8c99; /* Darker Red */
-	color: #000000; /* Dark gray */
-	font-weight: 400;
+  background-color: color-mix(in srgb, #ff8c99 45%, var(--page-bg));
+  color: color-mix(in srgb, var(--page-fg) 75%, var(--page-bg));
+  font-weight: 400;
 }
 
+.budget-range {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
-.text-area {
-	width: 100%;
-	min-height: 100px
+.budget-range input[type="number"] {
+  width: 120px;
 }

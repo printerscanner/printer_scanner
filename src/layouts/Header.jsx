@@ -43,8 +43,8 @@ function Header({ isVisible, currentPath }) {
       </div>
 
       <div className="grid-item grid-item--link hidden-mobile">
-        <a className="menu-link right" href="/capabilities">
-          Capabilities
+        <a className="menu-link right" href="/about">
+          About
         </a>
       </div>
 
