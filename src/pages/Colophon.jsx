@@ -12,6 +12,11 @@ function Colophon() {
         />
       </Helmet>
       <div className="grid-layout">
+        <div className="grid-item hidden-mobile span-2"></div>
+        <div className="grid-item hidden-mobile"></div>
+        <div className="grid-item hidden-mobile"></div>
+        <div className="grid-item hidden-mobile"></div>
+        <div className="grid-item hidden-mobile"></div>
         <div className="grid-item hidden-mobile"></div>
         <div className="grid-item span-most text xl-grid">
           <p>
@@ -20,10 +25,7 @@ function Colophon() {
             <a href="">The Pangram Pangram🅐 Foundry</a>.
           </p>
         </div>
-        <div className="grid-item hidden-mobile span-2"></div>
-        <div className="grid-item hidden-mobile"></div>
-        <div className="grid-item hidden-mobile"></div>
-        <div className="grid-item hidden-mobile"></div>
+
         <div className="grid-item hidden-mobile"></div>
         <div className="grid-item hidden-mobile"></div>
         <div className="grid-item hidden-mobile"></div>
@@ -40,7 +42,6 @@ function Colophon() {
         <div className="grid-item hidden-mobile"></div>
         <div className="grid-item hidden-mobile"></div>
         <div className="grid-item hidden-mobile span-2"></div>
-        <div className="grid-item hidden-mobile"></div>
       </div>
     </div>
   );
