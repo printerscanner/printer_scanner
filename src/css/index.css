@@ -12,8 +12,8 @@
 /**/
 
 :root {
-  --page-bg: red;
-  --page-fg: #000;
+  --page-bg: #f4f1ea;
+  --page-fg: #101010;
   /* Grid defaults: intentionally high-contrast vs page background */
   --grid-bg: color-mix(in srgb, var(--page-fg) 88%, var(--page-bg));
   --grid-fg: color-mix(in srgb, var(--page-bg) 88%, var(--page-fg));
