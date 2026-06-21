@@ -67,6 +67,18 @@ function Footer() {
         <div className="grid-item hidden-large"></div>
         <div className="grid-item hidden-large"></div>
         <div className="grid-item hidden-large"></div>
+        <div className="grid-item hidden-large"></div>
+        <div className="grid-item hidden-large"></div>
+        <div className="grid-item hidden-large"></div>
+        <div className="grid-item hidden-large"></div>
+        <div className="grid-item hidden-large"></div>
+        <div className="grid-item hidden-large"></div>
+        <div className="grid-item hidden-large"></div>
+        <div className="grid-item hidden-large"></div>
+        <div className="grid-item hidden-large"></div>
+        <div className="grid-item hidden-large"></div>
+        <div className="grid-item hidden-large"></div>
+        <div className="grid-item hidden-large"></div>
       </div>
     </footer>
   );
