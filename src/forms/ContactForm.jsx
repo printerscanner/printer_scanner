@@ -8,23 +8,6 @@ function ContactForm() {
     const [budgetLowK, setBudgetLowK] = useState(BUDGET_MIN_K)
     const [budgetHighK, setBudgetHighK] = useState(BUDGET_MAX_K)
 
-    const clampBudgetK = (value) => {
-        if (!Number.isFinite(value)) return BUDGET_MIN_K
-        return Math.min(BUDGET_MAX_K, Math.max(BUDGET_MIN_K, value))
-    }
-
-    const handleBudgetLowChange = (e) => {
-        const nextLow = clampBudgetK(parseInt(e.target.value, 10))
-        setBudgetLowK(nextLow)
-        if (nextLow > budgetHighK) setBudgetHighK(nextLow)
-    }
-
-    const handleBudgetHighChange = (e) => {
-        const nextHigh = clampBudgetK(parseInt(e.target.value, 10))
-        setBudgetHighK(nextHigh)
-        if (nextHigh < budgetLowK) setBudgetLowK(nextHigh)
-    }
-
     const handleSubmit = async (e) => {
         let thanksMessage
         e.preventDefault()
@@ -93,7 +76,7 @@ function ContactForm() {
             onSubmit={handleSubmit}
         >
             <div className="grid-item span-all text xl-grid">
-                <p>Let’s work together!</p>
+                <p>Get in Touch</p>
             </div>
 
             {/* Name */}
@@ -136,7 +119,7 @@ function ContactForm() {
             />
 
             <div className="grid-item text xl-grid">
-                <p>What you're looking for</p>
+                <p>What you&apos;re looking for</p>
             </div>
             <input
                 id="details"

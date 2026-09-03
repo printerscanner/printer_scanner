@@ -173,8 +173,13 @@ b {
     padding: 1rem;
 }
 
+.text-l {
+    margin: 0;
+}
+
 .text-l p {
-    font-size: 20px;
+    font-size: 16px;
+    margin: 0;
 }
 
 .grid-item {
@@ -286,6 +291,10 @@ b {
 .xl-grid {
     display: flex;
     align-items: center;
+}
+
+.xl-grid--about {
+    display: flex;
 }
 
 .xl-grid p {

@@ -1,137 +1,96 @@
-input[type="text"],
-input[type="email"],
-input[type="number"],
+input[type='text'],
+input[type='email'],
+input[type='number'],
 textarea {
-  border: none;
-  background: color-mix(in srgb, var(--page-bg) 72%, var(--grid-bg));
-  padding: 20px 10px;
-  font-size: 20px;
-  color: var(--page-fg);
-  outline: 0;
-  transition:
-    background-color 0.2s ease,
-    box-shadow 0.2s ease,
-    color 0.2s ease;
-  box-shadow:
-    0 0 0 1px color-mix(in srgb, var(--page-fg) 18%, transparent) inset,
-    0 1px 0 0 color-mix(in srgb, var(--page-bg) 55%, transparent);
+    border: none;
+    background: color-mix(in srgb, var(--page-bg) 72%, var(--grid-bg));
+    padding: 20px 10px;
+    font-size: 20px;
+    color: var(--page-fg);
+    outline: 0;
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease,
+        color 0.2s ease;
+    box-shadow:
+        0 0 0 1px color-mix(in srgb, var(--page-fg) 18%, transparent) inset,
+        0 1px 0 0 color-mix(in srgb, var(--page-bg) 55%, transparent);
 }
 
-input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="number"]:hover,
+input[type='text']:hover,
+input[type='email']:hover,
+input[type='number']:hover,
 textarea:hover {
-  background-color: var(--grid-hover-bg);
+    background-color: var(--grid-hover-bg);
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='number']:focus,
 textarea:focus {
-  background-color: var(--grid-hover-bg);
-  box-shadow:
-    0 0 0 4px color-mix(in srgb, var(--grid-fg) 30%, transparent),
-    0 0 0 1px color-mix(in srgb, var(--grid-fg) 55%, transparent) inset;
+    background-color: var(--grid-hover-bg);
+    box-shadow:
+        0 0 0 4px color-mix(in srgb, var(--grid-fg) 30%, transparent),
+        0 0 0 1px color-mix(in srgb, var(--grid-fg) 55%, transparent) inset;
 }
 
 /* Text inputs placeholder */
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-input[type="number"]::placeholder,
+input[type='text']::placeholder,
+input[type='email']::placeholder,
+input[type='number']::placeholder,
 textarea::placeholder {
-  color: color-mix(in srgb, var(--page-fg) 70%, var(--page-bg));
-  transition: color 0.2s ease;
+    color: color-mix(in srgb, var(--page-fg) 70%, var(--page-bg));
+    transition: color 0.2s ease;
 }
 
 /* Text inputs placeholder */
-input[type="text"]:hover::placeholder,
-input[type="email"]:hover::placeholder,
-input[type="number"]:hover::placeholder,
+input[type='text']:hover::placeholder,
+input[type='email']:hover::placeholder,
+input[type='number']:hover::placeholder,
 textarea:hover::placeholder {
-  color: var(--grid-fg);
+    color: var(--grid-fg);
 }
 
 /* Radio buttons */
-input[type="radio"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  outline: none;
-  cursor: pointer;
-  margin-right: 10px;
-  transition: background-color 0.3s ease;
+input[type='radio'] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
 }
 
-input[type="radio"]:checked {
-  background-color: color-mix(in srgb, #3264fe 60%, var(--page-bg));
+input[type='radio']:checked {
+    background-color: color-mix(in srgb, #3264fe 60%, var(--page-bg));
 }
 
 /* Radio button label hover */
-input[type="radio"]:hover + label {
-  color: color-mix(in srgb, #3264fe 60%, var(--page-fg));
+input[type='radio']:hover + label {
+    color: color-mix(in srgb, #3264fe 60%, var(--page-fg));
 }
 
 .submit {
-  padding: 20px;
-  background-color: inherit;
-  color: currentColor;
+    padding: 20px;
+    background-color: inherit;
+    color: currentColor;
 }
 
 .submit:hover {
-  background-color: rgb(152, 149, 187);
-  color: black;
-}
-/* Darker pastel hover colors with contrasty text */
-.web-design-hover:hover,
-.web-design-hover:focus,
-.web-design-hover.selected {
-  background-color: color-mix(in srgb, #ffafc2 45%, var(--page-bg));
-  color: color-mix(in srgb, var(--page-fg) 75%, var(--page-bg));
-  font-weight: 400;
-}
-
-.web-development-hover:hover,
-.web-development-hover:focus,
-.web-development-hover.selected {
-  background-color: color-mix(in srgb, #7fc8a9 45%, var(--page-bg));
-  color: color-mix(in srgb, var(--page-fg) 75%, var(--page-bg));
-  font-weight: 400;
-}
-
-.product-mvp-hover:hover,
-.product-mvp-hover:focus,
-.product-mvp-hover.selected {
-  background-color: color-mix(in srgb, #86abb8 45%, var(--page-bg));
-  color: color-mix(in srgb, var(--page-fg) 75%, var(--page-bg));
-  font-weight: 400;
-}
-
-.ecommerce-hover:hover,
-.ecommerce-hover:focus,
-.ecommerce-hover.selected {
-  background-color: color-mix(in srgb, #ffcc66 45%, var(--page-bg));
-  color: color-mix(in srgb, var(--page-fg) 75%, var(--page-bg));
-  font-weight: 400;
-}
-
-.other-hover:hover,
-.other-hover:focus,
-.other-hover.selected {
-  background-color: color-mix(in srgb, #ff8c99 45%, var(--page-bg));
-  color: color-mix(in srgb, var(--page-fg) 75%, var(--page-bg));
-  font-weight: 400;
+    background-color: rgb(152, 149, 187);
+    color: black;
 }
 
 .budget-range {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.budget-range input[type="number"] {
-  width: 120px;
+.budget-range input[type='number'] {
+    width: 120px;
 }

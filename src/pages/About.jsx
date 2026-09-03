@@ -11,13 +11,13 @@ function About() {
                 />
             </Helmet>
             <div className="grid-layout">
-                <div className="grid-item text xl-grid"></div>
-                <div className="grid-item span-most text l-grid"></div>
+                <div className="grid-item text xl-grid--about"></div>
+                <div className="grid-item span-most text text-l"></div>
                 <div className="grid-item"></div>
-                <div className="grid-item text xl-grid">
+                <div className="grid-item text xl-grid--about">
                     <b>Me</b>
                 </div>
-                <div className="grid-item span-most text l-grid">
+                <div className="grid-item span-most text text-l">
                     <p>
                         I'm a software developer from San Francisco based in
                         Berlin, known online as printer_scanner. You can find my
@@ -35,10 +35,10 @@ function About() {
 
                 <div className="grid-item"></div>
 
-                <div className="grid-item text xl-grid">
+                <div className="grid-item text xl-grid--about">
                     <b>Writing</b>
                 </div>
-                <div className="grid-item span-most text l-grid">
+                <div className="grid-item span-most text text-l">
                     <p>
                         I write a blog called{' '}
                         <a href="https://earthly-delights.net">
@@ -61,10 +61,10 @@ function About() {
 
                 <div className="grid-item"></div>
 
-                <div className="grid-item text xl-grid">
+                <div className="grid-item text xl-grid--about">
                     <b>Open Source</b>
                 </div>
-                <div className="grid-item span-most text l-grid">
+                <div className="grid-item span-most text text-l">
                     <p>
                         I work at <a href="https://xyflow.com/">xyflow</a>,
                         where I develop open-source libraries for building
@@ -81,10 +81,10 @@ function About() {
 
                 <div className="grid-item"></div>
 
-                <div className="grid-item text xl-grid">
+                <div className="grid-item text xl-grid--about">
                     <b>Type</b>
                 </div>
-                <div className="grid-item span-most text l-grid">
+                <div className="grid-item span-most text text-l">
                     <p>
                         I work on{' '}
                         <a href="https://mother-type.de">Mother Type</a>, an
@@ -92,7 +92,7 @@ function About() {
                         digital typefaces. Mother Type is a libre friend of{' '}
                         <a href="https://velvetyne.fr/velvetyne-libre-friends/">
                             {' '}
-                            Velvetyne Type Foundry{' '}
+                            Velvetyne Type Foundry
                         </a>
                         , and our typefaces are shared and distributed via the{' '}
                         <a href="https://github.com/mother-type/Unified-Font-Repository">
@@ -109,10 +109,10 @@ function About() {
 
                 <div className="grid-item"></div>
 
-                <div className="grid-item text xl-grid">
+                <div className="grid-item text xl-grid--about">
                     <b>Previously</b>
                 </div>
-                <div className="grid-item span-most text l-grid">
+                <div className="grid-item span-most text text-l">
                     <p>
                         I worked at{' '}
                         <a href="https://fictivekin.com">Fictive Kin</a>, a NYC
@@ -121,7 +121,7 @@ function About() {
                         <a href="https://en.wikipedia.org/wiki/Vera_C._Rubin_Observatory#/media/File:M1M3_mirror_group_photo.jpg">
                             {' '}
                             Vera Rubin Observatory
-                        </a>{' '}
+                        </a>
                         , an astronomical survey telescope that recently
                         achieved first light. You can read about it in the{' '}
                         <a href="https://www.nytimes.com/2025/06/23/science/vera-rubin-telescopes-first-images.html">
@@ -131,10 +131,10 @@ function About() {
                     </p>
                 </div>
                 <div className="grid-item"></div>
-                <div className="grid-item text xl-grid">
+                <div className="grid-item text xl-grid--about">
                     <b>Availability</b>
                 </div>
-                <div className="grid-item span-most text l-grid">
+                <div className="grid-item span-most text text-l">
                     <p>
                         I'm not currently available for new projects, but I love
                         to chat. If you would like to say hi, email me at{' '}

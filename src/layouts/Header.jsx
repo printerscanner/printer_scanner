@@ -21,7 +21,7 @@ function Header({ isVisible, currentPath }) {
             </div>
             <div className="grid-item grid-item--link">
                 <a className="menu-link right" href="/contact">
-                    Get in Touch
+                    Contact
                 </a>
             </div>
 
