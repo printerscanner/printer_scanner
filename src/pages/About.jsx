@@ -82,34 +82,6 @@ function About() {
                 <div className="grid-item"></div>
 
                 <div className="grid-item text xl-grid--about">
-                    <b>Type</b>
-                </div>
-                <div className="grid-item span-most text text-l">
-                    <p>
-                        I work on{' '}
-                        <a href="https://mother-type.de">Mother Type</a>, an
-                        open-source type foundry and open-development model for
-                        digital typefaces. Mother Type is a libre friend of{' '}
-                        <a href="https://velvetyne.fr/velvetyne-libre-friends/">
-                            {' '}
-                            Velvetyne Type Foundry
-                        </a>
-                        , and our typefaces are shared and distributed via the{' '}
-                        <a href="https://github.com/mother-type/Unified-Font-Repository">
-                            Unified Font Repository
-                        </a>
-                        . Fonts I've designed include{' '}
-                        <a href="https://mother-type.de/fonts/body-sans">
-                            (my) body sans
-                        </a>{' '}
-                        —you may have seen kitsch body fonts before, but you
-                        haven't seen one that's literally my body.
-                    </p>
-                </div>
-
-                <div className="grid-item"></div>
-
-                <div className="grid-item text xl-grid--about">
                     <b>Previously</b>
                 </div>
                 <div className="grid-item span-most text text-l">
