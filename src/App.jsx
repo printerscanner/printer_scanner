@@ -8,7 +8,7 @@ function App() {
         <title>Printer Scanner Studio</title>
         <meta
           name="description"
-          content="I'm printer_scanner, a Berlin-based independent designer and technologist."
+          content="I'm printer_scanner, a software developer in Berlin"
         />
       </Helmet>
       <Grid />
