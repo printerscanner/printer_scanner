@@ -112,7 +112,7 @@
     outline-offset: -2px;
 }
 
-@media (min-width: 801px) {
+@media (min-width: 801px) and (hover: hover) and (pointer: fine) {
     [data-pong-field] { display: grid; }
     [data-pong-field] > .hidden-large { display: block; }
     .pong-overlay { display: block; }

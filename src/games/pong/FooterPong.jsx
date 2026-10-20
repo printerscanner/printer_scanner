@@ -8,7 +8,7 @@ const WIN_MESSAGE =
 
 // The footer owns the original cells; this optional component only adds gameplay.
 // eslint-disable-next-line react/prop-types
-function FooterPong({ blockFieldRef }) {
+function FooterPongGame({ blockFieldRef }) {
     const ballRef = useRef(null)
     const paddleRef = useRef(null)
     const dropsRef = useRef(null)
@@ -371,6 +371,22 @@ function FooterPong({ blockFieldRef }) {
         </>,
         document.body
     )
+}
+
+const DESKTOP_PONG = '(min-width: 801px) and (hover: hover) and (pointer: fine)'
+
+// Mount gameplay only on desktop; resizing to mobile also restores cleared cells.
+// eslint-disable-next-line react/prop-types
+function FooterPong({ blockFieldRef }) {
+    const [enabled, setEnabled] = useState(() => window.matchMedia(DESKTOP_PONG).matches)
+    useEffect(() => {
+        const media = window.matchMedia(DESKTOP_PONG)
+        const update = () => setEnabled(media.matches)
+        media.addEventListener('change', update)
+        update()
+        return () => media.removeEventListener('change', update)
+    }, [])
+    return enabled ? <FooterPongGame blockFieldRef={blockFieldRef} /> : null
 }
 
 export default FooterPong
