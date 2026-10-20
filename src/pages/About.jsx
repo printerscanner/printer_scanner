@@ -11,10 +11,12 @@ function About() {
                 />
             </Helmet>
             <div className="grid-layout about-page">
-                <div className="grid-item text xl-grid--about"></div>
-                <div className="grid-item span-most text text-l"></div>
                 <div className="grid-item"></div>
-                <div className="grid-item about-right-extra" aria-hidden="true"></div>
+                <div className="grid-item"></div>
+                <div className="grid-item"></div>
+                <div className="grid-item"></div>
+                <div className="grid-item"></div>
+                <div className="grid-item"></div>
                 <div className="grid-item text xl-grid--about">
                     <b>Me</b>
                 </div>
