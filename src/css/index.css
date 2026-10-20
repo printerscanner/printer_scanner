@@ -349,13 +349,13 @@ b {
     visibility: hidden;
 }
 
-.logo-link:hover .logo-default,
-.logo-link:focus-visible .logo-default {
+footer .logo-link:hover .logo-default,
+footer .logo-link:focus-visible .logo-default {
     visibility: hidden;
 }
 
-.logo-link:hover .logo-hover,
-.logo-link:focus-visible .logo-hover {
+footer .logo-link:hover .logo-hover,
+footer .logo-link:focus-visible .logo-hover {
     visibility: visible;
 }
 
@@ -635,7 +635,7 @@ button {
 }
 
 /* Bold navigation labels with a quiet directional cue. */
-header .nav-cell {
+:is(header, footer) .nav-cell {
     text-decoration: none;
     font-size: 16px;
     font-weight: 700;
@@ -643,7 +643,7 @@ header .nav-cell {
     gap: 8px;
 }
 
-header .nav-cell::after {
+:is(header, footer) .nav-cell::after {
     content: '→';
     font-weight: 400;
     opacity: 0.55;
@@ -652,19 +652,52 @@ header .nav-cell::after {
         opacity 0.2s ease;
 }
 
-header .nav-cell[href^='https://']::after {
+:is(header, footer) .nav-cell[href^='https://']::after {
     content: '↗';
 }
 
-header .nav-cell:hover::after,
-header .nav-cell:focus-visible::after {
+:is(header, footer) .nav-cell:hover::after,
+:is(header, footer) .nav-cell:focus-visible::after {
     opacity: 1;
     transform: translateX(2px);
 }
 
 @media (prefers-reduced-motion: reduce) {
-    header .nav-cell::after {
+    :is(header, footer) .nav-cell::after {
         transition: none;
         transform: none;
     }
+}
+
+.colophon-page .text a {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.colophon-page .text a::after {
+    content: '↗';
+    display: inline-block;
+    margin-left: 0.35em;
+    font-weight: 400;
+    opacity: 0.55;
+}
+
+.colophon-page .text a:hover::after,
+.colophon-page .text a:focus-visible::after {
+    opacity: 1;
+}
+
+.colophon-page .text a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+header .nav-cell.nav-back {
+    justify-content: flex-start;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+header .nav-cell.nav-back::after {
+    content: none;
 }

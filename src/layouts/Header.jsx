@@ -13,15 +13,7 @@ function Header({ isVisible, currentPath }) {
                     className="logo-link"
                     aria-label="printer_scanner home"
                 >
-                    <h1 className="logo">
-                        <span className="logo-default" aria-hidden="true">
-                            printer_scanner
-                        </span>
-                        <span className="logo-hover" aria-hidden="true">
-                            scanner_printer
-                        </span>
-                        <span className="visually-hidden">printer_scanner</span>
-                    </h1>
+                    <h1 className="logo">printer_scanner</h1>
                 </a>
             </div>
 
@@ -35,13 +27,14 @@ function Header({ isVisible, currentPath }) {
                 Contact
             </a>
 
-            <div className="grid-item grid-item--link">
-                {currentPath != '/' && !isVisible && (
-                    <button onClick={onBackClick} className="home-button">
-                        <u>←</u>
-                    </button>
-                )}
-            </div>
+            {currentPath != '/' && !isVisible ? (
+                <button type="button" onClick={onBackClick}
+                    className="grid-item nav-cell nav-back" aria-label="Go back">
+                    <span aria-hidden="true">←</span>
+                </button>
+            ) : (
+                <div className="grid-item grid-item--link"></div>
+            )}
 
             <div className="grid-item span-2 text">
                 <p>Extremely famous graphic designer.</p>
