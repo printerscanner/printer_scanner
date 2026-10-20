@@ -42,7 +42,7 @@ function ContactForm() {
             aria-busy={sending}
         >
             <input type="hidden" name="form-name" value="submission" />
-            <h2 className="grid-item contact-title">Get in touch</h2>
+            <h2 className="grid-item contact-title">Let’s hear it</h2>
             {Array.from({ length: 5 }, (_, index) => (
                 <div
                     className="grid-item contact-heading-spacer"
