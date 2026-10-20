@@ -22,6 +22,7 @@ input[type='email']:hover,
 input[type='number']:hover,
 textarea:hover {
     background-color: var(--grid-hover-bg);
+    color: var(--grid-hover-fg);
 }
 
 input[type='text']:focus,
@@ -29,6 +30,7 @@ input[type='email']:focus,
 input[type='number']:focus,
 textarea:focus {
     background-color: var(--grid-hover-bg);
+    color: var(--grid-hover-fg);
     box-shadow:
         0 0 0 4px color-mix(in srgb, var(--grid-fg) 30%, transparent),
         0 0 0 1px color-mix(in srgb, var(--grid-fg) 55%, transparent) inset;
@@ -44,11 +46,15 @@ textarea::placeholder {
 }
 
 /* Text inputs placeholder */
+input[type='text']:focus::placeholder,
+input[type='email']:focus::placeholder,
+input[type='number']:focus::placeholder,
+textarea:focus::placeholder,
 input[type='text']:hover::placeholder,
 input[type='email']:hover::placeholder,
 input[type='number']:hover::placeholder,
 textarea:hover::placeholder {
-    color: var(--grid-fg);
+    color: var(--grid-hover-fg);
 }
 
 /* Radio buttons */
@@ -81,8 +87,8 @@ input[type='radio']:hover + label {
 }
 
 .submit:hover {
-    background-color: rgb(152, 149, 187);
-    color: black;
+    background-color: var(--accent);
+    color: var(--accent-fg);
 }
 
 .budget-range {

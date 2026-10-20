@@ -11,12 +11,12 @@ function About() {
                 />
             </Helmet>
             <div className="grid-layout about-page">
-                <div className="grid-item"></div>
-                <div className="grid-item"></div>
-                <div className="grid-item"></div>
-                <div className="grid-item"></div>
-                <div className="grid-item"></div>
-                <div className="grid-item"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
                 <div className="grid-item text xl-grid--about">
                     <b>Me</b>
                 </div>
@@ -36,8 +36,8 @@ function About() {
                     </p>
                 </div>
 
-                <div className="grid-item"></div>
-                <div className="grid-item about-right-extra" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
 
                 <div className="grid-item text xl-grid--about">
                     <b>Writing</b>
@@ -54,7 +54,10 @@ function About() {
                             The East Solano Plan
                         </a>{' '}
                         about a controversial proposed new city development in
-                        Northern California. I am also the web designer for{' '}
+                        Northern California.
+                    </p>
+                    <p>
+                        I am also the web designer for{' '}
                         <a href="https://proteanmag.com">Protean Magazine</a>,
                         an independent, ad-free leftist magazine of critical
                         essays, poetry, fiction, and art that you should
@@ -63,8 +66,8 @@ function About() {
                     </p>
                 </div>
 
-                <div className="grid-item"></div>
-                <div className="grid-item about-right-extra" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
 
                 <div className="grid-item text xl-grid--about">
                     <b>Open Source</b>
@@ -84,8 +87,8 @@ function About() {
                     </p>
                 </div>
 
-                <div className="grid-item"></div>
-                <div className="grid-item about-right-extra" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
 
                 <div className="grid-item text xl-grid--about">
                     <b>Previously</b>
@@ -108,8 +111,8 @@ function About() {
                         .
                     </p>
                 </div>
-                <div className="grid-item"></div>
-                <div className="grid-item about-right-extra" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
                 <div className="grid-item text xl-grid--about">
                     <b>Availability</b>
                 </div>
@@ -123,15 +126,15 @@ function About() {
                         .
                     </p>
                 </div>
-                <div className="grid-item"></div>
-                <div className="grid-item about-right-extra" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
 
-                <div className="grid-item"></div>
-                <div className="grid-item"></div>
-                <div className="grid-item"></div>
-                <div className="grid-item"></div>
-                <div className="grid-item"></div>
-                <div className="grid-item"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
             </div>
         </div>
     )

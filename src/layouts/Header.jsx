@@ -8,8 +8,12 @@ function Header({ isVisible, currentPath }) {
     return (
         <header className="grid-layout condensed-grid condensed-grid--secondary">
             <div className="grid-item span-2">
-                <a href="/">
-                    <h1 className="logo">printer_scanner</h1>
+                <a href="/" className="logo-link" aria-label="printer_scanner home">
+                    <h1 className="logo">
+                        <span className="logo-default" aria-hidden="true">printer_scanner</span>
+                        <span className="logo-hover" aria-hidden="true">scanner_printer</span>
+                        <span className="visually-hidden">printer_scanner</span>
+                    </h1>
                 </a>
             </div>
 
@@ -19,11 +23,9 @@ function Header({ isVisible, currentPath }) {
             <div className="grid-item grid-item--link">
                 <Form />
             </div>
-            <div className="grid-item grid-item--link">
-                <a className="menu-link right" href="/contact">
+            <a className="grid-item nav-cell" href="/contact">
                     Contact
                 </a>
-            </div>
 
             <div className="grid-item grid-item--link">
                 {currentPath != '/' && !isVisible && (
@@ -37,59 +39,32 @@ function Header({ isVisible, currentPath }) {
                 <p>Extremely famous graphic designer.</p>
             </div>
 
-            <div className="grid-item grid-item--link">
-                <a className="menu-link right" href="/about">
+            <a className="grid-item nav-cell" href="/about">
                     About
                 </a>
-            </div>
 
-            {/* <div className="grid-item grid-item--link"><a className="menu-link" href="/archive">Archive</a></div> */}
             <div className="grid-item hidden-mobile"></div>
             <div className="grid-item hidden-mobile"></div>
 
-            <div className="grid-item">
-                <a
-                    className="menu-link"
-                    href="https://github.com/printerscanner"
-                >
+            <a className="grid-item nav-cell" href="https://github.com/printerscanner">
                     Github
                 </a>
-            </div>
-            <div className="grid-item">
-                <a
-                    className="menu-link"
-                    href="https://www.are.na/printer-scanner"
-                >
+            <a className="grid-item nav-cell" href="https://www.are.na/printer-scanner">
                     Are.na
                 </a>
-            </div>
-            <div className="grid-item">
-                <a
-                    className="right menu-link"
-                    href="https://instagram.com/printer_scanner"
-                >
+            <a className="grid-item nav-cell" href="https://instagram.com/printer_scanner">
                     Instagram
                 </a>
-            </div>
-            <div className="grid-item ">
-                <a
-                    className="right menu-link"
-                    href="https://x.com/abbbbbbeyyyyyyy"
-                >
+            <a className="grid-item nav-cell" href="https://x.com/abbbbbbeyyyyyyy">
                     X
                 </a>
-            </div>
 
-            <div className="grid-item">
-                <a className="menu-link" href="https://mother-type.de">
+            <a className="grid-item nav-cell" href="https://mother-type.de">
                     ↗ Mother Type
                 </a>
-            </div>
-            <div className="grid-item">
-                <a className="menu-link" href="https://earthly-delights.net">
+            <a className="grid-item nav-cell" href="https://earthly-delights.net">
                     ↗ Earthly Delights
                 </a>
-            </div>
         </header>
     )
 }

@@ -73,16 +73,8 @@ const pickAccessibleText = (bg, preferred, minRatio = 4.5) => {
   return contrastRatio(best, bg) >= minRatio ? best : best;
 };
 
-const findHoverBg = ({ bg, fg, strength = 0.12, minRatio = 4.5 }) => {
-  // Mix a little of fg into bg, but keep text contrast >= minRatio.
-  let s = strength;
-  while (s > 0) {
-    const candidate = mixRgb(fg, bg, s);
-    if (contrastRatio(fg, candidate) >= minRatio) return candidate;
-    s -= 0.01;
-  }
-  return bg;
-};
+// A muted third tone that stays within the active palette.
+const deriveAccent = (bg, fg) => mixRgb(bg, fg, 0.72);
 
 const applyPalette = (palette) => {
   const root = document.documentElement;
@@ -97,11 +89,12 @@ const applyPalette = (palette) => {
   // Use a stricter target for cards so they read clearly.
   const gridFg = pickAccessibleText(gridBg, gridFgPreferred, 7);
 
-  const hoverBg = palette.hoverBg ? toResolvedRgb(palette.hoverBg) : findHoverBg({ bg: pageBg, fg: pageFg });
-  const hoverFg = palette.hoverFg ? toResolvedRgb(palette.hoverFg) : pageFg;
-
-  const gridHoverBg = findHoverBg({ bg: gridBg, fg: gridFg });
-  const gridHoverFg = gridFg;
+  const accent = palette.accent ? toResolvedRgb(palette.accent) : deriveAccent(pageBg, pageFg);
+  const accentFg = pickAccessibleText(accent, gridBg, 4.5);
+  const hoverBg = accent;
+  const hoverFg = accentFg;
+  const gridHoverBg = accent;
+  const gridHoverFg = accentFg;
 
   const pillBg = gridFg;
   const pillFg = pickAccessibleText(pillBg, gridBg, 4.5);
@@ -111,6 +104,9 @@ const applyPalette = (palette) => {
 
   root.style.setProperty("--grid-bg", rgbToCss(gridBg));
   root.style.setProperty("--grid-fg", rgbToCss(gridFg));
+
+  root.style.setProperty("--accent", rgbToCss(accent));
+  root.style.setProperty("--accent-fg", rgbToCss(accentFg));
 
   root.style.setProperty("--hover-bg", rgbToCss(hoverBg));
   root.style.setProperty("--hover-fg", rgbToCss(hoverFg));
