@@ -17,12 +17,14 @@
     /* Grid defaults: intentionally high-contrast vs page background */
     --grid-bg: color-mix(in srgb, var(--page-fg) 88%, var(--page-bg));
     --grid-fg: color-mix(in srgb, var(--page-bg) 88%, var(--page-fg));
-    /* Default hover is a subtle tint of the current theme */
-    --hover-bg: color-mix(in srgb, var(--page-fg) 12%, var(--page-bg));
-    --hover-fg: var(--page-fg);
+    --accent: color-mix(in srgb, var(--page-bg) 72%, var(--page-fg));
+    --accent-fg: #101010;
+    /* Shared accent for interactive hover states. */
+    --hover-bg: var(--accent);
+    --hover-fg: var(--accent-fg);
 
-    --grid-hover-bg: color-mix(in srgb, var(--grid-fg) 12%, var(--grid-bg));
-    --grid-hover-fg: var(--grid-fg);
+    --grid-hover-bg: var(--accent);
+    --grid-hover-fg: var(--accent-fg);
 
     --pill-bg: var(--grid-fg);
     --pill-fg: var(--grid-bg);
@@ -317,8 +319,44 @@ b {
     margin: 0 2px;
 }
 
+.logo-link {
+    display: block;
+}
+
+.logo-link:hover,
+.logo-link:focus-visible {
+    background: transparent;
+    color: var(--grid-fg);
+}
+
+.logo-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
 .logo {
     margin: 0;
+    display: grid;
+}
+
+.logo-default,
+.logo-hover {
+    grid-area: 1 / 1;
+}
+
+.logo-hover {
+    visibility: hidden;
+}
+
+.logo-link:hover .logo-default,
+.logo-link:focus-visible .logo-default {
+    visibility: hidden;
+}
+
+.logo-link:hover .logo-hover,
+.logo-link:focus-visible .logo-hover {
+    visibility: visible;
 }
 
 .home-button {
@@ -342,20 +380,97 @@ button {
     text-decoration: underline;
 }
 
-.form {
-    display: flex;
-    gap: 10px;
-    vertical-align: center;
+/* Newsletter stays contained within its existing header cell. */
+.newsletter {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    display: grid;
+    gap: 5px;
 }
 
-.email {
-    /* background: currentColor; */
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #00ff22;
-    color: white;
-    width: 90%;
+.newsletter-label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.newsletter-control {
+    display: flex;
+    align-items: stretch;
+    min-width: 0;
+    border-radius: 8px;
+    background: var(--grid-fg);
+    color: var(--grid-bg);
+}
+
+.newsletter .newsletter-email {
+    box-sizing: border-box;
+    flex: 1;
+    width: 0;
+    min-width: 0;
+    min-height: 36px;
+    padding: 8px;
+    border: 0;
+    border-radius: 8px 0 0 8px;
+    font: inherit;
+    font-size: 16px;
+    line-height: 1.25;
+    background: transparent;
+    color: var(--grid-bg);
+    box-shadow: none;
+}
+
+/* Override shared contact-form interaction colors within the newsletter. */
+.newsletter .newsletter-email:hover,
+.newsletter .newsletter-email:focus {
+    background: var(--grid-fg);
+    color: var(--grid-bg);
+    caret-color: var(--grid-bg);
+    box-shadow: none;
+}
+
+.newsletter .newsletter-email:autofill {
+    -webkit-text-fill-color: var(--grid-bg);
+    caret-color: var(--grid-bg);
+    box-shadow: 0 0 0 1000px var(--grid-fg) inset;
+}
+
+.newsletter .newsletter-email::placeholder,
+.newsletter .newsletter-email:hover::placeholder,
+.newsletter .newsletter-email:focus::placeholder {
+    color: color-mix(in srgb, var(--grid-bg) 75%, var(--grid-fg));
+    opacity: 1;
+}
+
+.newsletter .newsletter-submit {
+    flex: 0 0 32px;
+    box-sizing: border-box;
+    min-height: 36px;
+    padding: 0;
+    border-radius: 0 8px 8px 0;
+    border-left: 1px solid color-mix(in srgb, var(--grid-bg) 25%, transparent);
+    font-size: 20px;
+    line-height: 1;
+    color: var(--grid-bg);
+    transition: background-color 0.2s ease;
+}
+
+.newsletter .newsletter-submit:hover {
+    background: var(--accent);
+    color: var(--accent-fg);
+}
+
+.newsletter-control:focus-within {
+    outline: 2px solid var(--grid-fg);
+    outline-offset: 3px;
+}
+
+.newsletter .newsletter-email:focus-visible,
+.newsletter .newsletter-submit:focus-visible {
+    outline: 2px solid var(--grid-bg);
+    outline-offset: -4px;
 }
 
 ::placeholder {
@@ -470,8 +585,12 @@ button {
     overflow-wrap: anywhere;
 }
 
+.about-page .text-l p + p {
+    margin-top: 1em;
+}
+
 .about-page .xl-grid--about b {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.65;
 }
 
@@ -490,11 +609,25 @@ button {
     .about-page .span-most {
         grid-column-end: -3;
     }
-
 }
 
-@media (max-width: 800px) {
-    .about-page .about-right-extra {
-        display: none;
-    }
+/* Navigation links are the grid cells, including their padded hit areas. */
+.nav-cell {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-cell:hover,
+.nav-cell:focus-visible {
+    background: var(--grid-hover-bg);
+    color: var(--grid-hover-fg);
+}
+
+.nav-cell:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: -5px;
 }
