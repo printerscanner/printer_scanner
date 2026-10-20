@@ -10,16 +10,17 @@ function About() {
                     content="I’m an independent designer and programmer based in Berlin. I collaborate with agencies, brands, and designers to create modern, accessible and high-performing products."
                 />
             </Helmet>
-            <div className="grid-layout">
+            <div className="grid-layout about-page">
                 <div className="grid-item text xl-grid--about"></div>
                 <div className="grid-item span-most text text-l"></div>
                 <div className="grid-item"></div>
+                <div className="grid-item about-right-extra" aria-hidden="true"></div>
                 <div className="grid-item text xl-grid--about">
                     <b>Me</b>
                 </div>
                 <div className="grid-item span-most text text-l">
                     <p>
-                        I'm a software developer from San Francisco based in
+                        I&apos;m a software developer from San Francisco based in
                         Berlin, known online as printer_scanner. You can find my
                         open-source work on{' '}
                         <a href="https://github.com/printerscanner">Github</a>,
@@ -34,6 +35,7 @@ function About() {
                 </div>
 
                 <div className="grid-item"></div>
+                <div className="grid-item about-right-extra" aria-hidden="true"></div>
 
                 <div className="grid-item text xl-grid--about">
                     <b>Writing</b>
@@ -60,6 +62,7 @@ function About() {
                 </div>
 
                 <div className="grid-item"></div>
+                <div className="grid-item about-right-extra" aria-hidden="true"></div>
 
                 <div className="grid-item text xl-grid--about">
                     <b>Open Source</b>
@@ -80,6 +83,7 @@ function About() {
                 </div>
 
                 <div className="grid-item"></div>
+                <div className="grid-item about-right-extra" aria-hidden="true"></div>
 
                 <div className="grid-item text xl-grid--about">
                     <b>Previously</b>
@@ -103,12 +107,13 @@ function About() {
                     </p>
                 </div>
                 <div className="grid-item"></div>
+                <div className="grid-item about-right-extra" aria-hidden="true"></div>
                 <div className="grid-item text xl-grid--about">
                     <b>Availability</b>
                 </div>
                 <div className="grid-item span-most text text-l">
                     <p>
-                        I'm not currently available for new projects, but I love
+                        I&apos;m not currently available for new projects, but I love
                         to chat. If you would like to say hi, email me at{' '}
                         <a href="mailto:itsprinterscanner@gmail.com">
                             itsprinterscanner@gmail.com
@@ -117,6 +122,7 @@ function About() {
                     </p>
                 </div>
                 <div className="grid-item"></div>
+                <div className="grid-item about-right-extra" aria-hidden="true"></div>
 
                 <div className="grid-item"></div>
                 <div className="grid-item"></div>

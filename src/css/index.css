@@ -461,3 +461,40 @@ button {
         max-width: 100%;
     }
 }
+
+/* About content and reading-column width. */
+.about-page .text-l p {
+    font-size: 16px;
+    line-height: 1.65;
+    text-wrap: pretty;
+    overflow-wrap: anywhere;
+}
+
+.about-page .xl-grid--about b {
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.about-page .text a {
+    font-weight: 700;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+}
+
+.about-page .text a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+@media (min-width: 801px) {
+    .about-page .span-most {
+        grid-column-end: -3;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .about-page .about-right-extra {
+        display: none;
+    }
+}
