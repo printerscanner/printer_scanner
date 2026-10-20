@@ -1,4 +1,18 @@
 const data = {
+    'strudel-flow': {
+        title: 'Strudel Flow',
+        collaborators: 'xyflow',
+        featured: 'TRUE',
+        collaboratorsUrl: 'https://xyflow.com',
+        software: 'Strudel, React Flow',
+        role: 'Development',
+        license: 'AGPL-3.0',
+        year: '2026',
+        now: true,
+        source: 'https://xyflow.com/strudel-flow',
+        description:
+            'A visual drum machine and pattern sequencer built with Strudel and React Flow. Version 2.0 out now!',
+    },
     xyflow: {
         title: 'xyflow',
         role: 'Development',
@@ -9,19 +23,6 @@ const data = {
         source: 'https://xyflow.com',
         description:
             'React Flow | Svelte Flow - Open source libraries for building node-based UIs.',
-    },
-    'strudel-flow': {
-        title: 'Strudel Flow',
-        collaborators: 'xyflow',
-        featured: 'TRUE',
-        collaboratorsUrl: 'https://xyflow.com',
-        software: 'Strudel, React Flow',
-        role: 'Development',
-        license: 'AGPL-3.0',
-        year: '2025',
-        source: 'https://xyflow.com/strudel-flow',
-        description:
-            'A visual drum machine and pattern sequencer built with Strudel and React Flow.',
     },
     'co2-shield': {
         title: 'CO2 Shield',

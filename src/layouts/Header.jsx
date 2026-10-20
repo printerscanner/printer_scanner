@@ -71,7 +71,14 @@ function Header({ isVisible, currentPath }) {
                     Instagram
                 </a>
             </div>
-            <div className="grid-item hidden-mobile"></div>
+            <div className="grid-item ">
+                <a
+                    className="right menu-link"
+                    href="https://x.com/abbbbbbeyyyyyyy"
+                >
+                    X
+                </a>
+            </div>
 
             <div className="grid-item">
                 <a className="menu-link" href="https://mother-type.de">
