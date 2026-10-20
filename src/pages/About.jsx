@@ -4,27 +4,45 @@ function About() {
     return (
         <div>
             <Helmet>
-                <title>Capabilities</title>
+                <title>About</title>
                 <meta
                     name="description"
                     content="I’m an independent designer and programmer based in Berlin. I collaborate with agencies, brands, and designers to create modern, accessible and high-performing products."
                 />
             </Helmet>
             <div className="grid-layout about-page">
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
                 <div className="grid-item text xl-grid--about">
                     <b>Me</b>
                 </div>
                 <div className="grid-item span-most text text-l">
                     <p>
-                        I&apos;m a software developer from San Francisco based in
-                        Berlin, known online as printer_scanner. You can find my
-                        open-source work on{' '}
+                        I&apos;m a software developer from San Francisco based
+                        in Berlin, known online as printer_scanner. You can find
+                        my open-source work on{' '}
                         <a href="https://github.com/printerscanner">Github</a>,
                         occasional updates about my life on{' '}
                         <a href="https://www.instagram.com/printer_scanner">
@@ -36,8 +54,14 @@ function About() {
                     </p>
                 </div>
 
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
 
                 <div className="grid-item text xl-grid--about">
                     <b>Writing</b>
@@ -66,8 +90,14 @@ function About() {
                     </p>
                 </div>
 
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
 
                 <div className="grid-item text xl-grid--about">
                     <b>Open Source</b>
@@ -87,8 +117,14 @@ function About() {
                     </p>
                 </div>
 
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
 
                 <div className="grid-item text xl-grid--about">
                     <b>Previously</b>
@@ -111,30 +147,60 @@ function About() {
                         .
                     </p>
                 </div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
                 <div className="grid-item text xl-grid--about">
                     <b>Availability</b>
                 </div>
                 <div className="grid-item span-most text text-l">
                     <p>
-                        I&apos;m not currently available for new projects, but I love
-                        to chat. If you would like to say hi, email me at{' '}
+                        I&apos;m not currently available for new projects, but I
+                        love to chat. If you would like to say hi, email me at{' '}
                         <a href="mailto:itsprinterscanner@gmail.com">
                             itsprinterscanner@gmail.com
                         </a>
                         .
                     </p>
                 </div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
 
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
-                <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
+                <div
+                    className="grid-item hidden-mobile"
+                    aria-hidden="true"
+                ></div>
             </div>
         </div>
     )

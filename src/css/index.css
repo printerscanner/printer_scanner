@@ -221,7 +221,7 @@ b {
     gap: 8px;
 }
 
-.now-pill {
+.new-pill {
     display: inline-block;
     background: var(--pill-bg);
     color: var(--pill-fg);
@@ -618,7 +618,9 @@ button {
     min-width: 0;
     text-decoration: underline;
     text-underline-offset: 0.18em;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .nav-cell:hover,
@@ -630,4 +632,39 @@ button {
 .nav-cell:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: -5px;
+}
+
+/* Bold navigation labels with a quiet directional cue. */
+header .nav-cell {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+header .nav-cell::after {
+    content: '→';
+    font-weight: 400;
+    opacity: 0.55;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+header .nav-cell[href^='https://']::after {
+    content: '↗';
+}
+
+header .nav-cell:hover::after,
+header .nav-cell:focus-visible::after {
+    opacity: 1;
+    transform: translateX(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    header .nav-cell::after {
+        transition: none;
+        transform: none;
+    }
 }

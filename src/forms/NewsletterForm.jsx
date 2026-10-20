@@ -48,7 +48,7 @@ function Form() {
         >
             <input type="hidden" name="form-name" value="contact" />
             <label className="newsletter-label" htmlFor="newsletter-email">
-                Stay Updated
+                Want Updates?
             </label>
             <div className="newsletter-control">
                 <input

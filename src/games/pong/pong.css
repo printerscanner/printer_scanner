@@ -1,0 +1,120 @@
+/* Self-contained game styles. The original footer cells keep their shared CSS. */
+[data-pong-field] {
+    display: none;
+    position: relative;
+    padding-bottom: 48px;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+.pong-no-select,
+.pong-no-select * {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.pong-no-select:focus,
+.pong-no-select:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+[data-pong-damaged] {
+    outline: 2px dotted var(--grid-fg);
+    outline-offset: -5px;
+}
+
+.pong-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.pong-ball,
+.pong-paddle {
+    position: absolute;
+    pointer-events: none;
+    background: var(--page-fg);
+}
+
+.pong-ball {
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.pong-paddle {
+    bottom: 18px;
+    left: 50%;
+    width: 52px;
+    height: 6px;
+    transform: translateX(-50%);
+    border-radius: 999px;
+}
+
+.pong-drop {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    border: 1px solid var(--grid-fg);
+    background: var(--grid-bg);
+    color: var(--grid-fg);
+    font: 18px/1 sans-serif;
+    transform: translate(-50%, -50%);
+}
+
+.pong-controls {
+    -webkit-user-select: none;
+    user-select: none;
+    display: none;
+    position: absolute;
+    right: 4px;
+    bottom: 2px;
+    z-index: 21;
+    align-items: center;
+    gap: 3px;
+    border-radius: 4px;
+    background: var(--page-bg);
+    color: var(--page-fg);
+    padding: 0 2px 0 4px;
+    font-size: 7px;
+    letter-spacing: 2px;
+}
+
+.pong-controls button {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: normal;
+}
+
+.pong-controls button:hover {
+    background: var(--accent);
+    color: var(--accent-fg);
+}
+
+.pong-controls button:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: -2px;
+}
+
+@media (min-width: 801px) {
+    [data-pong-field] { display: grid; }
+    [data-pong-field] > .hidden-large { display: block; }
+    .pong-overlay { display: block; }
+    .pong-controls { display: flex; }
+}

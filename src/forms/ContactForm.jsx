@@ -2,166 +2,54 @@ import { useState } from 'react'
 import '../css/form.css'
 
 function ContactForm() {
-    const [selectedInterest, setSelectedInterest] = useState('')
-    const BUDGET_MIN_K = 15
-    const BUDGET_MAX_K = 121
-    const [budgetLowK, setBudgetLowK] = useState(BUDGET_MIN_K)
-    const [budgetHighK, setBudgetHighK] = useState(BUDGET_MAX_K)
+    const [status, setStatus] = useState('')
+    const [sending, setSending] = useState(false)
 
-    const handleSubmit = async (e) => {
-        let thanksMessage
-        e.preventDefault()
-
-        // Combine all form values into a single message
-        const message = JSON.stringify({
-            company: e.target.company.value,
-            details: e.target.details.value,
-            interest: selectedInterest,
-            BudgetLow: budgetLowK,
-            BudgetHigh: budgetHighK,
-            'start-date': e.target['start-date'].value,
-        })
-
+    const handleSubmit = async (event) => {
+        event.preventDefault()
+        if (sending) return
+        const form = event.currentTarget
+        const values = new FormData(form)
+        setSending(true)
+        setStatus('')
         try {
             const response = await fetch('/', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: new URLSearchParams({
-                    'form-name': 'submission',
-                    name: e.target.name.value,
-                    email: e.target.email.value,
-                    message: message, // Include the combined message
-                }).toString(),
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(values).toString(),
             })
-
-            if (response.ok) {
-                thanksMessage =
-                    'Our AI (my cousin) is hard at work on a response to your submission right now.'
-                // Reset form fields if needed
-                e.target.reset()
-                setSelectedInterest('')
-                setBudgetLowK(BUDGET_MIN_K)
-                setBudgetHighK(BUDGET_MAX_K)
-            } else {
-                thanksMessage =
-                    'Oops! Something went wrong. Did you fill out the form?'
-            }
-        } catch (error) {
-            console.error('Form submission failed:', error)
-            thanksMessage = 'Oops! Something went wrong.'
+            if (!response.ok) throw new Error('Submission failed')
+            form.reset()
+            setStatus('Thanks for your message. I’ll get back to you soon.')
+        } catch {
+            setStatus('Your message couldn’t be sent. Please try again or email itsprinterscanner@gmail.com.')
+        } finally {
+            setSending(false)
         }
-
-        // Creating a div element to hold the message
-        const bubble = document.createElement('div')
-        bubble.className = 'thanks-bubble bottom'
-        bubble.innerHTML = `<p>${thanksMessage}</p>`
-
-        // Appending the bubble to the form
-        document.body.appendChild(bubble)
-
-        // Hiding the bubble after 3 seconds
-        setTimeout(() => {
-            bubble.remove()
-        }, 3000)
     }
 
     return (
-        <form
-            name="submission"
-            method="POST"
-            data-netlify="true"
-            className="grid-layout"
-            onSubmit={handleSubmit}
-        >
-            <div className="grid-item span-all text xl-grid">
-                <p>Get in Touch</p>
-            </div>
-
-            {/* Name */}
-            <div className="grid-item text xl-grid">
-                <p>Name</p>
-            </div>
-            <input
-                id="name"
-                name="name"
-                type="text"
-                className="grid-item span-5"
-                placeholder="Elizabeth Holmes"
-            />
-
-            {/* Email */}
-            <div className="grid-item text xl-grid">
-                <p>Email</p>
-            </div>
-
-            <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                className="grid-item span-5"
-                placeholder="lizzie@theranos.com"
-            />
-
-            {/* Company */}
-
-            <div className="grid-item text xl-grid">
-                <p>Organization</p>
-            </div>
-            <input
-                id="company"
-                name="company"
-                type="text"
-                className="grid-item span-5"
-                placeholder="Theranos"
-            />
-
-            <div className="grid-item text xl-grid">
-                <p>What you&apos;re looking for</p>
-            </div>
-            <input
-                id="details"
-                name="details"
-                type="text"
-                className="grid-item span-5"
-                placeholder="Tell me more"
-            />
-
-            <div className="grid-item text xl-grid">
-                <p>Budget</p>
-            </div>
-
-            <input
-                id="start-date"
-                name="start-date"
-                type="text"
-                className="grid-item span-5"
-                placeholder="200,000,000 EUR"
-            />
-            {/* Start Date */}
-            <div className="grid-item text xl-grid">
-                <p>Target Launch Date</p>
-            </div>
-            <input
-                id="start-date"
-                name="start-date"
-                type="text"
-                className="grid-item span-most"
-                placeholder="January 1, 2029"
-            />
-
-            <input
-                type="hidden"
-                id="interest"
-                name="interest"
-                value={selectedInterest}
-            />
-
-            <button type="submit" className="submit grid-item">
-                Submit
+        <form name="submission" method="POST" data-netlify="true"
+            className="contact-form" onSubmit={handleSubmit} aria-busy={sending}>
+            <input type="hidden" name="form-name" value="submission" />
+            <h2 className="grid-item contact-title">Get in touch</h2>
+            {Array.from({ length: 5 }, (_, index) => (
+                <div className="grid-item contact-heading-spacer" key={index} aria-hidden="true" />
+            ))}
+            <label className="grid-item contact-label" htmlFor="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" autoComplete="name"
+                required className="grid-item contact-input" placeholder="Elizabeth Holmes" />
+            <label className="grid-item contact-label" htmlFor="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" autoComplete="email"
+                required className="grid-item contact-input" placeholder="lizzie@theranos.com" />
+            <label className="grid-item contact-label" htmlFor="contact-message">Message</label>
+            <textarea id="contact-message" name="message" required rows={6}
+                className="grid-item contact-input" placeholder="What’s on your mind?" />
+            <div className="grid-item contact-submit-spacer" aria-hidden="true" />
+            <button type="submit" className="grid-item contact-submit" disabled={sending}>
+                <span>{sending ? 'Sending…' : 'Submit'}</span><span aria-hidden="true">↗</span>
             </button>
+            <p className="contact-status" role="status">{status}</p>
         </form>
     )
 }

@@ -8,7 +8,7 @@ const data = {
         role: 'Development',
         license: 'AGPL-3.0',
         year: '2026',
-        now: true,
+        new: true,
         source: 'https://xyflow.com/strudel-flow',
         description:
             'A visual drum machine and pattern sequencer built with Strudel and React Flow. Version 2.0 out now!',
@@ -19,7 +19,6 @@ const data = {
         software: 'React, Svelte',
         license: 'MIT',
         year: '2024-',
-        now: true,
         source: 'https://xyflow.com',
         description:
             'React Flow | Svelte Flow - Open source libraries for building node-based UIs.',
