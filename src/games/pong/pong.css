@@ -102,9 +102,11 @@
     letter-spacing: normal;
 }
 
-.pong-controls button:hover {
+@media (hover: hover) and (pointer: fine) {
+    .pong-controls button:hover {
     background: var(--accent);
     color: var(--accent-fg);
+    }
 }
 
 .pong-controls button:focus-visible {

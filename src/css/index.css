@@ -66,11 +66,13 @@ button {
     text-decoration: none;
 }
 
-a:hover,
-button:hover {
+@media (hover: hover) and (pointer: fine) {
+    a:hover,
+    button:hover {
     cursor: pointer;
     background-color: var(--hover-bg);
     color: var(--hover-fg);
+    }
 }
 
 .text a {
@@ -323,10 +325,16 @@ b {
     display: block;
 }
 
-.logo-link:hover,
 .logo-link:focus-visible {
     background: transparent;
     color: var(--grid-fg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .logo-link:hover {
+    background: transparent;
+    color: var(--grid-fg);
+    }
 }
 
 .logo-link:focus-visible {
@@ -349,14 +357,24 @@ b {
     visibility: hidden;
 }
 
-footer .logo-link:hover .logo-default,
 footer .logo-link:focus-visible .logo-default {
     visibility: hidden;
 }
 
-footer .logo-link:hover .logo-hover,
+@media (hover: hover) and (pointer: fine) {
+    footer .logo-link:hover .logo-default {
+    visibility: hidden;
+    }
+}
+
 footer .logo-link:focus-visible .logo-hover {
     visibility: visible;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    footer .logo-link:hover .logo-hover {
+    visibility: visible;
+    }
 }
 
 .home-button {
@@ -422,13 +440,21 @@ button {
     box-shadow: none;
 }
 
-/* Override shared contact-form interaction colors within the newsletter. */
-.newsletter .newsletter-email:hover,
 .newsletter .newsletter-email:focus {
     background: var(--grid-fg);
     color: var(--grid-bg);
     caret-color: var(--grid-bg);
     box-shadow: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    /* Override shared contact-form interaction colors within the newsletter. */
+.newsletter .newsletter-email:hover {
+    background: var(--grid-fg);
+    color: var(--grid-bg);
+    caret-color: var(--grid-bg);
+    box-shadow: none;
+    }
 }
 
 .newsletter .newsletter-email:autofill {
@@ -438,10 +464,16 @@ button {
 }
 
 .newsletter .newsletter-email::placeholder,
-.newsletter .newsletter-email:hover::placeholder,
 .newsletter .newsletter-email:focus::placeholder {
     color: color-mix(in srgb, var(--grid-bg) 75%, var(--grid-fg));
     opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .newsletter .newsletter-email:hover::placeholder {
+    color: color-mix(in srgb, var(--grid-bg) 75%, var(--grid-fg));
+    opacity: 1;
+    }
 }
 
 .newsletter .newsletter-submit {
@@ -457,9 +489,11 @@ button {
     transition: background-color 0.2s ease;
 }
 
-.newsletter .newsletter-submit:hover {
+@media (hover: hover) and (pointer: fine) {
+    .newsletter .newsletter-submit:hover {
     background: var(--accent);
     color: var(--accent-fg);
+    }
 }
 
 .newsletter-control:focus-within {
@@ -623,10 +657,16 @@ button {
         color 0.2s ease;
 }
 
-.nav-cell:hover,
 .nav-cell:focus-visible {
     background: var(--grid-hover-bg);
     color: var(--grid-hover-fg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .nav-cell:hover {
+    background: var(--grid-hover-bg);
+    color: var(--grid-hover-fg);
+    }
 }
 
 .nav-cell:focus-visible {
@@ -656,10 +696,16 @@ button {
     content: '↗';
 }
 
-:is(header, footer) .nav-cell:hover::after,
 :is(header, footer) .nav-cell:focus-visible::after {
     opacity: 1;
     transform: translateX(2px);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    :is(header, footer) .nav-cell:hover::after {
+    opacity: 1;
+    transform: translateX(2px);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -682,9 +728,14 @@ button {
     opacity: 0.55;
 }
 
-.colophon-page .text a:hover::after,
 .colophon-page .text a:focus-visible::after {
     opacity: 1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .colophon-page .text a:hover::after {
+    opacity: 1;
+    }
 }
 
 .colophon-page .text a:focus-visible {
