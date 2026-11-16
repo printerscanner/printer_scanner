@@ -61,8 +61,6 @@ const mixRgb = (a, b, amountA) => {
 
 const rgbToCss = ({ r, g, b }) => `rgb(${r} ${g} ${b})`;
 
-const rgbaToCss = ({ r, g, b, a }) => `rgb(${r} ${g} ${b} / ${a})`;
-
 const pickAccessibleText = (bg, preferred, minRatio = 4.5) => {
   if (preferred && contrastRatio(preferred, bg) >= minRatio) return preferred;
   const black = { r: 0, g: 0, b: 0, a: 1 };

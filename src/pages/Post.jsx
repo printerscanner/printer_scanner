@@ -32,7 +32,7 @@ function Post() {
                     {product.img4 && <div className="grid-item span-3"><img className="product-subhero" alt={product.title} src={product.img4} loading="lazy" /></div>}
                     {product.img5 && <div className="grid-item span-3"><img className="product-subhero" alt={product.title} src={product.img5} loading="lazy" /></div>}
                     {product.img6 && <div className="grid-item span-3"><img className="product-subhero" alt={product.title} src={product.img6} loading="lazy" /></div>}
-                    {product.mov && <div className="grid-item span-3"><video autoPlay={true} loop={true} muted={true} width="400px" height="auto"><source autoPlay loop src={product.mov} type="video/mp4" /></video></div>}
+                    {product.mov && <div className="grid-item span-3"><video autoPlay={true} loop={true} muted={true} width="400px" height="auto"><source src={product.mov} type="video/mp4" /></video></div>}
                 </div>
             </article>
         </>

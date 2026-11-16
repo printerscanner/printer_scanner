@@ -1,8 +1,4 @@
-import { useRef } from 'react'
-import FooterPong from '../games/pong/FooterPong.jsx'
-
 function Footer() {
-    const blockFieldRef = useRef(null)
     return (
         <footer>
             <div className="grid-layout condensed-grid">
@@ -24,20 +20,16 @@ function Footer() {
                     <b>Office</b>
                     <p>Urbanstraße 71, 10967 Berlin</p>
                 </div>
-                {/* <div className="grid-item"></div> */}
-                {/* <div className="grid-item"></div> */}
                 <div className="grid-item grid-item--link"></div>
                 <a className="grid-item nav-cell" href="/colophon">
                     Colophon
                 </a>
             </div>
-            <div className="grid-layout condensed-grid" ref={blockFieldRef}>
+            <div className="grid-layout condensed-grid">
                 {Array.from({ length: 54 }, (_, index) => (
                     <div className="grid-item hidden-large" key={index} aria-hidden="true" />
                 ))}
             </div>
-            {/* Remove this component and its import to disable Pong; the cells remain. */}
-            <FooterPong blockFieldRef={blockFieldRef} />
         </footer>
     )
 }

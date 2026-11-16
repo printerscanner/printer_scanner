@@ -275,20 +275,9 @@ b {
     grid-row-end: span 1;
 }
 
-.span-5 {
-    grid-column-end: span 5;
-    grid-row-end: span 1;
-}
-
 .span-most {
     grid-column-start: 2;
     grid-column-end: -2;
-    grid-row-end: span 1;
-}
-
-.span-all {
-    grid-column-start: 1;
-    grid-column-end: -1;
     grid-row-end: span 1;
 }
 
@@ -303,16 +292,6 @@ b {
 
 .xl-grid p {
     font-size: 25px;
-    margin: 0;
-}
-
-.l-grid {
-    display: flex;
-    align-items: center;
-}
-
-.l-grid p {
-    font-size: 20px;
     margin: 0;
 }
 
@@ -377,25 +356,11 @@ footer .logo-link:focus-visible .logo-hover {
     }
 }
 
-.home-button {
-    display: block;
-    font-size: x-large;
-}
-
 button {
     background-color: transparent;
     border: none;
     color: currentColor;
     font-size: inherit;
-}
-
-.selected {
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.menu-link {
-    text-decoration: underline;
 }
 
 /* Newsletter stays contained within its existing header cell. */
@@ -511,20 +476,6 @@ button {
     color: black;
 }
 
-.thanks-bubble {
-    position: sticky;
-    top: 25px;
-    right: 25px;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 10px 15px;
-    z-index: 1000000;
-    border-radius: 20px;
-    animation: fadeOut 3s forwards;
-    width: max-content;
-    margin: 10px;
-}
-
 .thanks-bubble-newsletter {
     position: fixed;
     top: 2%; /* Adjust this to position */
@@ -536,23 +487,6 @@ button {
     max-width: 300px; /* Control the width */
     z-index: 1000;
     transition: opacity 0.8s ease-in-out;
-}
-
-.bottom {
-    top: initial;
-    bottom: 25px;
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -583,11 +517,6 @@ button {
 @media only screen and (max-width: 800px) {
     .grid-item {
         grid-column-end: span 3;
-    }
-    .span-all {
-        grid-column-start: 1;
-        grid-column-end: -1;
-        grid-row-end: span 1;
     }
     .span-most {
         grid-column-start: 1;

@@ -28,9 +28,9 @@
     grid-column: 2 / -1;
     width: calc(100% - 4px);
     padding: 22px 24px;
-    border: 1px solid var(--grid-bg);
-    background: var(--page-bg);
-    color: var(--page-fg);
+    border: 1px solid transparent;
+    background: color-mix(in srgb, var(--grid-bg) 92%, var(--grid-fg));
+    color: var(--grid-fg);
     font: inherit;
     font-size: 18px;
     line-height: 1.6;
@@ -39,8 +39,8 @@
 }
 
 .contact-input::placeholder {
-    color: var(--page-fg);
-    opacity: 0.6;
+    color: var(--grid-fg);
+    opacity: 0.7;
 }
 
 textarea.contact-input {
@@ -50,12 +50,12 @@ textarea.contact-input {
 
 @media (hover: hover) and (pointer: fine) {
     .contact-input:hover {
-    box-shadow: inset 0 0 0 1px var(--page-fg);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--grid-fg) 35%, transparent);
     }
 }
 
 .contact-input:focus-visible {
-    outline: 2px solid var(--page-fg);
+    outline: 2px solid var(--grid-fg);
     outline-offset: -5px;
 }
 
