@@ -44,18 +44,7 @@ function About() {
                             The Garden of Earthly Delights
                         </a>
                         , about tech, but also about manhood, scams, and
-                        California. Last year I published a post called{' '}
-                        <a href="https://earthly-delights.net/blog/the-east-solano-plan/">
-                            The East Solano Plan
-                        </a>{' '}
-                        about a controversial proposed new city development in
-                        Northern California.
-                    </p>
-                </div>
-
-                <div className="grid-item about-copy text text-l">
-                    <p>
-                        I am also the web designer for{' '}
+                        California. I am also the web designer for{' '}
                         <a href="https://proteanmag.com">Protean Magazine</a>,
                         an independent, ad-free leftist magazine of critical
                         essays, poetry, fiction, and art that you should
@@ -65,8 +54,6 @@ function About() {
                 </div>
 
                 {/* <div className="grid-item text xl-grid--about"><b>Open Source</b></div> */}
-                <div className="grid-item span-2 hidden-mobile" aria-hidden="true" />
-                <div className="grid-item hidden-mobile" aria-hidden="true" />
 
                 <div className="grid-item about-copy text text-l">
                     <p>
@@ -83,12 +70,11 @@ function About() {
                     </p>
                 </div>
 
-                {/* <div className="grid-item text xl-grid--about"><b>Previously</b></div> */}
-                <div className="grid-item hidden-mobile" aria-hidden="true" />
                 <div
                     className="grid-item span-2 hidden-mobile"
                     aria-hidden="true"
                 />
+                <div className="grid-item hidden-mobile" aria-hidden="true" />
                 <div className="grid-item about-copy text text-l">
                     <p>
                         I used to work at{' '}
