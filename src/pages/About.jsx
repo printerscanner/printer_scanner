@@ -11,9 +11,6 @@ function About() {
                 />
             </Helmet>
             <div className="grid-layout about-page">
-                {/* <div className="grid-item about-edge hidden-mobile" aria-hidden="true" />
-                <div className="grid-item hidden-mobile" aria-hidden="true" /> */}
-                {/* <div className="grid-item text xl-grid--about"><b>Me</b></div> */}
                 <div className="grid-item about-portrait">
                     <img
                         src="/headshot.webp"
@@ -35,8 +32,6 @@ function About() {
                         .
                     </p>
                 </div>
-
-                {/* <div className="grid-item text xl-grid--about"><b>Writing</b></div> */}
                 <div className="grid-item about-copy text text-l">
                     <p>
                         I write a blog called{' '}
@@ -52,8 +47,6 @@ function About() {
                         <a href="https://proteanmag.com/donate/">supporting</a>.
                     </p>
                 </div>
-
-                {/* <div className="grid-item text xl-grid--about"><b>Open Source</b></div> */}
 
                 <div className="grid-item about-copy text text-l">
                     <p>
@@ -93,11 +86,11 @@ function About() {
                         .
                     </p>
                 </div>
-
-                {/* <div className="grid-item text xl-grid--about"><b>Availability</b></div> */}
                 <div className="grid-item hidden-mobile" aria-hidden="true" />
-                <div className="grid-item hidden-mobile" aria-hidden="true" />
-                <div className="grid-item hidden-mobile" aria-hidden="true" />
+                <div
+                    className="grid-item span-2 hidden-mobile"
+                    aria-hidden="true"
+                />
                 <div className="grid-item about-copy text text-l">
                     <p>
                         I&apos;m not currently available for new projects, but I
@@ -108,11 +101,6 @@ function About() {
                         .
                     </p>
                 </div>
-                {/* <div className="grid-item hidden-mobile" aria-hidden="true" />
-                <div
-                    className="grid-item about-edge hidden-mobile"
-                    aria-hidden="true"
-                /> */}
             </div>
         </div>
     )
