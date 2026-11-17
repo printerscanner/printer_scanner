@@ -59,7 +59,7 @@ function About() {
                             Strudel Flow
                         </a>
                         , a visual drum machine and pattern sequencer built with{' '}
-                        <a href="https://strudel.cc/">Strudel</a>.
+                        Strudel.
                     </p>
                 </div>
 
@@ -70,7 +70,7 @@ function About() {
                 <div className="grid-item hidden-mobile" aria-hidden="true" />
                 <div className="grid-item about-copy text text-l">
                     <p>
-                        I used to work at{' '}
+                        Previously I worked at{' '}
                         <a href="https://fictivekin.com">Fictive Kin</a>, a NYC
                         product design studio building products and large
                         websites. Before that, I worked on the{' '}

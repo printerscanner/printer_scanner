@@ -680,6 +680,12 @@ button {
     }
 }
 
+@media (min-width: 801px) {
+    .colophon-page .span-most {
+        grid-column-end: -2;
+    }
+}
+
 .colophon-page .text a {
     font-weight: 700;
     text-decoration: none;
