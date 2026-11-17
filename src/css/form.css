@@ -28,8 +28,8 @@
     grid-column: 2 / -1;
     width: calc(100% - 4px);
     padding: 22px 24px;
-    border: 1px solid transparent;
-    background: color-mix(in srgb, var(--grid-bg) 92%, var(--grid-fg));
+    border: 1px solid color-mix(in srgb, var(--grid-fg) 35%, var(--grid-bg));
+    background: color-mix(in srgb, var(--grid-bg) 80%, var(--grid-fg));
     color: var(--grid-fg);
     font: inherit;
     font-size: 18px;
@@ -50,7 +50,7 @@ textarea.contact-input {
 
 @media (hover: hover) and (pointer: fine) {
     .contact-input:hover {
-    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--grid-fg) 35%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--grid-fg) 55%, transparent);
     }
 }
 

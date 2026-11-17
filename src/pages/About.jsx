@@ -11,34 +11,16 @@ function About() {
                 />
             </Helmet>
             <div className="grid-layout about-page">
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div className="grid-item text xl-grid--about">
-                    <b>Me</b>
+                {/* <div className="grid-item about-edge hidden-mobile" aria-hidden="true" />
+                <div className="grid-item hidden-mobile" aria-hidden="true" /> */}
+                {/* <div className="grid-item text xl-grid--about"><b>Me</b></div> */}
+                <div className="grid-item about-portrait">
+                    <img
+                        src="/headshot.webp"
+                        alt="Portrait of printer_scanner"
+                    />
                 </div>
-                <div className="grid-item span-most text text-l">
+                <div className="grid-item about-copy text text-l">
                     <p>
                         I&apos;m a software developer from San Francisco based
                         in Berlin, known online as printer_scanner. You can find
@@ -54,19 +36,8 @@ function About() {
                     </p>
                 </div>
 
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-
-                <div className="grid-item text xl-grid--about">
-                    <b>Writing</b>
-                </div>
-                <div className="grid-item span-most text text-l">
+                {/* <div className="grid-item text xl-grid--about"><b>Writing</b></div> */}
+                <div className="grid-item about-copy text text-l">
                     <p>
                         I write a blog called{' '}
                         <a href="https://earthly-delights.net">
@@ -80,6 +51,9 @@ function About() {
                         about a controversial proposed new city development in
                         Northern California.
                     </p>
+                </div>
+
+                <div className="grid-item about-copy text text-l">
                     <p>
                         I am also the web designer for{' '}
                         <a href="https://proteanmag.com">Protean Magazine</a>,
@@ -90,19 +64,11 @@ function About() {
                     </p>
                 </div>
 
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
+                {/* <div className="grid-item text xl-grid--about"><b>Open Source</b></div> */}
+                <div className="grid-item span-2 hidden-mobile" aria-hidden="true" />
+                <div className="grid-item hidden-mobile" aria-hidden="true" />
 
-                <div className="grid-item text xl-grid--about">
-                    <b>Open Source</b>
-                </div>
-                <div className="grid-item span-most text text-l">
+                <div className="grid-item about-copy text text-l">
                     <p>
                         I work at <a href="https://xyflow.com/">xyflow</a>,
                         where I develop open-source libraries for building
@@ -117,24 +83,18 @@ function About() {
                     </p>
                 </div>
 
+                {/* <div className="grid-item text xl-grid--about"><b>Previously</b></div> */}
+                <div className="grid-item hidden-mobile" aria-hidden="true" />
                 <div
-                    className="grid-item hidden-mobile"
+                    className="grid-item span-2 hidden-mobile"
                     aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-
-                <div className="grid-item text xl-grid--about">
-                    <b>Previously</b>
-                </div>
-                <div className="grid-item span-most text text-l">
+                />
+                <div className="grid-item about-copy text text-l">
                     <p>
-                        I worked at{' '}
+                        I used to work at{' '}
                         <a href="https://fictivekin.com">Fictive Kin</a>, a NYC
-                        product design studio building products and web systems.
-                        Before that, I worked on the{' '}
+                        product design studio building products and large
+                        websites. Before that, I worked on the{' '}
                         <a href="https://en.wikipedia.org/wiki/Vera_C._Rubin_Observatory#/media/File:M1M3_mirror_group_photo.jpg">
                             {' '}
                             Vera Rubin Observatory
@@ -147,18 +107,12 @@ function About() {
                         .
                     </p>
                 </div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div className="grid-item text xl-grid--about">
-                    <b>Availability</b>
-                </div>
-                <div className="grid-item span-most text text-l">
+
+                {/* <div className="grid-item text xl-grid--about"><b>Availability</b></div> */}
+                <div className="grid-item hidden-mobile" aria-hidden="true" />
+                <div className="grid-item hidden-mobile" aria-hidden="true" />
+                <div className="grid-item hidden-mobile" aria-hidden="true" />
+                <div className="grid-item about-copy text text-l">
                     <p>
                         I&apos;m not currently available for new projects, but I
                         love to chat. If you would like to say hi, email me at{' '}
@@ -168,39 +122,11 @@ function About() {
                         .
                     </p>
                 </div>
+                {/* <div className="grid-item hidden-mobile" aria-hidden="true" />
                 <div
-                    className="grid-item hidden-mobile"
+                    className="grid-item about-edge hidden-mobile"
                     aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
-                <div
-                    className="grid-item hidden-mobile"
-                    aria-hidden="true"
-                ></div>
+                /> */}
             </div>
         </div>
     )

@@ -17,19 +17,26 @@ function Header({ isVisible, currentPath }) {
                 </a>
             </div>
 
-            <div className="grid-item hidden-mobile"></div>
-            <div className="grid-item hidden-mobile"></div>
+            <div
+                className="grid-item span-2 hidden-mobile"
+                aria-hidden="true"
+            ></div>
 
-            <div className="grid-item grid-item--link">
-                <Form />
-            </div>
+            <a className="grid-item nav-cell" href="/about">
+                About
+            </a>
+
             <a className="grid-item nav-cell" href="/contact">
                 Contact
             </a>
 
             {currentPath != '/' && !isVisible ? (
-                <button type="button" onClick={onBackClick}
-                    className="grid-item nav-cell nav-back" aria-label="Go back">
+                <button
+                    type="button"
+                    onClick={onBackClick}
+                    className="grid-item nav-cell nav-back"
+                    aria-label="Go back"
+                >
                     <span aria-hidden="true">←</span>
                 </button>
             ) : (
@@ -39,14 +46,10 @@ function Header({ isVisible, currentPath }) {
             <div className="grid-item span-2 text">
                 <p>Extremely famous graphic designer.</p>
             </div>
-
-            <a className="grid-item nav-cell" href="/about">
-                About
-            </a>
-
-            <div className="grid-item hidden-mobile"></div>
-            <div className="grid-item hidden-mobile"></div>
-
+            <div className="grid-item hidden-mobile" aria-hidden="true"></div>
+            <div className="grid-item span-2 grid-item--link">
+                <Form />
+            </div>
             <a
                 className="grid-item nav-cell"
                 href="https://github.com/printerscanner"
@@ -71,14 +74,10 @@ function Header({ isVisible, currentPath }) {
             >
                 X
             </a>
-
-            <div className="grid-item hidden-mobile"></div>
-            <a
-                className="grid-item nav-cell"
-                href="https://earthly-delights.net"
-            >
-                Earthly Delights
-            </a>
+            <div
+                className="grid-item span-2 hidden-mobile"
+                aria-hidden="true"
+            ></div>
         </header>
     )
 }

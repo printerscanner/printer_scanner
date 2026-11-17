@@ -18,10 +18,21 @@ const data = {
         role: 'Development',
         software: 'React, Svelte',
         license: 'MIT',
-        year: '2024-',
+        year: '2024-Present',
         source: 'https://xyflow.com',
         description:
             'React Flow | Svelte Flow - Open source libraries for building node-based UIs.',
+    },
+    'the-garden-of-earthly-delights': {
+        title: 'The Garden of Earthly Delights',
+        category: 'Blog',
+        software: 'Obsidian, Eleventy',
+        featured: 'TRUE',
+        new: true,
+        year: '2026',
+        source: 'https://earthly-delights.net',
+        description:
+            "Like the eponymous painting, this tech blog is a triptych of delights about life's perils and temptations.",
     },
     'co2-shield': {
         title: 'CO2 Shield',
@@ -43,21 +54,10 @@ const data = {
         software: 'Wordpress, WooCommerce',
         role: 'Design, Development',
         featured: 'TRUE',
-        year: '2024',
+        year: '2025 ',
         source: 'https://proteanmag.com',
         description:
             'Protean publishes incisive and affecting criticism, journalism, poetry, and art for the discerning leftist, sans advertisements.',
-    },
-
-    'the-garden-of-earthly-delights': {
-        title: 'The Garden of Earthly Delights',
-        category: 'Blog',
-        software: 'Obsidian, Eleventy',
-        featured: 'TRUE',
-        year: '2024',
-        source: 'https://earthly-delights.net',
-        description:
-            "Like the eponymous painting, this tech blog is a triptych of delights about life's perils and temptations.",
     },
     overbrowsing: {
         title: 'Overbrowsing',
@@ -75,7 +75,7 @@ const data = {
         software: 'React',
         license: 'MIT',
         featured: 'TRUE',
-        year: '2024',
+        year: '2026',
         source: 'https://mother-type.de',
         description:
             'Mother Type is an open-source type foundry exploring an open model for typefaces that are free to use, modify, and distribute.',
